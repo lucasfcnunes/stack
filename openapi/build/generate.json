@@ -612,6 +612,7 @@
     "/api/ledger/_info": {
       "get": {
         "tags": [
+          "Ledger",
           "Server"
         ],
         "summary": "Show server information",
@@ -688,6 +689,7 @@
         "summary": "Count the accounts from a ledger",
         "operationId": "countAccounts",
         "tags": [
+          "Ledger",
           "Accounts"
         ],
         "parameters": [
@@ -753,6 +755,7 @@
         "description": "List accounts from a ledger, sorted by address in descending order.",
         "operationId": "listAccounts",
         "tags": [
+          "Ledger",
           "Accounts"
         ],
         "parameters": [
@@ -919,6 +922,7 @@
         "summary": "Get account by its address",
         "operationId": "getAccount",
         "tags": [
+          "Ledger",
           "Accounts"
         ],
         "parameters": [
@@ -972,6 +976,7 @@
         "summary": "Add metadata to an account",
         "operationId": "addMetadataToAccount",
         "tags": [
+          "Ledger",
           "Accounts"
         ],
         "parameters": [
@@ -1028,6 +1033,7 @@
     "/api/ledger/{ledger}/mapping": {
       "get": {
         "tags": [
+          "Ledger",
           "Mapping"
         ],
         "operationId": "getMapping",
@@ -1069,6 +1075,7 @@
       },
       "put": {
         "tags": [
+          "Ledger",
           "Mapping"
         ],
         "operationId": "updateMapping",
@@ -1123,6 +1130,7 @@
       "post": {
         "deprecated": true,
         "tags": [
+          "Ledger",
           "Script"
         ],
         "operationId": "runScript",
@@ -1176,6 +1184,7 @@
     "/api/ledger/{ledger}/stats": {
       "get": {
         "tags": [
+          "Ledger",
           "Stats"
         ],
         "operationId": "readStats",
@@ -1220,6 +1229,7 @@
     "/api/ledger/{ledger}/transactions": {
       "head": {
         "tags": [
+          "Ledger",
           "Transactions"
         ],
         "summary": "Count the transactions from a ledger",
@@ -1351,6 +1361,7 @@
       },
       "get": {
         "tags": [
+          "Ledger",
           "Transactions"
         ],
         "summary": "List transactions from a ledger",
@@ -1537,6 +1548,7 @@
       },
       "post": {
         "tags": [
+          "Ledger",
           "Transactions"
         ],
         "summary": "Create a new transaction to a ledger",
@@ -1600,6 +1612,7 @@
     "/api/ledger/{ledger}/transactions/{txid}": {
       "get": {
         "tags": [
+          "Ledger",
           "Transactions"
         ],
         "summary": "Get transaction from a ledger by its ID",
@@ -1655,6 +1668,7 @@
     "/api/ledger/{ledger}/transactions/{txid}/metadata": {
       "post": {
         "tags": [
+          "Ledger",
           "Transactions"
         ],
         "summary": "Set the metadata of a transaction by its ID",
@@ -1714,6 +1728,7 @@
     "/api/ledger/{ledger}/transactions/{txid}/revert": {
       "post": {
         "tags": [
+          "Ledger",
           "Transactions"
         ],
         "operationId": "revertTransaction",
@@ -1769,6 +1784,7 @@
     "/api/ledger/{ledger}/transactions/batch": {
       "post": {
         "tags": [
+          "Ledger",
           "Transactions"
         ],
         "summary": "Create a new batch of transactions to a ledger",
@@ -1822,6 +1838,7 @@
     "/api/ledger/{ledger}/balances": {
       "get": {
         "tags": [
+          "Ledger",
           "Balances"
         ],
         "summary": "Get the balances from a ledger's account",
@@ -1902,6 +1919,7 @@
     "/api/ledger/{ledger}/aggregate/balances": {
       "get": {
         "tags": [
+          "Ledger",
           "Balances"
         ],
         "summary": "Get the aggregated balances from selected accounts",
@@ -1954,6 +1972,7 @@
     "/api/ledger/{ledger}/logs": {
       "get": {
         "tags": [
+          "Ledger",
           "Logs"
         ],
         "summary": "List the logs from a ledger",
