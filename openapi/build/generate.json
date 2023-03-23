@@ -7376,7 +7376,7 @@
         }
       },
       "Stage": {
-        "anyOf": [
+        "oneOf": [
           {
             "$ref": "#/components/schemas/StageSend"
           },
