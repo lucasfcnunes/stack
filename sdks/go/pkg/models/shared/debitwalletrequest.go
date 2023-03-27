@@ -3,10 +3,10 @@
 package shared
 
 type DebitWalletRequest struct {
-	Amount      Monetary    `json:"amount"`
-	Balances    []string    `json:"balances,omitempty"`
-	Description *string     `json:"description,omitempty"`
-	Destination interface{} `json:"destination,omitempty"`
+	Amount      Monetary `json:"amount"`
+	Balances    []string `json:"balances,omitempty"`
+	Description *string  `json:"description,omitempty"`
+	Destination *Subject `json:"destination,omitempty"`
 	// Metadata associated with the wallet.
 	Metadata map[string]interface{} `json:"metadata,omitempty"`
 	// Set to true to create a pending hold. If false, the wallet will be debited immediately.

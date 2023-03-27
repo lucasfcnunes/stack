@@ -6698,6 +6698,7 @@
         }
       },
       "LedgerAccountSubject": {
+        "type": "object",
         "required": [
           "type",
           "identifier"
@@ -6712,6 +6713,7 @@
         }
       },
       "WalletSubject": {
+        "type": "object",
         "required": [
           "type",
           "identifier"
@@ -7376,7 +7378,7 @@
         }
       },
       "Stage": {
-        "oneOf": [
+        "anyOf": [
           {
             "$ref": "#/components/schemas/StageSend"
           },

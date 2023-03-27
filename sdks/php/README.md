@@ -16,8 +16,26 @@
 
 ### Composer
 
+To install the SDK first add the below to your `composer.json` file:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "github",
+            "url": "<UNSET>.git"
+        }
+    ],
+    "require": {
+        "formance/stack": "*"
+    }
+}
+```
+
+Then run the following command:
+
 ```bash
-composer require "formance/stack"
+composer update
 ```
 <!-- End SDK Installation -->
 

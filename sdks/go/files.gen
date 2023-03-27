@@ -198,6 +198,9 @@ pkg/models/shared/paymentadjustment.go
 pkg/models/shared/activitygetaccountoutput.go
 pkg/models/shared/activitydebitwalletoutput.go
 pkg/models/shared/hold.go
+pkg/models/shared/subject.go
+pkg/models/shared/ledgeraccountsubject.go
+pkg/models/shared/walletsubject.go
 pkg/models/shared/activitycreatetransactionoutput.go
 pkg/models/shared/workflowinstancehistorystageinput.go
 pkg/models/shared/activityvoidhold.go
@@ -226,6 +229,7 @@ pkg/models/shared/taskdummypay.go
 pkg/models/shared/taskmodulr.go
 pkg/models/shared/taskbankingcircle.go
 pkg/models/shared/paymentresponse.go
+pkg/models/shared/connectorconfig.go
 pkg/models/shared/stripeconfig.go
 pkg/models/shared/dummypayconfig.go
 pkg/models/shared/wiseconfig.go

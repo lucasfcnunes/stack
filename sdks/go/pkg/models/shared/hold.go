@@ -3,8 +3,8 @@
 package shared
 
 type Hold struct {
-	Description string      `json:"description"`
-	Destination interface{} `json:"destination,omitempty"`
+	Description string   `json:"description"`
+	Destination *Subject `json:"destination,omitempty"`
 	// The unique ID of the hold.
 	ID string `json:"id"`
 	// Metadata associated with the hold.

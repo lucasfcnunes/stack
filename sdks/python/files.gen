@@ -194,6 +194,8 @@ src/sdk/models/shared/paymentadjustment.py
 src/sdk/models/shared/activitygetaccountoutput.py
 src/sdk/models/shared/activitydebitwalletoutput.py
 src/sdk/models/shared/hold.py
+src/sdk/models/shared/ledgeraccountsubject.py
+src/sdk/models/shared/walletsubject.py
 src/sdk/models/shared/activitycreatetransactionoutput.py
 src/sdk/models/shared/workflowinstancehistorystageinput.py
 src/sdk/models/shared/activityvoidhold.py

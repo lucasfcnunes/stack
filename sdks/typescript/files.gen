@@ -6,6 +6,7 @@ src/sdk/search.ts
 src/sdk/wallets.ts
 src/sdk/webhooks.ts
 src/sdk/sdk.ts
+.eslintrc.yml
 jest.config.js
 package-lock.json
 package.json
@@ -202,6 +203,8 @@ src/sdk/models/shared/paymentadjustment.ts
 src/sdk/models/shared/activitygetaccountoutput.ts
 src/sdk/models/shared/activitydebitwalletoutput.ts
 src/sdk/models/shared/hold.ts
+src/sdk/models/shared/ledgeraccountsubject.ts
+src/sdk/models/shared/walletsubject.ts
 src/sdk/models/shared/activitycreatetransactionoutput.ts
 src/sdk/models/shared/workflowinstancehistorystageinput.ts
 src/sdk/models/shared/activityvoidhold.ts

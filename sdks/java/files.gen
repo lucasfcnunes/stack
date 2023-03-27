@@ -300,6 +300,8 @@ lib/src/main/java/com/formance/formance_sdk/models/shared/PaymentAdjustment.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/ActivityGetAccountOutput.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/ActivityDebitWalletOutput.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/Hold.java
+lib/src/main/java/com/formance/formance_sdk/models/shared/LedgerAccountSubject.java
+lib/src/main/java/com/formance/formance_sdk/models/shared/WalletSubject.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/ActivityCreateTransactionOutput.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/WorkflowInstanceHistoryStageInput.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/ActivityVoidHold.java

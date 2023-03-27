@@ -289,6 +289,8 @@ src/Models/Shared/PaymentAdjustment.php
 src/Models/Shared/ActivityGetAccountOutput.php
 src/Models/Shared/ActivityDebitWalletOutput.php
 src/Models/Shared/Hold.php
+src/Models/Shared/LedgerAccountSubject.php
+src/Models/Shared/WalletSubject.php
 src/Models/Shared/ActivityCreateTransactionOutput.php
 src/Models/Shared/WorkflowInstanceHistoryStageInput.php
 src/Models/Shared/ActivityVoidHold.php

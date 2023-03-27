@@ -9,5 +9,5 @@ type CreditWalletRequest struct {
 	// Metadata associated with the wallet.
 	Metadata  map[string]interface{} `json:"metadata,omitempty"`
 	Reference *string                `json:"reference,omitempty"`
-	Sources   []interface{}          `json:"sources"`
+	Sources   []Subject              `json:"sources"`
 }

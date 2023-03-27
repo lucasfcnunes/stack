@@ -17,13 +17,13 @@
 ### NPM
 
 ```bash
-npm add @formance/formance-sdk
+npm add <UNSET>
 ```
 
 ### Yarn
 
 ```bash
-yarn add @formance/formance-sdk
+yarn add <UNSET>
 ```
 <!-- End SDK Installation -->
 

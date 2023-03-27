@@ -15,7 +15,7 @@
 ## SDK Installation
 
 ```bash
-pip install stack-sdk
+pip install git+<UNSET>.git
 ```
 <!-- End SDK Installation -->
 

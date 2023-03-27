@@ -95,7 +95,7 @@ func New(opts ...SDKOption) *Formance {
 	sdk := &Formance{
 		_language:   "go",
 		_sdkVersion: "",
-		_genVersion: "2.13.1",
+		_genVersion: "2.16.1",
 	}
 	for _, opt := range opts {
 		opt(sdk)

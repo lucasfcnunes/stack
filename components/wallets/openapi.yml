@@ -785,6 +785,7 @@ components:
           example: true
           description: Define a final confirmation. Remaining funds will be returned to the wallet.
     LedgerAccountSubject:
+      type: object
       required:
       - type
       - identifier
@@ -794,6 +795,7 @@ components:
         identifier:
           type: string
     WalletSubject:
+      type: object
       required:
       - type
       - identifier
