@@ -62,7 +62,7 @@ func NewCreateCommand() *cobra.Command {
 			}
 
 			pterm.Success.WithWriter(cmd.OutOrStdout()).Printfln(
-				"Config created successfully with ID: %s", &res.ConfigResponse.Data)
+				"Config created successfully with ID: %s", *res.ConfigResponse.Data.ID)
 			// TODO: Need to print only ID
 			return nil
 		}),

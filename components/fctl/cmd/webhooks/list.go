@@ -5,8 +5,8 @@ import (
 	"time"
 
 	fctl "github.com/formancehq/fctl/pkg"
-	"github.com/formancehq/formance-sdk-go"
 	"github.com/formancehq/formance-sdk-go/pkg/models/operations"
+	"github.com/formancehq/formance-sdk-go/pkg/models/shared"
 	"github.com/pkg/errors"
 	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
@@ -50,9 +50,9 @@ func NewListCommand() *cobra.Command {
 				WithData(
 					fctl.Prepend(
 						fctl.Map(res.ConfigsResponse.Cursor.Data,
-							func(src formance.WebhooksConfig) []string {
+							func(src shared.WebhooksConfig) []string {
 								return []string{
-									*src.Id,
+									*src.ID,
 									src.CreatedAt.Format(time.RFC3339),
 									fctl.StringPointerToString(src.Secret),
 									*src.Endpoint,

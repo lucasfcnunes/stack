@@ -57,7 +57,7 @@ func NewChangeSecretCommand() *cobra.Command {
 			}
 
 			pterm.Success.WithWriter(cmd.OutOrStdout()).Printfln(
-				"Config updated successfully with new secret: %s", *res.ConfigResponse.Data)
+				"Config updated successfully with new secret: %s", *res.ConfigResponse.Data.Secret)
 			// TODO: Need to return only secret
 			return nil
 		}),

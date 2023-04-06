@@ -3,8 +3,8 @@ package install
 import (
 	"github.com/formancehq/fctl/cmd/payments/connectors/internal"
 	fctl "github.com/formancehq/fctl/pkg"
-	"github.com/formancehq/formance-sdk-go"
 	"github.com/formancehq/formance-sdk-go/pkg/models/operations"
+	"github.com/formancehq/formance-sdk-go/pkg/models/shared"
 	"github.com/pkg/errors"
 	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
@@ -50,8 +50,8 @@ func NewBankingCircleCommand() *cobra.Command {
 
 			request := operations.InstallConnectorRequest{
 				Connector: internal.BankingCircleConnector,
-				RequestBody: &formance.ConnectorConfig{
-					BankingCircleConfig: &formance.BankingCircleConfig{
+				ConnectorConfig: shared.ConnectorConfig{
+					BankingCircleConfig: &shared.BankingCircleConfig{
 						Username:              args[0],
 						Password:              args[1],
 						Endpoint:              fctl.GetString(cmd, endpointFlag),

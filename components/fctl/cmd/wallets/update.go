@@ -2,7 +2,7 @@ package wallets
 
 import (
 	fctl "github.com/formancehq/fctl/pkg"
-	"github.com/formancehq/formance-sdk-go"
+	"github.com/formancehq/formance-sdk-go/pkg/models/operations"
 	"github.com/pkg/errors"
 	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
@@ -48,9 +48,12 @@ func NewUpdateCommand() *cobra.Command {
 				return err
 			}
 
-			_, err = client.Wallets.UpdateWallet(cmd.Context(), args[0]).UpdateWalletRequest(formance.UpdateWalletRequest{
-				Metadata: metadata,
-			}).Execute()
+			_, err = client.Wallets.UpdateWallet(cmd.Context(), operations.UpdateWalletRequest{
+				RequestBody: &operations.UpdateWalletRequestBody{
+					Metadata: metadata,
+				},
+				ID: args[0],
+			})
 			if err != nil {
 				return errors.Wrap(err, "Updating wallets")
 			}

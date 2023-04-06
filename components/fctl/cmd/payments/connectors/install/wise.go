@@ -3,7 +3,8 @@ package install
 import (
 	"github.com/formancehq/fctl/cmd/payments/connectors/internal"
 	fctl "github.com/formancehq/fctl/pkg"
-	"github.com/formancehq/formance-sdk-go"
+	"github.com/formancehq/formance-sdk-go/pkg/models/operations"
+	"github.com/formancehq/formance-sdk-go/pkg/models/shared"
 	"github.com/pkg/errors"
 	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
@@ -38,13 +39,14 @@ func NewWiseCommand() *cobra.Command {
 				return err
 			}
 
-			_, err = paymentsClient.Payments.InstallConnector(cmd.Context(), internal.WiseConnector).
-				ConnectorConfig(formance.ConnectorConfig{
-					WiseConfig: &formance.WiseConfig{
-						ApiKey: args[1],
+			_, err = paymentsClient.Payments.InstallConnector(cmd.Context(), operations.InstallConnectorRequest{
+				ConnectorConfig: shared.ConnectorConfig{
+					WiseConfig: &shared.WiseConfig{
+						APIKey: args[1],
 					},
-				}).
-				Execute()
+				},
+				Connector: internal.WiseConnector,
+			})
 
 			pterm.Success.WithWriter(cmd.OutOrStdout()).Printfln("Connector installed!")
 

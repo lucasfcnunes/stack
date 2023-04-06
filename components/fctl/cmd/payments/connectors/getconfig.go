@@ -3,7 +3,6 @@ package connectors
 import (
 	"github.com/formancehq/fctl/cmd/payments/connectors/internal"
 	fctl "github.com/formancehq/fctl/pkg"
-	"github.com/formancehq/formance-sdk-go"
 	"github.com/formancehq/formance-sdk-go/pkg/models/operations"
 	"github.com/formancehq/formance-sdk-go/pkg/models/shared"
 	"github.com/pterm/pterm"
@@ -68,7 +67,7 @@ func displayStripeConfig(cmd *cobra.Command, connectorConfig shared.ConnectorCon
 	config := connectorConfig.StripeConfig
 
 	tableData := pterm.TableData{}
-	tableData = append(tableData, []string{pterm.LightCyan("API key:"), config.ApiKey})
+	tableData = append(tableData, []string{pterm.LightCyan("API key:"), config.APIKey})
 
 	if err := pterm.DefaultTable.
 		WithWriter(cmd.OutOrStdout()).
@@ -79,12 +78,12 @@ func displayStripeConfig(cmd *cobra.Command, connectorConfig shared.ConnectorCon
 	return nil
 }
 
-func displayModulrConfig(cmd *cobra.Command, connectorConfig formance.ConnectorConfig) error {
+func displayModulrConfig(cmd *cobra.Command, connectorConfig shared.ConnectorConfig) error {
 	config := connectorConfig.ModulrConfig
 
 	tableData := pterm.TableData{}
-	tableData = append(tableData, []string{pterm.LightCyan("API key:"), config.ApiKey})
-	tableData = append(tableData, []string{pterm.LightCyan("API secret:"), config.ApiSecret})
+	tableData = append(tableData, []string{pterm.LightCyan("API key:"), config.APIKey})
+	tableData = append(tableData, []string{pterm.LightCyan("API secret:"), config.APISecret})
 	tableData = append(tableData, []string{pterm.LightCyan("Endpoint:"), func() string {
 		if config.Endpoint == nil {
 			return ""
@@ -101,11 +100,11 @@ func displayModulrConfig(cmd *cobra.Command, connectorConfig formance.ConnectorC
 	return nil
 }
 
-func displayWiseConfig(cmd *cobra.Command, connectorConfig formance.ConnectorConfig) error {
+func displayWiseConfig(cmd *cobra.Command, connectorConfig shared.ConnectorConfig) error {
 	config := connectorConfig.WiseConfig
 
 	tableData := pterm.TableData{}
-	tableData = append(tableData, []string{pterm.LightCyan("API key:"), config.ApiKey})
+	tableData = append(tableData, []string{pterm.LightCyan("API key:"), config.APIKey})
 
 	if err := pterm.DefaultTable.
 		WithWriter(cmd.OutOrStdout()).
@@ -116,7 +115,7 @@ func displayWiseConfig(cmd *cobra.Command, connectorConfig formance.ConnectorCon
 	return nil
 }
 
-func displayBankingCircleConfig(cmd *cobra.Command, connectorConfig formance.ConnectorConfig) error {
+func displayBankingCircleConfig(cmd *cobra.Command, connectorConfig shared.ConnectorConfig) error {
 	config := connectorConfig.BankingCircleConfig
 
 	tableData := pterm.TableData{}
@@ -134,11 +133,11 @@ func displayBankingCircleConfig(cmd *cobra.Command, connectorConfig formance.Con
 	return nil
 }
 
-func displayCurrencyCloudConfig(cmd *cobra.Command, connectorConfig formance.ConnectorConfig) error {
+func displayCurrencyCloudConfig(cmd *cobra.Command, connectorConfig shared.ConnectorConfig) error {
 	config := connectorConfig.CurrencyCloudConfig
 
 	tableData := pterm.TableData{}
-	tableData = append(tableData, []string{pterm.LightCyan("API key:"), config.ApiKey})
+	tableData = append(tableData, []string{pterm.LightCyan("API key:"), config.APIKey})
 	tableData = append(tableData, []string{pterm.LightCyan("Login ID:"), config.LoginID})
 	tableData = append(tableData, []string{pterm.LightCyan("Endpoint:"), func() string {
 		if config.Endpoint == nil {

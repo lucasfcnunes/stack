@@ -3,7 +3,8 @@ package install
 import (
 	"github.com/formancehq/fctl/cmd/payments/connectors/internal"
 	fctl "github.com/formancehq/fctl/pkg"
-	"github.com/formancehq/formance-sdk-go"
+	"github.com/formancehq/formance-sdk-go/pkg/models/operations"
+	"github.com/formancehq/formance-sdk-go/pkg/models/shared"
 	"github.com/pkg/errors"
 	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
@@ -43,13 +44,14 @@ func NewStripeCommand() *cobra.Command {
 				return err
 			}
 
-			_, err = paymentsClient.Payments.InstallConnector(cmd.Context(), internal.StripeConnector).
-				ConnectorConfig(formance.ConnectorConfig{
-					StripeConfig: &formance.StripeConfig{
-						ApiKey: args[0],
+			_, err = paymentsClient.Payments.InstallConnector(cmd.Context(), operations.InstallConnectorRequest{
+				ConnectorConfig: shared.ConnectorConfig{
+					StripeConfig: &shared.StripeConfig{
+						APIKey: args[0],
 					},
-				}).
-				Execute()
+				},
+				Connector: internal.StripeConnector,
+			})
 
 			pterm.Success.WithWriter(cmd.OutOrStdout()).Printfln("Connector installed!")
 

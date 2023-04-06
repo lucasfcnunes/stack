@@ -3,7 +3,8 @@ package install
 import (
 	"github.com/formancehq/fctl/cmd/payments/connectors/internal"
 	fctl "github.com/formancehq/fctl/pkg"
-	"github.com/formancehq/formance-sdk-go"
+	"github.com/formancehq/formance-sdk-go/pkg/models/operations"
+	"github.com/formancehq/formance-sdk-go/pkg/models/shared"
 	"github.com/pkg/errors"
 	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
@@ -48,15 +49,16 @@ func NewCurrencyCloudCommand() *cobra.Command {
 				endpoint = &e
 			}
 
-			_, err = paymentsClient.Payments.InstallConnector(cmd.Context(), internal.CurrencyCloudConnector).
-				ConnectorConfig(formance.ConnectorConfig{
-					CurrencyCloudConfig: &formance.CurrencyCloudConfig{
-						ApiKey:   args[1],
+			_, err = paymentsClient.Payments.InstallConnector(cmd.Context(), operations.InstallConnectorRequest{
+				ConnectorConfig: shared.ConnectorConfig{
+					CurrencyCloudConfig: &shared.CurrencyCloudConfig{
+						APIKey:   args[1],
 						LoginID:  args[0],
 						Endpoint: endpoint,
 					},
-				}).
-				Execute()
+				},
+				Connector: internal.CurrencyCloudConnector,
+			})
 
 			pterm.Success.WithWriter(cmd.OutOrStdout()).Printfln("Connector installed!")
 

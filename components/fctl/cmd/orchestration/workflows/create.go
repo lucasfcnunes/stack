@@ -2,7 +2,7 @@ package workflows
 
 import (
 	fctl "github.com/formancehq/fctl/pkg"
-	"github.com/formancehq/formance-sdk-go"
+	"github.com/formancehq/formance-sdk-go/pkg/models/shared"
 	"github.com/pkg/errors"
 	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
@@ -40,20 +40,22 @@ func NewCreateCommand() *cobra.Command {
 				return err
 			}
 
-			config := formance.WorkflowConfig{}
+			config := shared.WorkflowConfig{}
 			if err := yaml.Unmarshal([]byte(script), &config); err != nil {
 				return err
 			}
 
-			res, _, err := client.OrchestrationApi.
-				CreateWorkflow(cmd.Context()).
-				Body(config).
-				Execute()
+			//nolint:gosimple
+			res, err := client.Orchestration.
+				CreateWorkflow(cmd.Context(), shared.CreateWorkflowRequest{
+					Name:   config.Name,
+					Stages: config.Stages,
+				})
 			if err != nil {
 				return errors.Wrap(err, "listing workflows")
 			}
 
-			pterm.Success.WithWriter(cmd.OutOrStdout()).Printfln("Workflow created with ID: %s", res.Data.Id)
+			pterm.Success.WithWriter(cmd.OutOrStdout()).Printfln("Workflow created with ID: %s", res.CreateWorkflowResponse.Data.ID)
 
 			return nil
 		}),

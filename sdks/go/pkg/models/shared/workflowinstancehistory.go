@@ -7,10 +7,10 @@ import (
 )
 
 type WorkflowInstanceHistory struct {
-	Error        *string     `json:"error,omitempty"`
-	Input        interface{} `json:"input"`
-	Name         string      `json:"name"`
-	StartedAt    time.Time   `json:"startedAt"`
-	Terminated   bool        `json:"terminated"`
-	TerminatedAt *time.Time  `json:"terminatedAt,omitempty"`
+	Error        *string    `json:"error,omitempty"`
+	Input        Stage      `json:"input"`
+	Name         string     `json:"name"`
+	StartedAt    time.Time  `json:"startedAt"`
+	Terminated   bool       `json:"terminated"`
+	TerminatedAt *time.Time `json:"terminatedAt,omitempty"`
 }

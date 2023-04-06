@@ -2,7 +2,7 @@ package instances
 
 import (
 	fctl "github.com/formancehq/fctl/pkg"
-	"github.com/formancehq/formance-sdk-go"
+	"github.com/formancehq/formance-sdk-go/pkg/models/operations"
 	"github.com/pkg/errors"
 	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
@@ -33,9 +33,12 @@ func NewSendEventCommand() *cobra.Command {
 				return errors.Wrap(err, "creating stack client")
 			}
 
-			_, err = client.OrchestrationApi.SendEvent(cmd.Context(), args[0]).SendEventRequest(formance.SendEventRequest{
-				Name: args[1],
-			}).Execute()
+			_, err = client.Orchestration.SendEvent(cmd.Context(), operations.SendEventRequest{
+				RequestBody: &operations.SendEventRequestBody{
+					Name: args[1],
+				},
+				InstanceID: args[0],
+			})
 			if err != nil {
 				return err
 			}

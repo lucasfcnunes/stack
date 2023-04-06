@@ -599,7 +599,7 @@ components:
         event:
           type: string
     Stage:
-      anyOf:
+      oneOf:
       - $ref: '#/components/schemas/StageSend'
       - $ref: '#/components/schemas/StageDelay'
       - $ref: '#/components/schemas/StageWaitEvent'

@@ -3,7 +3,8 @@ package fctl
 import (
 	"github.com/formancehq/fctl/membershipclient"
 	"github.com/pkg/errors"
-feature
+	"github.com/segmentio/analytics-go/v3"
+	"github.com/segmentio/ksuid"
 	"github.com/spf13/cobra"
 )
 

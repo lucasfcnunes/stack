@@ -5,6 +5,7 @@ import (
 
 	"github.com/formancehq/fctl/cmd/orchestration/internal"
 	fctl "github.com/formancehq/fctl/pkg"
+	"github.com/formancehq/formance-sdk-go/pkg/models/operations"
 	"github.com/pkg/errors"
 	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
@@ -52,23 +53,26 @@ func NewRunCommand() *cobra.Command {
 				variables[parts[0]] = parts[1]
 			}
 
-			res, _, err := client.OrchestrationApi.
-				RunWorkflow(cmd.Context(), args[0]).
-				RequestBody(variables).
-				Wait(wait).
-				Execute()
+			res, err := client.Orchestration.
+				RunWorkflow(cmd.Context(), operations.RunWorkflowRequest{
+					RequestBody: variables,
+					Wait:        &wait,
+					WorkflowID:  args[0],
+				})
 			if err != nil {
 				return errors.Wrap(err, "running workflow")
 			}
 
-			pterm.Success.WithWriter(cmd.OutOrStdout()).Printfln("Workflow instance created with ID: %s", res.Data.Id)
+			pterm.Success.WithWriter(cmd.OutOrStdout()).Printfln("Workflow instance created with ID: %s", res.RunWorkflowResponse.Data.ID)
 			if wait {
-				w, _, err := client.OrchestrationApi.GetWorkflow(cmd.Context(), args[0]).Execute()
+				w, err := client.Orchestration.GetWorkflow(cmd.Context(), operations.GetWorkflowRequest{
+					FlowID: args[0],
+				})
 				if err != nil {
 					panic(err)
 				}
 
-				return internal.PrintWorkflowInstance(cmd.OutOrStdout(), w.Data, res.Data)
+				return internal.PrintWorkflowInstance(cmd.OutOrStdout(), w.GetWorkflowResponse.Data, res.RunWorkflowResponse.Data)
 			}
 
 			return nil

@@ -173,6 +173,7 @@ pkg/models/shared/workflowinstance.go
 pkg/models/shared/stagestatus.go
 pkg/models/shared/getworkflowinstancehistoryresponse.go
 pkg/models/shared/workflowinstancehistory.go
+pkg/models/shared/stage.go
 pkg/models/shared/stagesend.go
 pkg/models/shared/stagesendsource.go
 pkg/models/shared/stagesendsourcewallet.go

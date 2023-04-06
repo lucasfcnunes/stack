@@ -3,7 +3,8 @@ package connectors
 import (
 	"github.com/formancehq/fctl/cmd/payments/connectors/internal"
 	fctl "github.com/formancehq/fctl/pkg"
-	"github.com/formancehq/formance-sdk-go"
+	"github.com/formancehq/formance-sdk-go/pkg/models/operations"
+	"github.com/formancehq/formance-sdk-go/pkg/models/shared"
 	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
 )
@@ -41,7 +42,9 @@ func NewUninstallCommand() *cobra.Command {
 				return err
 			}
 
-			_, err = client.Payments.UninstallConnector(cmd.Context(), formance.Connector(args[0])).Execute()
+			_, err = client.Payments.UninstallConnector(cmd.Context(), operations.UninstallConnectorRequest{
+				Connector: shared.ConnectorEnum(args[0]),
+			})
 			if err != nil {
 				return fctl.WrapError(err, "uninstalling connector")
 			}

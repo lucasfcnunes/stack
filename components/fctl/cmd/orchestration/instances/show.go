@@ -5,6 +5,7 @@ import (
 
 	"github.com/formancehq/fctl/cmd/orchestration/internal"
 	fctl "github.com/formancehq/fctl/pkg"
+	"github.com/formancehq/formance-sdk-go/pkg/models/operations"
 	"github.com/pkg/errors"
 	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
@@ -35,21 +36,23 @@ func NewShowCommand() *cobra.Command {
 				return errors.Wrap(err, "creating stack client")
 			}
 
-			res, _, err := client.OrchestrationApi.GetInstance(cmd.Context(), args[0]).Execute()
+			res, err := client.Orchestration.GetInstance(cmd.Context(), operations.GetInstanceRequest{
+				InstanceID: args[0],
+			})
 			if err != nil {
 				return errors.Wrap(err, "reading instance")
 			}
 
 			fctl.Section.WithWriter(cmd.OutOrStdout()).Println("Information")
 			tableData := pterm.TableData{}
-			tableData = append(tableData, []string{pterm.LightCyan("ID"), res.Data.Id})
-			tableData = append(tableData, []string{pterm.LightCyan("Created at"), res.Data.CreatedAt.Format(time.RFC3339)})
-			tableData = append(tableData, []string{pterm.LightCyan("Updated at"), res.Data.UpdatedAt.Format(time.RFC3339)})
-			if res.Data.Terminated {
-				tableData = append(tableData, []string{pterm.LightCyan("Terminated at"), res.Data.TerminatedAt.Format(time.RFC3339)})
+			tableData = append(tableData, []string{pterm.LightCyan("ID"), res.GetWorkflowInstanceResponse.Data.ID})
+			tableData = append(tableData, []string{pterm.LightCyan("Created at"), res.GetWorkflowInstanceResponse.Data.CreatedAt.Format(time.RFC3339)})
+			tableData = append(tableData, []string{pterm.LightCyan("Updated at"), res.GetWorkflowInstanceResponse.Data.UpdatedAt.Format(time.RFC3339)})
+			if res.GetWorkflowInstanceResponse.Data.Terminated {
+				tableData = append(tableData, []string{pterm.LightCyan("Terminated at"), res.GetWorkflowInstanceResponse.Data.TerminatedAt.Format(time.RFC3339)})
 			}
-			if res.Data.Error != nil && *res.Data.Error != "" {
-				tableData = append(tableData, []string{pterm.LightCyan("Error"), *res.Data.Error})
+			if res.GetWorkflowInstanceResponse.Data.Error != nil && *res.GetWorkflowInstanceResponse.Data.Error != "" {
+				tableData = append(tableData, []string{pterm.LightCyan("Error"), *res.GetWorkflowInstanceResponse.Data.Error})
 			}
 
 			if err := pterm.DefaultTable.
@@ -59,12 +62,14 @@ func NewShowCommand() *cobra.Command {
 				return err
 			}
 
-			w, _, err := client.OrchestrationApi.GetWorkflow(cmd.Context(), res.Data.WorkflowID).Execute()
+			w, err := client.Orchestration.GetWorkflow(cmd.Context(), operations.GetWorkflowRequest{
+				FlowID: res.GetWorkflowInstanceResponse.Data.WorkflowID,
+			})
 			if err != nil {
 				return errors.Wrap(err, "reading workflow")
 			}
 
-			if err := internal.PrintWorkflowInstance(cmd.OutOrStdout(), w.Data, res.Data); err != nil {
+			if err := internal.PrintWorkflowInstance(cmd.OutOrStdout(), w.GetWorkflowResponse.Data, res.GetWorkflowInstanceResponse.Data); err != nil {
 				return err
 			}
 

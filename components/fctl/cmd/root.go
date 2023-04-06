@@ -10,9 +10,13 @@ import (
 	"github.com/formancehq/fctl/cmd/auth"
 	"github.com/formancehq/fctl/cmd/cloud"
 	"github.com/formancehq/fctl/cmd/ledger"
+	"github.com/formancehq/fctl/cmd/orchestration"
+	"github.com/formancehq/fctl/cmd/payments"
 	"github.com/formancehq/fctl/cmd/profiles"
 	"github.com/formancehq/fctl/cmd/search"
 	"github.com/formancehq/fctl/cmd/stack"
+	"github.com/formancehq/fctl/cmd/wallets"
+	"github.com/formancehq/fctl/cmd/webhooks"
 	fctl "github.com/formancehq/fctl/pkg"
 	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
@@ -43,10 +47,10 @@ func NewRootCommand() *cobra.Command {
 			auth.NewCommand(),
 			ledger.NewCommand(),
 			search.NewCommand(),
-			//payments.NewCommand(),
-			//orchestration.NewCommand(),
-			//webhooks.NewCommand(),
-			//wallets.NewCommand(),
+			payments.NewCommand(),
+			orchestration.NewCommand(),
+			webhooks.NewCommand(),
+			wallets.NewCommand(),
 		),
 		fctl.WithPersistentStringPFlag(fctl.ProfileFlag, "p", "", "config profile to use"),
 		fctl.WithPersistentStringPFlag(fctl.FileFlag, "c", fmt.Sprintf("%s/.formance/fctl.config", homedir), "Debug mode"),
