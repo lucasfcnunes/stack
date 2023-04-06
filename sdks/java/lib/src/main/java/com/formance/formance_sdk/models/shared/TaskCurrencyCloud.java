@@ -14,7 +14,8 @@ import com.formance.formance_sdk.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
 public class TaskCurrencyCloud {
-    @JsonProperty("connectorId")public String connectorId;
+    @JsonProperty("connectorId")
+    public String connectorId;
     public TaskCurrencyCloud withConnectorId(String connectorId) {
         this.connectorId = connectorId;
         return this;
@@ -22,38 +23,44 @@ public class TaskCurrencyCloud {
     
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("createdAt")public OffsetDateTime createdAt;
+    @JsonProperty("createdAt")
+    public OffsetDateTime createdAt;
     public TaskCurrencyCloud withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
     
-    @JsonProperty("descriptor")public TaskCurrencyCloudDescriptor descriptor;
+    @JsonProperty("descriptor")
+    public TaskCurrencyCloudDescriptor descriptor;
     public TaskCurrencyCloud withDescriptor(TaskCurrencyCloudDescriptor descriptor) {
         this.descriptor = descriptor;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("error")public String error;
+    @JsonProperty("error")
+    public String error;
     public TaskCurrencyCloud withError(String error) {
         this.error = error;
         return this;
     }
     
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public TaskCurrencyCloud withId(String id) {
         this.id = id;
         return this;
     }
     
-    @JsonProperty("state")public java.util.Map<String, Object> state;
+    @JsonProperty("state")
+    public java.util.Map<String, Object> state;
     public TaskCurrencyCloud withState(java.util.Map<String, Object> state) {
         this.state = state;
         return this;
     }
     
-    @JsonProperty("status")public PaymentStatusEnum status;
+    @JsonProperty("status")
+    public PaymentStatusEnum status;
     public TaskCurrencyCloud withStatus(PaymentStatusEnum status) {
         this.status = status;
         return this;
@@ -61,7 +68,8 @@ public class TaskCurrencyCloud {
     
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("updatedAt")public OffsetDateTime updatedAt;
+    @JsonProperty("updatedAt")
+    public OffsetDateTime updatedAt;
     public TaskCurrencyCloud withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;

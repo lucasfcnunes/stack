@@ -11,8 +11,8 @@ from marshmallow import fields
 from sdk import utils
 
 class PaymentsAccountTypeEnum(str, Enum):
-    TARGET = "TARGET"
-    SOURCE = "SOURCE"
+    TARGET = 'TARGET'
+    SOURCE = 'SOURCE'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

@@ -4,5 +4,5 @@ package shared
 
 // AttemptResponse - OK
 type AttemptResponse struct {
-	Data interface{} `json:"data"`
+	Data Attempt `json:"data"`
 }

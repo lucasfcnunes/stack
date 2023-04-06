@@ -10,21 +10,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StageSend {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("amount")public Monetary amount;
+    @JsonProperty("amount")
+    public Monetary amount;
     public StageSend withAmount(Monetary amount) {
         this.amount = amount;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("destination")public StageSendDestination destination;
+    @JsonProperty("destination")
+    public StageSendDestination destination;
     public StageSend withDestination(StageSendDestination destination) {
         this.destination = destination;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("source")public StageSendSource source;
+    @JsonProperty("source")
+    public StageSendSource source;
     public StageSend withSource(StageSendSource source) {
         this.source = source;
         return this;

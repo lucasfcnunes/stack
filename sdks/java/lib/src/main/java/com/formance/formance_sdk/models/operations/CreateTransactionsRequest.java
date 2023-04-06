@@ -7,7 +7,8 @@ package com.formance.formance_sdk.models.operations;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class CreateTransactionsRequest {
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.formance.formance_sdk.models.shared.Transactions transactions;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.formance.formance_sdk.models.shared.Transactions transactions;
     public CreateTransactionsRequest withTransactions(com.formance.formance_sdk.models.shared.Transactions transactions) {
         this.transactions = transactions;
         return this;
@@ -16,7 +17,8 @@ public class CreateTransactionsRequest {
     /**
      * Name of the ledger.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")public String ledger;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")
+    public String ledger;
     public CreateTransactionsRequest withLedger(String ledger) {
         this.ledger = ledger;
         return this;

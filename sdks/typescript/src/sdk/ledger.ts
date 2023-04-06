@@ -724,7 +724,10 @@ export class Ledger {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.ledgerInfoResponse = httpRes?.data;
+            res.ledgerInfoResponse = utils.deserializeJSONResponse(
+              httpRes?.data,
+              shared.LedgerInfoResponse
+            );
           }
           break;
         default:

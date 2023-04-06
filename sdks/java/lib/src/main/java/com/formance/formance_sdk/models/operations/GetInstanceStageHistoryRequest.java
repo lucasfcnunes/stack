@@ -10,7 +10,8 @@ public class GetInstanceStageHistoryRequest {
     /**
      * The instance id
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instanceID")public String instanceID;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instanceID")
+    public String instanceID;
     public GetInstanceStageHistoryRequest withInstanceID(String instanceID) {
         this.instanceID = instanceID;
         return this;
@@ -19,7 +20,8 @@ public class GetInstanceStageHistoryRequest {
     /**
      * The stage number
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")public Long number;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public Long number;
     public GetInstanceStageHistoryRequest withNumber(Long number) {
         this.number = number;
         return this;

@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * ConfigInfoResponse - OK
  */
 public class ConfigInfoResponse {
-    @JsonProperty("data")public ConfigInfo data;
+    @JsonProperty("data")
+    public ConfigInfo data;
     public ConfigInfoResponse withData(ConfigInfo data) {
         this.data = data;
         return this;

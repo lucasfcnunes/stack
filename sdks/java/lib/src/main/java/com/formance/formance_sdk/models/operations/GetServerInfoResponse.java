@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class GetServerInfoResponse {
+    
     public String contentType;
     public GetServerInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,17 +17,20 @@ public class GetServerInfoResponse {
     /**
      * Server information
      */
+    
     public com.formance.formance_sdk.models.shared.ServerInfo serverInfo;
     public GetServerInfoResponse withServerInfo(com.formance.formance_sdk.models.shared.ServerInfo serverInfo) {
         this.serverInfo = serverInfo;
         return this;
     }
     
+    
     public Integer statusCode;
     public GetServerInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public GetServerInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

@@ -7,7 +7,7 @@ from enum import Enum
 from sdk import utils
 
 class WalletsErrorResponseErrorCodeEnum(str, Enum):
-    VALIDATION = "VALIDATION"
+    VALIDATION = 'VALIDATION'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

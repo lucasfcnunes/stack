@@ -10,7 +10,8 @@ public class ListInstancesRequest {
     /**
      * Filter running instances
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=running")public Boolean running;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=running")
+    public Boolean running;
     public ListInstancesRequest withRunning(Boolean running) {
         this.running = running;
         return this;
@@ -19,7 +20,8 @@ public class ListInstancesRequest {
     /**
      * A workflow id
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workflowID")public String workflowID;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workflowID")
+    public String workflowID;
     public ListInstancesRequest withWorkflowID(String workflowID) {
         this.workflowID = workflowID;
         return this;

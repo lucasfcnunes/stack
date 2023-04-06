@@ -7,13 +7,15 @@ package com.formance.formance_sdk.models.operations;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class CreditWalletRequest {
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.formance.formance_sdk.models.shared.CreditWalletRequest creditWalletRequest;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.formance.formance_sdk.models.shared.CreditWalletRequest creditWalletRequest;
     public CreditWalletRequest withCreditWalletRequest(com.formance.formance_sdk.models.shared.CreditWalletRequest creditWalletRequest) {
         this.creditWalletRequest = creditWalletRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")public String id;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
     public CreditWalletRequest withId(String id) {
         this.id = id;
         return this;

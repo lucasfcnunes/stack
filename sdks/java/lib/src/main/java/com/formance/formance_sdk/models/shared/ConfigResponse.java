@@ -10,8 +10,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * ConfigResponse - Config created successfully.
  */
 public class ConfigResponse {
-    @JsonProperty("data")public Object data;
-    public ConfigResponse withData(Object data) {
+    @JsonProperty("data")
+    public WebhooksConfig data;
+    public ConfigResponse withData(WebhooksConfig data) {
         this.data = data;
         return this;
     }

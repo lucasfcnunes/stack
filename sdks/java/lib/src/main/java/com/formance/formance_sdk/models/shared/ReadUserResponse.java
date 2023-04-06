@@ -13,7 +13,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class ReadUserResponse {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("data")public User data;
+    @JsonProperty("data")
+    public User data;
     public ReadUserResponse withData(User data) {
         this.data = data;
         return this;

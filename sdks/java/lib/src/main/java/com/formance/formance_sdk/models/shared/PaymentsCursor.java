@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * PaymentsCursor - OK
  */
 public class PaymentsCursor {
-    @JsonProperty("cursor")public PaymentsCursorCursor cursor;
+    @JsonProperty("cursor")
+    public PaymentsCursorCursor cursor;
     public PaymentsCursor withCursor(PaymentsCursorCursor cursor) {
         this.cursor = cursor;
         return this;

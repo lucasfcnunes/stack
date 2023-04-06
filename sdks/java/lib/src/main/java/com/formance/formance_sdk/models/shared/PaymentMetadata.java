@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PaymentMetadata {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("key")public String key;
+    @JsonProperty("key")
+    public String key;
     public PaymentMetadata withKey(String key) {
         this.key = key;
         return this;

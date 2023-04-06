@@ -11,7 +11,8 @@ public class ListLogsRequest {
     /**
      * Pagination cursor, will return the logs after a given ID. (in descending order).
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")public String after;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
+    public String after;
     public ListLogsRequest withAfter(String after) {
         this.after = after;
         return this;
@@ -24,7 +25,8 @@ public class ListLogsRequest {
      * No other parameters can be set when this parameter is set.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")public String cursor;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
     public ListLogsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -35,7 +37,8 @@ public class ListLogsRequest {
      * The format is RFC3339 and is exclusive (for example, "2023-01-02T15:04:01Z" excludes the first second of 4th minute).
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")public OffsetDateTime endTime;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")
+    public OffsetDateTime endTime;
     public ListLogsRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -47,7 +50,8 @@ public class ListLogsRequest {
      * Deprecated, please use `endTime` instead.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")public OffsetDateTime endTimeDeprecated;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public OffsetDateTime endTimeDeprecated;
     public ListLogsRequest withEndTimeDeprecated(OffsetDateTime endTimeDeprecated) {
         this.endTimeDeprecated = endTimeDeprecated;
         return this;
@@ -56,7 +60,8 @@ public class ListLogsRequest {
     /**
      * Name of the ledger.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")public String ledger;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")
+    public String ledger;
     public ListLogsRequest withLedger(String ledger) {
         this.ledger = ledger;
         return this;
@@ -66,7 +71,8 @@ public class ListLogsRequest {
      * The maximum number of results to return per page.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")public Long pageSize;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
     public ListLogsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -77,7 +83,8 @@ public class ListLogsRequest {
      * Deprecated, please use `pageSize` instead.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")public Long pageSizeDeprecated;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSizeDeprecated;
     public ListLogsRequest withPageSizeDeprecated(Long pageSizeDeprecated) {
         this.pageSizeDeprecated = pageSizeDeprecated;
         return this;
@@ -91,7 +98,8 @@ public class ListLogsRequest {
      * Deprecated, please use `cursor` instead.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagination_token")public String paginationToken;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagination_token")
+    public String paginationToken;
     public ListLogsRequest withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
@@ -102,7 +110,8 @@ public class ListLogsRequest {
      * The format is RFC3339 and is inclusive (for example, "2023-01-02T15:04:01Z" includes the first second of 4th minute).
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")public OffsetDateTime startTime;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")
+    public OffsetDateTime startTime;
     public ListLogsRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -114,7 +123,8 @@ public class ListLogsRequest {
      * Deprecated, please use `startTime` instead.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_time")public OffsetDateTime startTimeDeprecated;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_time")
+    public OffsetDateTime startTimeDeprecated;
     public ListLogsRequest withStartTimeDeprecated(OffsetDateTime startTimeDeprecated) {
         this.startTimeDeprecated = startTimeDeprecated;
         return this;

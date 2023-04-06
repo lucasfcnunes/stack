@@ -7,7 +7,8 @@ package com.formance.formance_sdk.models.operations;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class UpdateMappingRequest {
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.formance.formance_sdk.models.shared.Mapping mapping;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.formance.formance_sdk.models.shared.Mapping mapping;
     public UpdateMappingRequest withMapping(com.formance.formance_sdk.models.shared.Mapping mapping) {
         this.mapping = mapping;
         return this;
@@ -16,7 +17,8 @@ public class UpdateMappingRequest {
     /**
      * Name of the ledger.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")public String ledger;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")
+    public String ledger;
     public UpdateMappingRequest withLedger(String ledger) {
         this.ledger = ledger;
         return this;

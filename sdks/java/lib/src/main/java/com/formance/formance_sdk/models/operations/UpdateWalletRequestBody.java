@@ -13,7 +13,8 @@ public class UpdateWalletRequestBody {
      * Custom metadata to attach to this wallet.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("metadata")public java.util.Map<String, Object> metadata;
+    @JsonProperty("metadata")
+    public java.util.Map<String, Object> metadata;
     public UpdateWalletRequestBody withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;

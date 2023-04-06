@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class GetHoldResponse {
+    
     public String contentType;
     public GetHoldResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,17 +17,20 @@ public class GetHoldResponse {
     /**
      * Holds
      */
+    
     public com.formance.formance_sdk.models.shared.GetHoldResponse getHoldResponse;
     public GetHoldResponse withGetHoldResponse(com.formance.formance_sdk.models.shared.GetHoldResponse getHoldResponse) {
         this.getHoldResponse = getHoldResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public GetHoldResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public GetHoldResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
@@ -37,6 +41,7 @@ public class GetHoldResponse {
     /**
      * Error
      */
+    
     public com.formance.formance_sdk.models.shared.WalletsErrorResponse walletsErrorResponse;
     public GetHoldResponse withWalletsErrorResponse(com.formance.formance_sdk.models.shared.WalletsErrorResponse walletsErrorResponse) {
         this.walletsErrorResponse = walletsErrorResponse;

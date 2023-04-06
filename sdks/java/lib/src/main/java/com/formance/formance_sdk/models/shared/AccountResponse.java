@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * AccountResponse - OK
  */
 public class AccountResponse {
-    @JsonProperty("data")public AccountWithVolumesAndBalances data;
+    @JsonProperty("data")
+    public AccountWithVolumesAndBalances data;
     public AccountResponse withData(AccountWithVolumesAndBalances data) {
         this.data = data;
         return this;

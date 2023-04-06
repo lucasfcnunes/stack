@@ -7,17 +7,20 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class AddTransientScopeResponse {
+    
     public String contentType;
     public AddTransientScopeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
     
+    
     public Integer statusCode;
     public AddTransientScopeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public AddTransientScopeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

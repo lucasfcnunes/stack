@@ -9,7 +9,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CurrencyCloudConfig {
-    @JsonProperty("apiKey")public String apiKey;
+    @JsonProperty("apiKey")
+    public String apiKey;
     public CurrencyCloudConfig withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -19,7 +20,8 @@ public class CurrencyCloudConfig {
      * The endpoint to use for the API. Defaults to https://devapi.currencycloud.com
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("endpoint")public String endpoint;
+    @JsonProperty("endpoint")
+    public String endpoint;
     public CurrencyCloudConfig withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -28,7 +30,8 @@ public class CurrencyCloudConfig {
     /**
      * Username of the API Key holder
      */
-    @JsonProperty("loginID")public String loginID;
+    @JsonProperty("loginID")
+    public String loginID;
     public CurrencyCloudConfig withLoginID(String loginID) {
         this.loginID = loginID;
         return this;
@@ -38,7 +41,8 @@ public class CurrencyCloudConfig {
      * The frequency at which the connector will fetch transactions
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("pollingPeriod")public String pollingPeriod;
+    @JsonProperty("pollingPeriod")
+    public String pollingPeriod;
     public CurrencyCloudConfig withPollingPeriod(String pollingPeriod) {
         this.pollingPeriod = pollingPeriod;
         return this;

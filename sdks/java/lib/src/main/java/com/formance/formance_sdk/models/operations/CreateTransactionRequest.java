@@ -13,7 +13,8 @@ public class CreateTransactionRequest {
      *   - `script`: enabling more complex transactions with Numscript
      * 
      */
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.formance.formance_sdk.models.shared.PostTransaction postTransaction;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.formance.formance_sdk.models.shared.PostTransaction postTransaction;
     public CreateTransactionRequest withPostTransaction(com.formance.formance_sdk.models.shared.PostTransaction postTransaction) {
         this.postTransaction = postTransaction;
         return this;
@@ -22,7 +23,8 @@ public class CreateTransactionRequest {
     /**
      * Name of the ledger.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")public String ledger;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")
+    public String ledger;
     public CreateTransactionRequest withLedger(String ledger) {
         this.ledger = ledger;
         return this;
@@ -31,7 +33,8 @@ public class CreateTransactionRequest {
     /**
      * Set the preview mode. Preview mode doesn't add the logs to the database or publish a message to the message broker.
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=preview")public Boolean preview;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=preview")
+    public Boolean preview;
     public CreateTransactionRequest withPreview(Boolean preview) {
         this.preview = preview;
         return this;

@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class ReadScopeResponse {
+    
     public String contentType;
     public ReadScopeResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,17 +17,20 @@ public class ReadScopeResponse {
     /**
      * Retrieved scope
      */
+    
     public com.formance.formance_sdk.models.shared.ReadScopeResponse readScopeResponse;
     public ReadScopeResponse withReadScopeResponse(com.formance.formance_sdk.models.shared.ReadScopeResponse readScopeResponse) {
         this.readScopeResponse = readScopeResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public ReadScopeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public ReadScopeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

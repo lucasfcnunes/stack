@@ -7,7 +7,8 @@ package com.formance.formance_sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StageWaitEvent {
-    @JsonProperty("event")public String event;
+    @JsonProperty("event")
+    public String event;
     public StageWaitEvent withEvent(String event) {
         this.event = event;
         return this;

@@ -10,11 +10,13 @@ public class ActivateConfigResponse {
     /**
      * Config successfully activated.
      */
+    
     public com.formance.formance_sdk.models.shared.ConfigResponse configResponse;
     public ActivateConfigResponse withConfigResponse(com.formance.formance_sdk.models.shared.ConfigResponse configResponse) {
         this.configResponse = configResponse;
         return this;
     }
+    
     
     public String contentType;
     public ActivateConfigResponse withContentType(String contentType) {
@@ -22,11 +24,13 @@ public class ActivateConfigResponse {
         return this;
     }
     
+    
     public Integer statusCode;
     public ActivateConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public ActivateConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

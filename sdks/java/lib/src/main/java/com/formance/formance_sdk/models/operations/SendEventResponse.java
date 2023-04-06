@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class SendEventResponse {
+    
     public String contentType;
     public SendEventResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,17 +17,20 @@ public class SendEventResponse {
     /**
      * General error
      */
+    
     public com.formance.formance_sdk.models.shared.Error error;
     public SendEventResponse withError(com.formance.formance_sdk.models.shared.Error error) {
         this.error = error;
         return this;
     }
     
+    
     public Integer statusCode;
     public SendEventResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public SendEventResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

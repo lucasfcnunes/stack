@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class GetMappingResponse {
+    
     public String contentType;
     public GetMappingResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,6 +17,7 @@ public class GetMappingResponse {
     /**
      * Error
      */
+    
     public com.formance.formance_sdk.models.shared.ErrorResponse errorResponse;
     public GetMappingResponse withErrorResponse(com.formance.formance_sdk.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
@@ -25,17 +27,20 @@ public class GetMappingResponse {
     /**
      * OK
      */
+    
     public com.formance.formance_sdk.models.shared.MappingResponse mappingResponse;
     public GetMappingResponse withMappingResponse(com.formance.formance_sdk.models.shared.MappingResponse mappingResponse) {
         this.mappingResponse = mappingResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public GetMappingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public GetMappingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

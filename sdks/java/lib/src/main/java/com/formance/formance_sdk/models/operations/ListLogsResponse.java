@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class ListLogsResponse {
+    
     public String contentType;
     public ListLogsResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,6 +17,7 @@ public class ListLogsResponse {
     /**
      * Error
      */
+    
     public com.formance.formance_sdk.models.shared.ErrorResponse errorResponse;
     public ListLogsResponse withErrorResponse(com.formance.formance_sdk.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
@@ -25,17 +27,20 @@ public class ListLogsResponse {
     /**
      * OK
      */
+    
     public com.formance.formance_sdk.models.shared.LogsCursorResponse logsCursorResponse;
     public ListLogsResponse withLogsCursorResponse(com.formance.formance_sdk.models.shared.LogsCursorResponse logsCursorResponse) {
         this.logsCursorResponse = logsCursorResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public ListLogsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public ListLogsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

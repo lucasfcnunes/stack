@@ -15,20 +15,23 @@ import java.time.OffsetDateTime;
 
 public class TransactionData {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("metadata")public java.util.Map<String, Object> metadata;
+    @JsonProperty("metadata")
+    public java.util.Map<String, Object> metadata;
     public TransactionData withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
     }
     
-    @JsonProperty("postings")public Posting[] postings;
+    @JsonProperty("postings")
+    public Posting[] postings;
     public TransactionData withPostings(Posting[] postings) {
         this.postings = postings;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("reference")public String reference;
+    @JsonProperty("reference")
+    public String reference;
     public TransactionData withReference(String reference) {
         this.reference = reference;
         return this;
@@ -37,7 +40,8 @@ public class TransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("timestamp")public OffsetDateTime timestamp;
+    @JsonProperty("timestamp")
+    public OffsetDateTime timestamp;
     public TransactionData withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;

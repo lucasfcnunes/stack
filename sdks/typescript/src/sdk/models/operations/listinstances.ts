@@ -38,7 +38,7 @@ export class ListInstancesResponse extends SpeakeasyBase {
    * List of workflow instances
    */
   @SpeakeasyMetadata()
-  listRunsResponse?: any;
+  listRunsResponse?: shared.ListRunsResponse;
 
   @SpeakeasyMetadata()
   statusCode: number;

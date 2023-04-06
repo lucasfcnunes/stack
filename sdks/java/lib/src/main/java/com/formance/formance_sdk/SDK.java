@@ -18,7 +18,7 @@ import com.formance.formance_sdk.utils.SpeakeasyHTTPClient;
  *   - OAuth2
  * OAuth2 - an open protocol to allow secure authorization in a simple
  * and standard method from web, mobile and desktop applications.
- * <SecurityDefinitions />
+ * &lt;SecurityDefinitions /&gt;
  * 
  */
 public class SDK {
@@ -50,7 +50,7 @@ public class SDK {
 	private String _serverUrl;
 	private String _language = "java";
 	private String _sdkVersion = "0.0.1";
-	private String _genVersion = "2.16.1";
+	private String _genVersion = "2.17.8";
 	/**
 	 * The Builder class allows the configuration of a new instance of the SDK.
 	 */

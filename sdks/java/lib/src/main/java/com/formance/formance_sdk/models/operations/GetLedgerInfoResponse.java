@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class GetLedgerInfoResponse {
+    
     public String contentType;
     public GetLedgerInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,6 +17,7 @@ public class GetLedgerInfoResponse {
     /**
      * Error
      */
+    
     public com.formance.formance_sdk.models.shared.ErrorResponse errorResponse;
     public GetLedgerInfoResponse withErrorResponse(com.formance.formance_sdk.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
@@ -25,17 +27,20 @@ public class GetLedgerInfoResponse {
     /**
      * OK
      */
-    public Object ledgerInfoResponse;
-    public GetLedgerInfoResponse withLedgerInfoResponse(Object ledgerInfoResponse) {
+    
+    public com.formance.formance_sdk.models.shared.LedgerInfoResponse ledgerInfoResponse;
+    public GetLedgerInfoResponse withLedgerInfoResponse(com.formance.formance_sdk.models.shared.LedgerInfoResponse ledgerInfoResponse) {
         this.ledgerInfoResponse = ledgerInfoResponse;
         return this;
     }
+    
     
     public Integer statusCode;
     public GetLedgerInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public GetLedgerInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

@@ -14,7 +14,8 @@ public class GetHoldsRequest {
      * No other parameters can be set when the pagination token is set.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")public String cursor;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
     public GetHoldsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -23,7 +24,8 @@ public class GetHoldsRequest {
     /**
      * Filter holds by metadata key value pairs. Nested objects can be used as seen in the example below.
      */
-    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=metadata")public java.util.Map<String, Object> metadata;
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=metadata")
+    public java.util.Map<String, Object> metadata;
     public GetHoldsRequest withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -32,7 +34,8 @@ public class GetHoldsRequest {
     /**
      * The maximum number of results to return per page
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")public Long pageSize;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
     public GetHoldsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -41,7 +44,8 @@ public class GetHoldsRequest {
     /**
      * The wallet to filter on
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=walletID")public String walletID;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=walletID")
+    public String walletID;
     public GetHoldsRequest withWalletID(String walletID) {
         this.walletID = walletID;
         return this;

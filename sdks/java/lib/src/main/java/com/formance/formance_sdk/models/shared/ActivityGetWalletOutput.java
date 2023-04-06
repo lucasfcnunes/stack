@@ -7,7 +7,8 @@ package com.formance.formance_sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ActivityGetWalletOutput {
-    @JsonProperty("data")public WalletWithBalances data;
+    @JsonProperty("data")
+    public WalletWithBalances data;
     public ActivityGetWalletOutput withData(WalletWithBalances data) {
         this.data = data;
         return this;

@@ -17,7 +17,7 @@ type GetLedgerInfoResponse struct {
 	// Error
 	ErrorResponse *shared.ErrorResponse
 	// OK
-	LedgerInfoResponse interface{}
+	LedgerInfoResponse *shared.LedgerInfoResponse
 	StatusCode         int
 	RawResponse        *http.Response
 }

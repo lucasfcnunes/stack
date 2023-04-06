@@ -10,7 +10,8 @@ public class GetPaymentRequest {
     /**
      * The payment ID.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentId")public String paymentId;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentId")
+    public String paymentId;
     public GetPaymentRequest withPaymentId(String paymentId) {
         this.paymentId = paymentId;
         return this;

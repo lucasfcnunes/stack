@@ -10,7 +10,8 @@ public class AddMetadataToAccountRequest {
     /**
      * metadata
      */
-    @SpeakeasyMetadata("request:mediaType=application/json")public java.util.Map<String, Object> requestBody;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> requestBody;
     public AddMetadataToAccountRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,7 +24,8 @@ public class AddMetadataToAccountRequest {
      * ```
      * 
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=address")public String address;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=address")
+    public String address;
     public AddMetadataToAccountRequest withAddress(String address) {
         this.address = address;
         return this;
@@ -32,7 +34,8 @@ public class AddMetadataToAccountRequest {
     /**
      * Name of the ledger.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")public String ledger;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")
+    public String ledger;
     public AddMetadataToAccountRequest withLedger(String ledger) {
         this.ledger = ledger;
         return this;

@@ -9,14 +9,16 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StageSendDestinationAccount {
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public StageSendDestinationAccount withId(String id) {
         this.id = id;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("ledger")public String ledger;
+    @JsonProperty("ledger")
+    public String ledger;
     public StageSendDestinationAccount withLedger(String ledger) {
         this.ledger = ledger;
         return this;

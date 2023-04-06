@@ -16,33 +16,38 @@ import java.time.OffsetDateTime;
 public class WorkflowInstance {
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("createdAt")public OffsetDateTime createdAt;
+    @JsonProperty("createdAt")
+    public OffsetDateTime createdAt;
     public WorkflowInstance withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("error")public String error;
+    @JsonProperty("error")
+    public String error;
     public WorkflowInstance withError(String error) {
         this.error = error;
         return this;
     }
     
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public WorkflowInstance withId(String id) {
         this.id = id;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("status")public StageStatus[] status;
+    @JsonProperty("status")
+    public StageStatus[] status;
     public WorkflowInstance withStatus(StageStatus[] status) {
         this.status = status;
         return this;
     }
     
-    @JsonProperty("terminated")public Boolean terminated;
+    @JsonProperty("terminated")
+    public Boolean terminated;
     public WorkflowInstance withTerminated(Boolean terminated) {
         this.terminated = terminated;
         return this;
@@ -51,7 +56,8 @@ public class WorkflowInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("terminatedAt")public OffsetDateTime terminatedAt;
+    @JsonProperty("terminatedAt")
+    public OffsetDateTime terminatedAt;
     public WorkflowInstance withTerminatedAt(OffsetDateTime terminatedAt) {
         this.terminatedAt = terminatedAt;
         return this;
@@ -59,13 +65,15 @@ public class WorkflowInstance {
     
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("updatedAt")public OffsetDateTime updatedAt;
+    @JsonProperty("updatedAt")
+    public OffsetDateTime updatedAt;
     public WorkflowInstance withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
-    @JsonProperty("workflowID")public String workflowID;
+    @JsonProperty("workflowID")
+    public String workflowID;
     public WorkflowInstance withWorkflowID(String workflowID) {
         this.workflowID = workflowID;
         return this;

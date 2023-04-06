@@ -10,7 +10,8 @@ public class RevertTransactionRequest {
     /**
      * Name of the ledger.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")public String ledger;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")
+    public String ledger;
     public RevertTransactionRequest withLedger(String ledger) {
         this.ledger = ledger;
         return this;
@@ -19,7 +20,8 @@ public class RevertTransactionRequest {
     /**
      * Transaction ID.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=txid")public Long txid;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=txid")
+    public Long txid;
     public RevertTransactionRequest withTxid(Long txid) {
         this.txid = txid;
         return this;

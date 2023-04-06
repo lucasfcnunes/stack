@@ -7,17 +7,20 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class CreditWalletResponse {
+    
     public String contentType;
     public CreditWalletResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
     
+    
     public Integer statusCode;
     public CreditWalletResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public CreditWalletResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
@@ -28,6 +31,7 @@ public class CreditWalletResponse {
     /**
      * Error
      */
+    
     public com.formance.formance_sdk.models.shared.WalletsErrorResponse walletsErrorResponse;
     public CreditWalletResponse withWalletsErrorResponse(com.formance.formance_sdk.models.shared.WalletsErrorResponse walletsErrorResponse) {
         this.walletsErrorResponse = walletsErrorResponse;

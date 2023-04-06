@@ -9,14 +9,16 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ExpandedDebitHold {
-    @JsonProperty("description")public String description;
+    @JsonProperty("description")
+    public String description;
     public ExpandedDebitHold withDescription(String description) {
         this.description = description;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("destination")public Object destination;
+    @JsonProperty("destination")
+    public Object destination;
     public ExpandedDebitHold withDestination(Object destination) {
         this.destination = destination;
         return this;
@@ -25,7 +27,8 @@ public class ExpandedDebitHold {
     /**
      * The unique ID of the hold.
      */
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public ExpandedDebitHold withId(String id) {
         this.id = id;
         return this;
@@ -34,7 +37,8 @@ public class ExpandedDebitHold {
     /**
      * Metadata associated with the hold.
      */
-    @JsonProperty("metadata")public java.util.Map<String, Object> metadata;
+    @JsonProperty("metadata")
+    public java.util.Map<String, Object> metadata;
     public ExpandedDebitHold withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -43,7 +47,8 @@ public class ExpandedDebitHold {
     /**
      * Original amount on hold
      */
-    @JsonProperty("originalAmount")public Long originalAmount;
+    @JsonProperty("originalAmount")
+    public Long originalAmount;
     public ExpandedDebitHold withOriginalAmount(Long originalAmount) {
         this.originalAmount = originalAmount;
         return this;
@@ -52,7 +57,8 @@ public class ExpandedDebitHold {
     /**
      * Remaining amount on hold
      */
-    @JsonProperty("remaining")public Long remaining;
+    @JsonProperty("remaining")
+    public Long remaining;
     public ExpandedDebitHold withRemaining(Long remaining) {
         this.remaining = remaining;
         return this;
@@ -61,7 +67,8 @@ public class ExpandedDebitHold {
     /**
      * The ID of the wallet the hold is associated with.
      */
-    @JsonProperty("walletID")public String walletID;
+    @JsonProperty("walletID")
+    public String walletID;
     public ExpandedDebitHold withWalletID(String walletID) {
         this.walletID = walletID;
         return this;

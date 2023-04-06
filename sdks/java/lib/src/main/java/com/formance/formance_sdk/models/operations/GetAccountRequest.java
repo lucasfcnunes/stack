@@ -14,7 +14,8 @@ public class GetAccountRequest {
      * ```
      * 
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=address")public String address;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=address")
+    public String address;
     public GetAccountRequest withAddress(String address) {
         this.address = address;
         return this;
@@ -23,7 +24,8 @@ public class GetAccountRequest {
     /**
      * Name of the ledger.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")public String ledger;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")
+    public String ledger;
     public GetAccountRequest withLedger(String ledger) {
         this.ledger = ledger;
         return this;

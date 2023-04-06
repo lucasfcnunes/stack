@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * GetHoldsResponse - Holds
  */
 public class GetHoldsResponse {
-    @JsonProperty("cursor")public GetHoldsResponseCursor cursor;
+    @JsonProperty("cursor")
+    public GetHoldsResponseCursor cursor;
     public GetHoldsResponse withCursor(GetHoldsResponseCursor cursor) {
         this.cursor = cursor;
         return this;

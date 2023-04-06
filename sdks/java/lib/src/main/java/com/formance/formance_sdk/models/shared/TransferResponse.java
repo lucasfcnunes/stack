@@ -13,7 +13,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class TransferResponse {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public TransferResponse withId(String id) {
         this.id = id;
         return this;

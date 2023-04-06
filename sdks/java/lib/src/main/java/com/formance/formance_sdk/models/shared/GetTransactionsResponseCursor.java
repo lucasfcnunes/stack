@@ -9,34 +9,39 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetTransactionsResponseCursor {
-    @JsonProperty("data")public WalletsTransaction[] data;
+    @JsonProperty("data")
+    public WalletsTransaction[] data;
     public GetTransactionsResponseCursor withData(WalletsTransaction[] data) {
         this.data = data;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("hasMore")public Boolean hasMore;
+    @JsonProperty("hasMore")
+    public Boolean hasMore;
     public GetTransactionsResponseCursor withHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("next")public String next;
+    @JsonProperty("next")
+    public String next;
     public GetTransactionsResponseCursor withNext(String next) {
         this.next = next;
         return this;
     }
     
-    @JsonProperty("pageSize")public Long pageSize;
+    @JsonProperty("pageSize")
+    public Long pageSize;
     public GetTransactionsResponseCursor withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("previous")public String previous;
+    @JsonProperty("previous")
+    public String previous;
     public GetTransactionsResponseCursor withPrevious(String previous) {
         this.previous = previous;
         return this;

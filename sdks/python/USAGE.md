@@ -11,8 +11,8 @@ s = sdk.SDK(
 
 
 req = operations.AddScopeToClientRequest(
-    client_id="unde",
-    scope_id="deserunt",
+    client_id="corrupti",
+    scope_id="provident",
 )
     
 res = s.auth.add_scope_to_client(req)

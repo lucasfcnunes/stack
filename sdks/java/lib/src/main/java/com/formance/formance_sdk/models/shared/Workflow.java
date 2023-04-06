@@ -12,7 +12,8 @@ import com.formance.formance_sdk.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
 public class Workflow {
-    @JsonProperty("config")public WorkflowConfig config;
+    @JsonProperty("config")
+    public WorkflowConfig config;
     public Workflow withConfig(WorkflowConfig config) {
         this.config = config;
         return this;
@@ -20,13 +21,15 @@ public class Workflow {
     
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("createdAt")public OffsetDateTime createdAt;
+    @JsonProperty("createdAt")
+    public OffsetDateTime createdAt;
     public Workflow withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
     
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public Workflow withId(String id) {
         this.id = id;
         return this;
@@ -34,7 +37,8 @@ public class Workflow {
     
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("updatedAt")public OffsetDateTime updatedAt;
+    @JsonProperty("updatedAt")
+    public OffsetDateTime updatedAt;
     public Workflow withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;

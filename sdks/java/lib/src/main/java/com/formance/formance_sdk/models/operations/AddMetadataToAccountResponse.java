@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class AddMetadataToAccountResponse {
+    
     public String contentType;
     public AddMetadataToAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,17 +17,20 @@ public class AddMetadataToAccountResponse {
     /**
      * Error
      */
+    
     public com.formance.formance_sdk.models.shared.ErrorResponse errorResponse;
     public AddMetadataToAccountResponse withErrorResponse(com.formance.formance_sdk.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public AddMetadataToAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public AddMetadataToAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

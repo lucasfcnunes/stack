@@ -241,6 +241,11 @@ lib/src/main/java/com/formance/formance_sdk/models/shared/ConfigInfoResponse.jav
 lib/src/main/java/com/formance/formance_sdk/models/shared/ConfigInfo.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/Config.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/LedgerStorage.java
+lib/src/main/java/com/formance/formance_sdk/models/shared/LedgerInfoResponse.java
+lib/src/main/java/com/formance/formance_sdk/models/shared/LedgerInfoStorage.java
+lib/src/main/java/com/formance/formance_sdk/models/shared/LedgerInfo.java
+lib/src/main/java/com/formance/formance_sdk/models/shared/MigrationInfoStateEnum.java
+lib/src/main/java/com/formance/formance_sdk/models/shared/MigrationInfo.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/MappingResponse.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/Mapping.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/Contract.java
@@ -317,6 +322,7 @@ lib/src/main/java/com/formance/formance_sdk/models/shared/CreditWalletRequest.ja
 lib/src/main/java/com/formance/formance_sdk/models/shared/ActivityCreateTransaction.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/ActivityConfirmHold.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/GetWorkflowResponse.java
+lib/src/main/java/com/formance/formance_sdk/models/shared/ListRunsResponse.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/ListWorkflowsResponse.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/RunWorkflowResponse.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/StripeTransferRequest.java
@@ -389,10 +395,12 @@ lib/src/main/java/com/formance/formance_sdk/models/shared/ListBalancesResponse.j
 lib/src/main/java/com/formance/formance_sdk/models/shared/ListWalletsResponseCursor.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/ListWalletsResponse.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/ConfigResponse.java
+lib/src/main/java/com/formance/formance_sdk/models/shared/WebhooksConfig.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/ConfigChangeSecret.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/ConfigsResponseCursor.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/ConfigsResponse.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/ConfigUser.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/AttemptResponse.java
+lib/src/main/java/com/formance/formance_sdk/models/shared/Attempt.java
 lib/src/main/java/com/formance/formance_sdk/models/shared/Security.java
 USAGE.md

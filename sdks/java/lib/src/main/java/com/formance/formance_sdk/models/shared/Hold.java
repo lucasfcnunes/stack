@@ -9,14 +9,16 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Hold {
-    @JsonProperty("description")public String description;
+    @JsonProperty("description")
+    public String description;
     public Hold withDescription(String description) {
         this.description = description;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("destination")public Object destination;
+    @JsonProperty("destination")
+    public Object destination;
     public Hold withDestination(Object destination) {
         this.destination = destination;
         return this;
@@ -25,7 +27,8 @@ public class Hold {
     /**
      * The unique ID of the hold.
      */
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public Hold withId(String id) {
         this.id = id;
         return this;
@@ -34,7 +37,8 @@ public class Hold {
     /**
      * Metadata associated with the hold.
      */
-    @JsonProperty("metadata")public java.util.Map<String, Object> metadata;
+    @JsonProperty("metadata")
+    public java.util.Map<String, Object> metadata;
     public Hold withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -43,7 +47,8 @@ public class Hold {
     /**
      * The ID of the wallet the hold is associated with.
      */
-    @JsonProperty("walletID")public String walletID;
+    @JsonProperty("walletID")
+    public String walletID;
     public Hold withWalletID(String walletID) {
         this.walletID = walletID;
         return this;

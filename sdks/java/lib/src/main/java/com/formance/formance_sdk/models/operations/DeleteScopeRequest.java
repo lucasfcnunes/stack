@@ -10,7 +10,8 @@ public class DeleteScopeRequest {
     /**
      * Scope ID
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scopeId")public String scopeId;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scopeId")
+    public String scopeId;
     public DeleteScopeRequest withScopeId(String scopeId) {
         this.scopeId = scopeId;
         return this;

@@ -10,7 +10,8 @@ public class GetManyConfigsRequest {
     /**
      * Optional filter by endpoint URL
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endpoint")public String endpoint;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endpoint")
+    public String endpoint;
     public GetManyConfigsRequest withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -19,7 +20,8 @@ public class GetManyConfigsRequest {
     /**
      * Optional filter by Config ID
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")public String id;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
     public GetManyConfigsRequest withId(String id) {
         this.id = id;
         return this;

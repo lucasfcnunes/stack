@@ -7,17 +7,20 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class DeleteScopeFromClientResponse {
+    
     public String contentType;
     public DeleteScopeFromClientResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
     
+    
     public Integer statusCode;
     public DeleteScopeFromClientResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public DeleteScopeFromClientResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

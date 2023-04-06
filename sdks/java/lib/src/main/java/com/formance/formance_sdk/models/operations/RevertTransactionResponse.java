@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class RevertTransactionResponse {
+    
     public String contentType;
     public RevertTransactionResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,17 +17,20 @@ public class RevertTransactionResponse {
     /**
      * Error
      */
+    
     public com.formance.formance_sdk.models.shared.ErrorResponse errorResponse;
     public RevertTransactionResponse withErrorResponse(com.formance.formance_sdk.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public RevertTransactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public RevertTransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
@@ -37,6 +41,7 @@ public class RevertTransactionResponse {
     /**
      * OK
      */
+    
     public com.formance.formance_sdk.models.shared.TransactionResponse transactionResponse;
     public RevertTransactionResponse withTransactionResponse(com.formance.formance_sdk.models.shared.TransactionResponse transactionResponse) {
         this.transactionResponse = transactionResponse;

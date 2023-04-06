@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class WalletsgetServerInfoResponse {
+    
     public String contentType;
     public WalletsgetServerInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,17 +17,20 @@ public class WalletsgetServerInfoResponse {
     /**
      * Server information
      */
+    
     public com.formance.formance_sdk.models.shared.ServerInfo serverInfo;
     public WalletsgetServerInfoResponse withServerInfo(com.formance.formance_sdk.models.shared.ServerInfo serverInfo) {
         this.serverInfo = serverInfo;
         return this;
     }
     
+    
     public Integer statusCode;
     public WalletsgetServerInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public WalletsgetServerInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
@@ -37,6 +41,7 @@ public class WalletsgetServerInfoResponse {
     /**
      * Error
      */
+    
     public com.formance.formance_sdk.models.shared.WalletsErrorResponse walletsErrorResponse;
     public WalletsgetServerInfoResponse withWalletsErrorResponse(com.formance.formance_sdk.models.shared.WalletsErrorResponse walletsErrorResponse) {
         this.walletsErrorResponse = walletsErrorResponse;

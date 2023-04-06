@@ -10,11 +10,13 @@ public class GetAccountResponse {
     /**
      * OK
      */
+    
     public com.formance.formance_sdk.models.shared.AccountResponse accountResponse;
     public GetAccountResponse withAccountResponse(com.formance.formance_sdk.models.shared.AccountResponse accountResponse) {
         this.accountResponse = accountResponse;
         return this;
     }
+    
     
     public String contentType;
     public GetAccountResponse withContentType(String contentType) {
@@ -25,17 +27,20 @@ public class GetAccountResponse {
     /**
      * Error
      */
+    
     public com.formance.formance_sdk.models.shared.ErrorResponse errorResponse;
     public GetAccountResponse withErrorResponse(com.formance.formance_sdk.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public GetAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public GetAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

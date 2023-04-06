@@ -11,7 +11,8 @@ public class ListTransactionsRequest {
     /**
      * Filter transactions with postings involving given account, either as source or destination (regular expression placed between ^ and $).
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account")public String account;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account")
+    public String account;
     public ListTransactionsRequest withAccount(String account) {
         this.account = account;
         return this;
@@ -20,7 +21,8 @@ public class ListTransactionsRequest {
     /**
      * Pagination cursor, will return transactions after given txid (in descending order).
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")public String after;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
+    public String after;
     public ListTransactionsRequest withAfter(String after) {
         this.after = after;
         return this;
@@ -33,7 +35,8 @@ public class ListTransactionsRequest {
      * No other parameters can be set when this parameter is set.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")public String cursor;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
     public ListTransactionsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -42,7 +45,8 @@ public class ListTransactionsRequest {
     /**
      * Filter transactions with postings involving given account at destination (regular expression placed between ^ and $).
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination")public String destination;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination")
+    public String destination;
     public ListTransactionsRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -53,7 +57,8 @@ public class ListTransactionsRequest {
      * The format is RFC3339 and is exclusive (for example, "2023-01-02T15:04:01Z" excludes the first second of 4th minute).
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")public OffsetDateTime endTime;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")
+    public OffsetDateTime endTime;
     public ListTransactionsRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -65,7 +70,8 @@ public class ListTransactionsRequest {
      * Deprecated, please use `endTime` instead.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")public OffsetDateTime endTimeDeprecated;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public OffsetDateTime endTimeDeprecated;
     public ListTransactionsRequest withEndTimeDeprecated(OffsetDateTime endTimeDeprecated) {
         this.endTimeDeprecated = endTimeDeprecated;
         return this;
@@ -74,7 +80,8 @@ public class ListTransactionsRequest {
     /**
      * Name of the ledger.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")public String ledger;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")
+    public String ledger;
     public ListTransactionsRequest withLedger(String ledger) {
         this.ledger = ledger;
         return this;
@@ -83,7 +90,8 @@ public class ListTransactionsRequest {
     /**
      * Filter transactions by metadata key value pairs. Nested objects can be used as seen in the example below.
      */
-    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=metadata")public java.util.Map<String, Object> metadata;
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=metadata")
+    public java.util.Map<String, Object> metadata;
     public ListTransactionsRequest withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -93,7 +101,8 @@ public class ListTransactionsRequest {
      * The maximum number of results to return per page.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")public Long pageSize;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
     public ListTransactionsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -104,7 +113,8 @@ public class ListTransactionsRequest {
      * Deprecated, please use `pageSize` instead.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")public Long pageSizeDeprecated;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSizeDeprecated;
     public ListTransactionsRequest withPageSizeDeprecated(Long pageSizeDeprecated) {
         this.pageSizeDeprecated = pageSizeDeprecated;
         return this;
@@ -118,7 +128,8 @@ public class ListTransactionsRequest {
      * Deprecated, please use `cursor` instead.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagination_token")public String paginationToken;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagination_token")
+    public String paginationToken;
     public ListTransactionsRequest withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
@@ -127,7 +138,8 @@ public class ListTransactionsRequest {
     /**
      * Find transactions by reference field.
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reference")public String reference;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reference")
+    public String reference;
     public ListTransactionsRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -136,7 +148,8 @@ public class ListTransactionsRequest {
     /**
      * Filter transactions with postings involving given account at source (regular expression placed between ^ and $).
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")public String source;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
     public ListTransactionsRequest withSource(String source) {
         this.source = source;
         return this;
@@ -147,7 +160,8 @@ public class ListTransactionsRequest {
      * The format is RFC3339 and is inclusive (for example, "2023-01-02T15:04:01Z" includes the first second of 4th minute).
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")public OffsetDateTime startTime;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")
+    public OffsetDateTime startTime;
     public ListTransactionsRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -159,7 +173,8 @@ public class ListTransactionsRequest {
      * Deprecated, please use `startTime` instead.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_time")public OffsetDateTime startTimeDeprecated;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_time")
+    public OffsetDateTime startTimeDeprecated;
     public ListTransactionsRequest withStartTimeDeprecated(OffsetDateTime startTimeDeprecated) {
         this.startTimeDeprecated = startTimeDeprecated;
         return this;

@@ -10,7 +10,8 @@ public class DeleteScopeFromClientRequest {
     /**
      * Client ID
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")public String clientId;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
+    public String clientId;
     public DeleteScopeFromClientRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -19,7 +20,8 @@ public class DeleteScopeFromClientRequest {
     /**
      * Scope ID
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scopeId")public String scopeId;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scopeId")
+    public String scopeId;
     public DeleteScopeFromClientRequest withScopeId(String scopeId) {
         this.scopeId = scopeId;
         return this;

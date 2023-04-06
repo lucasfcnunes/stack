@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * BalancesCursorResponse - OK
  */
 public class BalancesCursorResponse {
-    @JsonProperty("cursor")public BalancesCursorResponseCursor cursor;
+    @JsonProperty("cursor")
+    public BalancesCursorResponseCursor cursor;
     public BalancesCursorResponse withCursor(BalancesCursorResponseCursor cursor) {
         this.cursor = cursor;
         return this;

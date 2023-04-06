@@ -13,7 +13,8 @@ public class ConfirmHoldRequest {
      * Define the amount to transfer.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("amount")public Long amount;
+    @JsonProperty("amount")
+    public Long amount;
     public ConfirmHoldRequest withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -23,7 +24,8 @@ public class ConfirmHoldRequest {
      * Define a final confirmation. Remaining funds will be returned to the wallet.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("final")public Boolean final_;
+    @JsonProperty("final")
+    public Boolean final_;
     public ConfirmHoldRequest withFinal(Boolean final_) {
         this.final_ = final_;
         return this;

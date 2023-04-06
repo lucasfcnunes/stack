@@ -13,13 +13,15 @@ public class CreateWalletRequest {
      * Custom metadata to attach to this wallet.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("metadata")public java.util.Map<String, Object> metadata;
+    @JsonProperty("metadata")
+    public java.util.Map<String, Object> metadata;
     public CreateWalletRequest withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
     }
     
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public CreateWalletRequest withName(String name) {
         this.name = name;
         return this;

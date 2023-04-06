@@ -14,10 +14,10 @@ class ConfigsResponseCursor
     /**
      * $data
      * 
-     * @var array<mixed> $data
+     * @var array<\formance\stack\Models\Shared\WebhooksConfig> $data
      */
 	#[\JMS\Serializer\Annotation\SerializedName('data')]
-    #[\JMS\Serializer\Annotation\Type('array<mixed>')]
+    #[\JMS\Serializer\Annotation\Type('array<formance\stack\Models\Shared\WebhooksConfig>')]
     public array $data;
     
 	#[\JMS\Serializer\Annotation\SerializedName('hasMore')]

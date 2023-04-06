@@ -10,7 +10,8 @@ public class ReadClientRequest {
     /**
      * Client ID
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")public String clientId;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
+    public String clientId;
     public ReadClientRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;

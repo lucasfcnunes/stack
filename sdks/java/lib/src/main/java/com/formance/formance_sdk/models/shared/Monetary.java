@@ -10,7 +10,8 @@ public class Monetary {
     /**
      * The amount of the monetary value.
      */
-    @JsonProperty("amount")public Long amount;
+    @JsonProperty("amount")
+    public Long amount;
     public Monetary withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -19,7 +20,8 @@ public class Monetary {
     /**
      * The asset of the monetary value.
      */
-    @JsonProperty("asset")public String asset;
+    @JsonProperty("asset")
+    public String asset;
     public Monetary withAsset(String asset) {
         this.asset = asset;
         return this;

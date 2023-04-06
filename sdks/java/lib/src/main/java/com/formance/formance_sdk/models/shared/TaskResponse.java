@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * TaskResponse - OK
  */
 public class TaskResponse {
-    @JsonProperty("data")public Object data;
+    @JsonProperty("data")
+    public Object data;
     public TaskResponse withData(Object data) {
         this.data = data;
         return this;

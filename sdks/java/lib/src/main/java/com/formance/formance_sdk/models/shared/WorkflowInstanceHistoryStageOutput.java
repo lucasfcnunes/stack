@@ -10,42 +10,48 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class WorkflowInstanceHistoryStageOutput {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("CreateTransaction")public ActivityCreateTransactionOutput createTransaction;
+    @JsonProperty("CreateTransaction")
+    public ActivityCreateTransactionOutput createTransaction;
     public WorkflowInstanceHistoryStageOutput withCreateTransaction(ActivityCreateTransactionOutput createTransaction) {
         this.createTransaction = createTransaction;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("DebitWallet")public ActivityDebitWalletOutput debitWallet;
+    @JsonProperty("DebitWallet")
+    public ActivityDebitWalletOutput debitWallet;
     public WorkflowInstanceHistoryStageOutput withDebitWallet(ActivityDebitWalletOutput debitWallet) {
         this.debitWallet = debitWallet;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("GetAccount")public ActivityGetAccountOutput getAccount;
+    @JsonProperty("GetAccount")
+    public ActivityGetAccountOutput getAccount;
     public WorkflowInstanceHistoryStageOutput withGetAccount(ActivityGetAccountOutput getAccount) {
         this.getAccount = getAccount;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("GetPayment")public ActivityGetPaymentOutput getPayment;
+    @JsonProperty("GetPayment")
+    public ActivityGetPaymentOutput getPayment;
     public WorkflowInstanceHistoryStageOutput withGetPayment(ActivityGetPaymentOutput getPayment) {
         this.getPayment = getPayment;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("GetWallet")public ActivityGetWalletOutput getWallet;
+    @JsonProperty("GetWallet")
+    public ActivityGetWalletOutput getWallet;
     public WorkflowInstanceHistoryStageOutput withGetWallet(ActivityGetWalletOutput getWallet) {
         this.getWallet = getWallet;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("RevertTransaction")public ActivityRevertTransactionOutput revertTransaction;
+    @JsonProperty("RevertTransaction")
+    public ActivityRevertTransactionOutput revertTransaction;
     public WorkflowInstanceHistoryStageOutput withRevertTransaction(ActivityRevertTransactionOutput revertTransaction) {
         this.revertTransaction = revertTransaction;
         return this;

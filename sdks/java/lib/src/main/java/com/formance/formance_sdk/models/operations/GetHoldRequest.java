@@ -10,7 +10,8 @@ public class GetHoldRequest {
     /**
      * The hold ID
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=holdID")public String holdID;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=holdID")
+    public String holdID;
     public GetHoldRequest withHoldID(String holdID) {
         this.holdID = holdID;
         return this;

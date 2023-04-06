@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * ConnectorsResponse - OK
  */
 public class ConnectorsResponse {
-    @JsonProperty("data")public ConnectorsResponseData[] data;
+    @JsonProperty("data")
+    public ConnectorsResponseData[] data;
     public ConnectorsResponse withData(ConnectorsResponseData[] data) {
         this.data = data;
         return this;

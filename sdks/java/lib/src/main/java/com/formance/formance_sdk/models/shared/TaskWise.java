@@ -14,7 +14,8 @@ import com.formance.formance_sdk.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
 public class TaskWise {
-    @JsonProperty("connectorId")public String connectorId;
+    @JsonProperty("connectorId")
+    public String connectorId;
     public TaskWise withConnectorId(String connectorId) {
         this.connectorId = connectorId;
         return this;
@@ -22,38 +23,44 @@ public class TaskWise {
     
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("createdAt")public OffsetDateTime createdAt;
+    @JsonProperty("createdAt")
+    public OffsetDateTime createdAt;
     public TaskWise withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
     
-    @JsonProperty("descriptor")public TaskWiseDescriptor descriptor;
+    @JsonProperty("descriptor")
+    public TaskWiseDescriptor descriptor;
     public TaskWise withDescriptor(TaskWiseDescriptor descriptor) {
         this.descriptor = descriptor;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("error")public String error;
+    @JsonProperty("error")
+    public String error;
     public TaskWise withError(String error) {
         this.error = error;
         return this;
     }
     
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public TaskWise withId(String id) {
         this.id = id;
         return this;
     }
     
-    @JsonProperty("state")public java.util.Map<String, Object> state;
+    @JsonProperty("state")
+    public java.util.Map<String, Object> state;
     public TaskWise withState(java.util.Map<String, Object> state) {
         this.state = state;
         return this;
     }
     
-    @JsonProperty("status")public PaymentStatusEnum status;
+    @JsonProperty("status")
+    public PaymentStatusEnum status;
     public TaskWise withStatus(PaymentStatusEnum status) {
         this.status = status;
         return this;
@@ -61,7 +68,8 @@ public class TaskWise {
     
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("updatedAt")public OffsetDateTime updatedAt;
+    @JsonProperty("updatedAt")
+    public OffsetDateTime updatedAt;
     public TaskWise withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;

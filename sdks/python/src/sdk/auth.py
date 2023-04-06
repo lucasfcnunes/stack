@@ -35,8 +35,6 @@ class Auth:
 
         res = operations.AddScopeToClientResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code == 204:
-            pass
 
         return res
 
@@ -56,8 +54,6 @@ class Auth:
 
         res = operations.AddTransientScopeResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code == 204:
-            pass
 
         return res
 
@@ -152,8 +148,6 @@ class Auth:
 
         res = operations.DeleteClientResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code == 204:
-            pass
 
         return res
 
@@ -173,8 +167,6 @@ class Auth:
 
         res = operations.DeleteScopeResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code == 204:
-            pass
 
         return res
 
@@ -192,8 +184,6 @@ class Auth:
 
         res = operations.DeleteScopeFromClientResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code == 204:
-            pass
 
         return res
 
@@ -211,8 +201,6 @@ class Auth:
 
         res = operations.DeleteSecretResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code == 204:
-            pass
 
         return res
 
@@ -232,8 +220,6 @@ class Auth:
 
         res = operations.DeleteTransientScopeResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code == 204:
-            pass
 
         return res
 

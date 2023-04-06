@@ -10,7 +10,8 @@ public class AddMetadataOnTransactionRequest {
     /**
      * metadata
      */
-    @SpeakeasyMetadata("request:mediaType=application/json")public java.util.Map<String, Object> requestBody;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> requestBody;
     public AddMetadataOnTransactionRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,7 +20,8 @@ public class AddMetadataOnTransactionRequest {
     /**
      * Name of the ledger.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")public String ledger;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")
+    public String ledger;
     public AddMetadataOnTransactionRequest withLedger(String ledger) {
         this.ledger = ledger;
         return this;
@@ -28,7 +30,8 @@ public class AddMetadataOnTransactionRequest {
     /**
      * Transaction ID.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=txid")public Long txid;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=txid")
+    public Long txid;
     public AddMetadataOnTransactionRequest withTxid(Long txid) {
         this.txid = txid;
         return this;

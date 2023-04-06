@@ -462,7 +462,10 @@ export class Orchestration {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.listRunsResponse = httpRes?.data;
+            res.listRunsResponse = utils.deserializeJSONResponse(
+              httpRes?.data,
+              shared.ListRunsResponse
+            );
           }
           break;
         default:

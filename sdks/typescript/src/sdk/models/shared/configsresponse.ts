@@ -3,12 +3,14 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import { WebhooksConfig } from "./webhooksconfig";
 import { Expose, Type } from "class-transformer";
 
 export class ConfigsResponseCursor extends SpeakeasyBase {
-  @SpeakeasyMetadata()
+  @SpeakeasyMetadata({ elemType: WebhooksConfig })
   @Expose({ name: "data" })
-  data: any[];
+  @Type(() => WebhooksConfig)
+  data: WebhooksConfig[];
 
   @SpeakeasyMetadata()
   @Expose({ name: "hasMore" })

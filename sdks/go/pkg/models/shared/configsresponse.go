@@ -3,8 +3,8 @@
 package shared
 
 type ConfigsResponseCursor struct {
-	Data    []interface{} `json:"data"`
-	HasMore bool          `json:"hasMore"`
+	Data    []WebhooksConfig `json:"data"`
+	HasMore bool             `json:"hasMore"`
 }
 
 // ConfigsResponse - OK

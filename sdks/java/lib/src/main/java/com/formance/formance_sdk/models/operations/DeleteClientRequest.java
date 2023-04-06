@@ -10,7 +10,8 @@ public class DeleteClientRequest {
     /**
      * Client ID
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")public String clientId;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
+    public String clientId;
     public DeleteClientRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;

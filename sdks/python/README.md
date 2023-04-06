@@ -33,8 +33,8 @@ s = sdk.SDK(
 
 
 req = operations.AddScopeToClientRequest(
-    client_id="unde",
-    scope_id="deserunt",
+    client_id="corrupti",
+    scope_id="provident",
 )
     
 res = s.auth.add_scope_to_client(req)
@@ -45,7 +45,7 @@ if res.status_code == 200:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### auth

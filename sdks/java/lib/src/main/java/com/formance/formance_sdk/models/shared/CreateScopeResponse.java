@@ -13,7 +13,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class CreateScopeResponse {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("data")public Scope data;
+    @JsonProperty("data")
+    public Scope data;
     public CreateScopeResponse withData(Scope data) {
         this.data = data;
         return this;

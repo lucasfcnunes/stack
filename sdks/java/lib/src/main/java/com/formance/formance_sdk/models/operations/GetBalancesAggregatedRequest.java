@@ -10,7 +10,8 @@ public class GetBalancesAggregatedRequest {
     /**
      * Filter balances involving given account, either as source or destination.
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address")public String address;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address")
+    public String address;
     public GetBalancesAggregatedRequest withAddress(String address) {
         this.address = address;
         return this;
@@ -19,7 +20,8 @@ public class GetBalancesAggregatedRequest {
     /**
      * Name of the ledger.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")public String ledger;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")
+    public String ledger;
     public GetBalancesAggregatedRequest withLedger(String ledger) {
         this.ledger = ledger;
         return this;

@@ -14,31 +14,36 @@ import java.time.OffsetDateTime;
 public class PaymentsAccount {
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("createdAt")public OffsetDateTime createdAt;
+    @JsonProperty("createdAt")
+    public OffsetDateTime createdAt;
     public PaymentsAccount withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
     
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public PaymentsAccount withId(String id) {
         this.id = id;
         return this;
     }
     
-    @JsonProperty("provider")public ConnectorEnum provider;
+    @JsonProperty("provider")
+    public ConnectorEnum provider;
     public PaymentsAccount withProvider(ConnectorEnum provider) {
         this.provider = provider;
         return this;
     }
     
-    @JsonProperty("reference")public String reference;
+    @JsonProperty("reference")
+    public String reference;
     public PaymentsAccount withReference(String reference) {
         this.reference = reference;
         return this;
     }
     
-    @JsonProperty("type")public PaymentsAccountTypeEnum type;
+    @JsonProperty("type")
+    public PaymentsAccountTypeEnum type;
     public PaymentsAccount withType(PaymentsAccountTypeEnum type) {
         this.type = type;
         return this;

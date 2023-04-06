@@ -10,7 +10,8 @@ public class DeleteConfigRequest {
     /**
      * Config ID
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")public String id;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
     public DeleteConfigRequest withId(String id) {
         this.id = id;
         return this;

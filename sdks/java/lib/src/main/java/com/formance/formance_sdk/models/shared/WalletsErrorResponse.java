@@ -10,13 +10,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * WalletsErrorResponse - Error
  */
 public class WalletsErrorResponse {
-    @JsonProperty("errorCode")public WalletsErrorResponseErrorCodeEnum errorCode;
+    @JsonProperty("errorCode")
+    public WalletsErrorResponseErrorCodeEnum errorCode;
     public WalletsErrorResponse withErrorCode(WalletsErrorResponseErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
     }
     
-    @JsonProperty("errorMessage")public String errorMessage;
+    @JsonProperty("errorMessage")
+    public String errorMessage;
     public WalletsErrorResponse withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;

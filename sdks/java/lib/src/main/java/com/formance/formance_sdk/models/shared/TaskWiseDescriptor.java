@@ -10,21 +10,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TaskWiseDescriptor {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("key")public String key;
+    @JsonProperty("key")
+    public String key;
     public TaskWiseDescriptor withKey(String key) {
         this.key = key;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public TaskWiseDescriptor withName(String name) {
         this.name = name;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("profileID")public Long profileID;
+    @JsonProperty("profileID")
+    public Long profileID;
     public TaskWiseDescriptor withProfileID(Long profileID) {
         this.profileID = profileID;
         return this;

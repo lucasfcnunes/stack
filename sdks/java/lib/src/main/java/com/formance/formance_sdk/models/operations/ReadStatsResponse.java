@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class ReadStatsResponse {
+    
     public String contentType;
     public ReadStatsResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,6 +17,7 @@ public class ReadStatsResponse {
     /**
      * Error
      */
+    
     public com.formance.formance_sdk.models.shared.ErrorResponse errorResponse;
     public ReadStatsResponse withErrorResponse(com.formance.formance_sdk.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
@@ -25,17 +27,20 @@ public class ReadStatsResponse {
     /**
      * OK
      */
+    
     public com.formance.formance_sdk.models.shared.StatsResponse statsResponse;
     public ReadStatsResponse withStatsResponse(com.formance.formance_sdk.models.shared.StatsResponse statsResponse) {
         this.statsResponse = statsResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public ReadStatsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public ReadStatsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

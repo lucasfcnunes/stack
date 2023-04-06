@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
+from ..shared import webhooksconfig as shared_webhooksconfig
 from dataclasses_json import Undefined, dataclass_json
 from sdk import utils
-from typing import Any
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -12,5 +12,5 @@ from typing import Any
 class ConfigResponse:
     r"""Config created successfully."""
     
-    data: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data') }})  
+    data: shared_webhooksconfig.WebhooksConfig = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data') }})  
     

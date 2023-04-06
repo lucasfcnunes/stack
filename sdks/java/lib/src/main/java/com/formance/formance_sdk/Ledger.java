@@ -561,7 +561,7 @@ public class Ledger {
         if (httpRes.statusCode() == 200) {
             if (com.formance.formance_sdk.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                com.formance.formance_sdk.models.shared.LedgerInfoResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.formance.formance_sdk.models.shared.LedgerInfoResponse.class);
                 res.ledgerInfoResponse = out;
             }
         }

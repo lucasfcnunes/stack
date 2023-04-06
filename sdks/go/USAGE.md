@@ -18,8 +18,8 @@ func main() {
     )
 
     req := operations.AddScopeToClientRequest{
-        ClientID: "unde",
-        ScopeID: "deserunt",
+        ClientID: "corrupti",
+        ScopeID: "provident",
     }
 
     ctx := context.Background()

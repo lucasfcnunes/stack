@@ -10,7 +10,8 @@ public class GetConnectorTaskRequest {
     /**
      * The name of the connector.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connector")public com.formance.formance_sdk.models.shared.ConnectorEnum connector;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connector")
+    public com.formance.formance_sdk.models.shared.ConnectorEnum connector;
     public GetConnectorTaskRequest withConnector(com.formance.formance_sdk.models.shared.ConnectorEnum connector) {
         this.connector = connector;
         return this;
@@ -19,7 +20,8 @@ public class GetConnectorTaskRequest {
     /**
      * The task ID.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")public String taskId;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
     public GetConnectorTaskRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;

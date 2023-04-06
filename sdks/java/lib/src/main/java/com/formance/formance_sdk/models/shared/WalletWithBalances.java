@@ -12,7 +12,8 @@ import com.formance.formance_sdk.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
 public class WalletWithBalances {
-    @JsonProperty("balances")public WalletWithBalancesBalances balances;
+    @JsonProperty("balances")
+    public WalletWithBalancesBalances balances;
     public WalletWithBalances withBalances(WalletWithBalancesBalances balances) {
         this.balances = balances;
         return this;
@@ -20,7 +21,8 @@ public class WalletWithBalances {
     
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("createdAt")public OffsetDateTime createdAt;
+    @JsonProperty("createdAt")
+    public OffsetDateTime createdAt;
     public WalletWithBalances withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,13 +31,15 @@ public class WalletWithBalances {
     /**
      * The unique ID of the wallet.
      */
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public WalletWithBalances withId(String id) {
         this.id = id;
         return this;
     }
     
-    @JsonProperty("ledger")public String ledger;
+    @JsonProperty("ledger")
+    public String ledger;
     public WalletWithBalances withLedger(String ledger) {
         this.ledger = ledger;
         return this;
@@ -44,13 +48,15 @@ public class WalletWithBalances {
     /**
      * Metadata associated with the wallet.
      */
-    @JsonProperty("metadata")public java.util.Map<String, Object> metadata;
+    @JsonProperty("metadata")
+    public java.util.Map<String, Object> metadata;
     public WalletWithBalances withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
     }
     
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public WalletWithBalances withName(String name) {
         this.name = name;
         return this;

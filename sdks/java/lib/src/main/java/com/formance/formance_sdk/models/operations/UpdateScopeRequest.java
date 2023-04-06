@@ -7,7 +7,8 @@ package com.formance.formance_sdk.models.operations;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class UpdateScopeRequest {
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.formance.formance_sdk.models.shared.UpdateScopeRequest updateScopeRequest;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.formance.formance_sdk.models.shared.UpdateScopeRequest updateScopeRequest;
     public UpdateScopeRequest withUpdateScopeRequest(com.formance.formance_sdk.models.shared.UpdateScopeRequest updateScopeRequest) {
         this.updateScopeRequest = updateScopeRequest;
         return this;
@@ -16,7 +17,8 @@ public class UpdateScopeRequest {
     /**
      * Scope ID
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scopeId")public String scopeId;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scopeId")
+    public String scopeId;
     public UpdateScopeRequest withScopeId(String scopeId) {
         this.scopeId = scopeId;
         return this;

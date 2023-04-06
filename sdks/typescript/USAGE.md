@@ -14,8 +14,8 @@ const sdk = new SDK({
 });
 
 const req: AddScopeToClientRequest = {
-  clientId: "unde",
-  scopeId: "deserunt",
+  clientId: "corrupti",
+  scopeId: "provident",
 };
 
 sdk.auth.addScopeToClient(req).then((res: AddScopeToClientResponse | AxiosError) => {

@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ConfigChangeSecret {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("secret")public String secret;
+    @JsonProperty("secret")
+    public String secret;
     public ConfigChangeSecret withSecret(String secret) {
         this.secret = secret;
         return this;

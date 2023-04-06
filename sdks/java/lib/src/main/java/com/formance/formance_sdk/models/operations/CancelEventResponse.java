@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class CancelEventResponse {
+    
     public String contentType;
     public CancelEventResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,17 +17,20 @@ public class CancelEventResponse {
     /**
      * General error
      */
+    
     public com.formance.formance_sdk.models.shared.Error error;
     public CancelEventResponse withError(com.formance.formance_sdk.models.shared.Error error) {
         this.error = error;
         return this;
     }
     
+    
     public Integer statusCode;
     public CancelEventResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public CancelEventResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

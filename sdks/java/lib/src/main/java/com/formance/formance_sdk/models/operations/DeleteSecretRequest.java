@@ -10,7 +10,8 @@ public class DeleteSecretRequest {
     /**
      * Client ID
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")public String clientId;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
+    public String clientId;
     public DeleteSecretRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -19,7 +20,8 @@ public class DeleteSecretRequest {
     /**
      * Secret ID
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secretId")public String secretId;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secretId")
+    public String secretId;
     public DeleteSecretRequest withSecretId(String secretId) {
         this.secretId = secretId;
         return this;

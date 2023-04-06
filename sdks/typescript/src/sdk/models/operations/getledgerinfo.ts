@@ -30,7 +30,7 @@ export class GetLedgerInfoResponse extends SpeakeasyBase {
    * OK
    */
   @SpeakeasyMetadata()
-  ledgerInfoResponse?: any;
+  ledgerInfoResponse?: shared.LedgerInfoResponse;
 
   @SpeakeasyMetadata()
   statusCode: number;

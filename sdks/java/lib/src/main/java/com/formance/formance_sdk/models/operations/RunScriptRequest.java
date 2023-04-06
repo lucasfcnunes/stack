@@ -7,7 +7,8 @@ package com.formance.formance_sdk.models.operations;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class RunScriptRequest {
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.formance.formance_sdk.models.shared.Script script;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.formance.formance_sdk.models.shared.Script script;
     public RunScriptRequest withScript(com.formance.formance_sdk.models.shared.Script script) {
         this.script = script;
         return this;
@@ -16,7 +17,8 @@ public class RunScriptRequest {
     /**
      * Name of the ledger.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")public String ledger;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")
+    public String ledger;
     public RunScriptRequest withLedger(String ledger) {
         this.ledger = ledger;
         return this;
@@ -25,7 +27,8 @@ public class RunScriptRequest {
     /**
      * Set the preview mode. Preview mode doesn't add the logs to the database or publish a message to the message broker.
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=preview")public Boolean preview;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=preview")
+    public Boolean preview;
     public RunScriptRequest withPreview(Boolean preview) {
         this.preview = preview;
         return this;

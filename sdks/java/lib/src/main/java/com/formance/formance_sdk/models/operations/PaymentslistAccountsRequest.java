@@ -14,7 +14,8 @@ public class PaymentslistAccountsRequest {
      * No other parameters can be set when this parameter is set.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")public String cursor;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
     public PaymentslistAccountsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -24,7 +25,8 @@ public class PaymentslistAccountsRequest {
      * The maximum number of results to return per page.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")public Long pageSize;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
     public PaymentslistAccountsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -33,7 +35,8 @@ public class PaymentslistAccountsRequest {
     /**
      * Fields used to sort payments (default is date:desc).
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")public String[] sort;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String[] sort;
     public PaymentslistAccountsRequest withSort(String[] sort) {
         this.sort = sort;
         return this;

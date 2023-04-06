@@ -10,14 +10,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ActivityDebitWallet {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("data")public DebitWalletRequest data;
+    @JsonProperty("data")
+    public DebitWalletRequest data;
     public ActivityDebitWallet withData(DebitWalletRequest data) {
         this.data = data;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public ActivityDebitWallet withId(String id) {
         this.id = id;
         return this;

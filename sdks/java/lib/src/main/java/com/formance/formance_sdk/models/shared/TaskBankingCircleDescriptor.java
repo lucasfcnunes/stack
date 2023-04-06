@@ -10,14 +10,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TaskBankingCircleDescriptor {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("key")public String key;
+    @JsonProperty("key")
+    public String key;
     public TaskBankingCircleDescriptor withKey(String key) {
         this.key = key;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public TaskBankingCircleDescriptor withName(String name) {
         this.name = name;
         return this;

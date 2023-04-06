@@ -10,11 +10,13 @@ public class ListConfigsAvailableConnectorsResponse {
     /**
      * OK
      */
+    
     public com.formance.formance_sdk.models.shared.ConnectorsConfigsResponse connectorsConfigsResponse;
     public ListConfigsAvailableConnectorsResponse withConnectorsConfigsResponse(com.formance.formance_sdk.models.shared.ConnectorsConfigsResponse connectorsConfigsResponse) {
         this.connectorsConfigsResponse = connectorsConfigsResponse;
         return this;
     }
+    
     
     public String contentType;
     public ListConfigsAvailableConnectorsResponse withContentType(String contentType) {
@@ -22,11 +24,13 @@ public class ListConfigsAvailableConnectorsResponse {
         return this;
     }
     
+    
     public Integer statusCode;
     public ListConfigsAvailableConnectorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public ListConfigsAvailableConnectorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

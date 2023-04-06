@@ -14,7 +14,8 @@ public class GetTransactionsRequest {
      * No other parameters can be set when the cursor is set.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")public String cursor;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
     public GetTransactionsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -23,7 +24,8 @@ public class GetTransactionsRequest {
     /**
      * The maximum number of results to return per page
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")public Long pageSize;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
     public GetTransactionsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -32,7 +34,8 @@ public class GetTransactionsRequest {
     /**
      * A wallet ID to filter on
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=walletID")public String walletID;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=walletID")
+    public String walletID;
     public GetTransactionsRequest withWalletID(String walletID) {
         this.walletID = walletID;
         return this;

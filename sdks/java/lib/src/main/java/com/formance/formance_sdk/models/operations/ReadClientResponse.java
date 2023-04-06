@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class ReadClientResponse {
+    
     public String contentType;
     public ReadClientResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,17 +17,20 @@ public class ReadClientResponse {
     /**
      * Retrieved client
      */
+    
     public com.formance.formance_sdk.models.shared.ReadClientResponse readClientResponse;
     public ReadClientResponse withReadClientResponse(com.formance.formance_sdk.models.shared.ReadClientResponse readClientResponse) {
         this.readClientResponse = readClientResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public ReadClientResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public ReadClientResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

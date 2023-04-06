@@ -9,26 +9,30 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TransferRequest {
-    @JsonProperty("amount")public Long amount;
+    @JsonProperty("amount")
+    public Long amount;
     public TransferRequest withAmount(Long amount) {
         this.amount = amount;
         return this;
     }
     
-    @JsonProperty("asset")public String asset;
+    @JsonProperty("asset")
+    public String asset;
     public TransferRequest withAsset(String asset) {
         this.asset = asset;
         return this;
     }
     
-    @JsonProperty("destination")public String destination;
+    @JsonProperty("destination")
+    public String destination;
     public TransferRequest withDestination(String destination) {
         this.destination = destination;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("source")public String source;
+    @JsonProperty("source")
+    public String source;
     public TransferRequest withSource(String source) {
         this.source = source;
         return this;

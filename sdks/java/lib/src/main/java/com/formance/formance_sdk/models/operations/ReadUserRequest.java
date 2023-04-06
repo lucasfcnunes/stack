@@ -10,7 +10,8 @@ public class ReadUserRequest {
     /**
      * User ID
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")public String userId;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
     public ReadUserRequest withUserId(String userId) {
         this.userId = userId;
         return this;

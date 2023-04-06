@@ -7,13 +7,15 @@ package com.formance.formance_sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class BalanceWithAssets {
-    @JsonProperty("assets")public java.util.Map<String, Double> assets;
+    @JsonProperty("assets")
+    public java.util.Map<String, Double> assets;
     public BalanceWithAssets withAssets(java.util.Map<String, Double> assets) {
         this.assets = assets;
         return this;
     }
     
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public BalanceWithAssets withName(String name) {
         this.name = name;
         return this;

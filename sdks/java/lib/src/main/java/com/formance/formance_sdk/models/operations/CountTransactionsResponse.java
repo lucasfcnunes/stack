@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class CountTransactionsResponse {
+    
     public String contentType;
     public CountTransactionsResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,11 +17,13 @@ public class CountTransactionsResponse {
     /**
      * Error
      */
+    
     public com.formance.formance_sdk.models.shared.ErrorResponse errorResponse;
     public CountTransactionsResponse withErrorResponse(com.formance.formance_sdk.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
     }
+    
     
     public java.util.Map<String, String[]> headers;
     public CountTransactionsResponse withHeaders(java.util.Map<String, String[]> headers) {
@@ -28,11 +31,13 @@ public class CountTransactionsResponse {
         return this;
     }
     
+    
     public Integer statusCode;
     public CountTransactionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public CountTransactionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

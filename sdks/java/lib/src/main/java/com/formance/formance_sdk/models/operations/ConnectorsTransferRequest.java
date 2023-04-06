@@ -7,7 +7,8 @@ package com.formance.formance_sdk.models.operations;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class ConnectorsTransferRequest {
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.formance.formance_sdk.models.shared.TransferRequest transferRequest;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.formance.formance_sdk.models.shared.TransferRequest transferRequest;
     public ConnectorsTransferRequest withTransferRequest(com.formance.formance_sdk.models.shared.TransferRequest transferRequest) {
         this.transferRequest = transferRequest;
         return this;
@@ -16,7 +17,8 @@ public class ConnectorsTransferRequest {
     /**
      * The name of the connector.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connector")public com.formance.formance_sdk.models.shared.ConnectorEnum connector;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connector")
+    public com.formance.formance_sdk.models.shared.ConnectorEnum connector;
     public ConnectorsTransferRequest withConnector(com.formance.formance_sdk.models.shared.ConnectorEnum connector) {
         this.connector = connector;
         return this;

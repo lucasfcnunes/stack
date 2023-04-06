@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from sdk.models import operations, shared
-from typing import Any, Optional
+from typing import Optional
 
 class Ledger:
     _client: requests_http.Session
@@ -308,7 +308,7 @@ class Ledger:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
+                out = utils.unmarshal_json(http_res.text, Optional[shared.LedgerInfoResponse])
                 res.ledger_info_response = out
         else:
             if utils.match_content_type(content_type, 'application/json'):
@@ -454,7 +454,6 @@ class Ledger:
     def read_stats(self, request: operations.ReadStatsRequest) -> operations.ReadStatsResponse:
         r"""Get statistics from a ledger
         Get statistics from a ledger. (aggregate metrics on accounts and transactions)
-        
         """
         base_url = self._server_url
         
@@ -507,7 +506,6 @@ class Ledger:
     def run_script(self, request: operations.RunScriptRequest) -> operations.RunScriptResponse:
         r"""Execute a Numscript
         This route is deprecated, and has been merged into `POST /{ledger}/transactions`.
-        
         """
         base_url = self._server_url
         

@@ -15,19 +15,22 @@ import java.time.OffsetDateTime;
 
 public class StageStatus {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("error")public String error;
+    @JsonProperty("error")
+    public String error;
     public StageStatus withError(String error) {
         this.error = error;
         return this;
     }
     
-    @JsonProperty("instanceID")public String instanceID;
+    @JsonProperty("instanceID")
+    public String instanceID;
     public StageStatus withInstanceID(String instanceID) {
         this.instanceID = instanceID;
         return this;
     }
     
-    @JsonProperty("stage")public Double stage;
+    @JsonProperty("stage")
+    public Double stage;
     public StageStatus withStage(Double stage) {
         this.stage = stage;
         return this;
@@ -35,7 +38,8 @@ public class StageStatus {
     
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("startedAt")public OffsetDateTime startedAt;
+    @JsonProperty("startedAt")
+    public OffsetDateTime startedAt;
     public StageStatus withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -44,7 +48,8 @@ public class StageStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("terminatedAt")public OffsetDateTime terminatedAt;
+    @JsonProperty("terminatedAt")
+    public OffsetDateTime terminatedAt;
     public StageStatus withTerminatedAt(OffsetDateTime terminatedAt) {
         this.terminatedAt = terminatedAt;
         return this;

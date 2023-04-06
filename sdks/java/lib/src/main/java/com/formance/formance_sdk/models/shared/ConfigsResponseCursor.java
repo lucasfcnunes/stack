@@ -7,13 +7,15 @@ package com.formance.formance_sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ConfigsResponseCursor {
-    @JsonProperty("data")public Object[] data;
-    public ConfigsResponseCursor withData(Object[] data) {
+    @JsonProperty("data")
+    public WebhooksConfig[] data;
+    public ConfigsResponseCursor withData(WebhooksConfig[] data) {
         this.data = data;
         return this;
     }
     
-    @JsonProperty("hasMore")public Boolean hasMore;
+    @JsonProperty("hasMore")
+    public Boolean hasMore;
     public ConfigsResponseCursor withHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
         return this;

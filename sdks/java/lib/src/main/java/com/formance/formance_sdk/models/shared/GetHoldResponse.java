@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * GetHoldResponse - Holds
  */
 public class GetHoldResponse {
-    @JsonProperty("data")public ExpandedDebitHold data;
+    @JsonProperty("data")
+    public ExpandedDebitHold data;
     public GetHoldResponse withData(ExpandedDebitHold data) {
         this.data = data;
         return this;

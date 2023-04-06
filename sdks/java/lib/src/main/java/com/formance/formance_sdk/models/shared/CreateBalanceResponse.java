@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * CreateBalanceResponse - Created balance
  */
 public class CreateBalanceResponse {
-    @JsonProperty("data")public Balance data;
+    @JsonProperty("data")
+    public Balance data;
     public CreateBalanceResponse withData(Balance data) {
         this.data = data;
         return this;

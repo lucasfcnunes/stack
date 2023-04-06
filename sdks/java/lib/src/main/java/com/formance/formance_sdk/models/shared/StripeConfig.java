@@ -9,7 +9,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StripeConfig {
-    @JsonProperty("apiKey")public String apiKey;
+    @JsonProperty("apiKey")
+    public String apiKey;
     public StripeConfig withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -20,7 +21,8 @@ public class StripeConfig {
      * 
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("pageSize")public Long pageSize;
+    @JsonProperty("pageSize")
+    public Long pageSize;
     public StripeConfig withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -31,7 +33,8 @@ public class StripeConfig {
      * 
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("pollingPeriod")public String pollingPeriod;
+    @JsonProperty("pollingPeriod")
+    public String pollingPeriod;
     public StripeConfig withPollingPeriod(String pollingPeriod) {
         this.pollingPeriod = pollingPeriod;
         return this;

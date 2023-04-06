@@ -13,7 +13,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class CreateSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("data")public Secret data;
+    @JsonProperty("data")
+    public Secret data;
     public CreateSecretResponse withData(Secret data) {
         this.data = data;
         return this;

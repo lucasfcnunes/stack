@@ -10,7 +10,8 @@ public class ListAccountsRequest {
     /**
      * Filter accounts by address pattern (regular expression placed between ^ and $).
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address")public String address;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address")
+    public String address;
     public ListAccountsRequest withAddress(String address) {
         this.address = address;
         return this;
@@ -19,7 +20,8 @@ public class ListAccountsRequest {
     /**
      * Pagination cursor, will return accounts after given address, in descending order.
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")public String after;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
+    public String after;
     public ListAccountsRequest withAfter(String after) {
         this.after = after;
         return this;
@@ -28,7 +30,8 @@ public class ListAccountsRequest {
     /**
      * Filter accounts by their balance (default operator is gte)
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=balance")public Long balance;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=balance")
+    public Long balance;
     public ListAccountsRequest withBalance(Long balance) {
         this.balance = balance;
         return this;
@@ -38,7 +41,8 @@ public class ListAccountsRequest {
      * Operator used for the filtering of balances can be greater than/equal, less than/equal, greater than, less than, equal or not.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=balanceOperator")public ListAccountsBalanceOperatorEnum balanceOperator;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=balanceOperator")
+    public ListAccountsBalanceOperatorEnum balanceOperator;
     public ListAccountsRequest withBalanceOperator(ListAccountsBalanceOperatorEnum balanceOperator) {
         this.balanceOperator = balanceOperator;
         return this;
@@ -49,7 +53,8 @@ public class ListAccountsRequest {
      * Deprecated, please use `balanceOperator` instead.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=balance_operator")public ListAccountsBalanceOperatorEnum balanceOperatorDeprecated;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=balance_operator")
+    public ListAccountsBalanceOperatorEnum balanceOperatorDeprecated;
     public ListAccountsRequest withBalanceOperatorDeprecated(ListAccountsBalanceOperatorEnum balanceOperatorDeprecated) {
         this.balanceOperatorDeprecated = balanceOperatorDeprecated;
         return this;
@@ -62,7 +67,8 @@ public class ListAccountsRequest {
      * No other parameters can be set when this parameter is set.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")public String cursor;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
     public ListAccountsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -71,7 +77,8 @@ public class ListAccountsRequest {
     /**
      * Name of the ledger.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")public String ledger;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")
+    public String ledger;
     public ListAccountsRequest withLedger(String ledger) {
         this.ledger = ledger;
         return this;
@@ -80,7 +87,8 @@ public class ListAccountsRequest {
     /**
      * Filter accounts by metadata key value pairs. Nested objects can be used as seen in the example below.
      */
-    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=metadata")public java.util.Map<String, Object> metadata;
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=metadata")
+    public java.util.Map<String, Object> metadata;
     public ListAccountsRequest withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -90,7 +98,8 @@ public class ListAccountsRequest {
      * The maximum number of results to return per page.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")public Long pageSize;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
     public ListAccountsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -101,7 +110,8 @@ public class ListAccountsRequest {
      * Deprecated, please use `pageSize` instead.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")public Long pageSizeDeprecated;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSizeDeprecated;
     public ListAccountsRequest withPageSizeDeprecated(Long pageSizeDeprecated) {
         this.pageSizeDeprecated = pageSizeDeprecated;
         return this;
@@ -115,7 +125,8 @@ public class ListAccountsRequest {
      * Deprecated, please use `cursor` instead.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagination_token")public String paginationToken;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagination_token")
+    public String paginationToken;
     public ListAccountsRequest withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;

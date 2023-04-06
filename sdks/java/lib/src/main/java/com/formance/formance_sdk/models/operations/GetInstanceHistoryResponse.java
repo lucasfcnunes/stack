@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class GetInstanceHistoryResponse {
+    
     public String contentType;
     public GetInstanceHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,6 +17,7 @@ public class GetInstanceHistoryResponse {
     /**
      * General error
      */
+    
     public com.formance.formance_sdk.models.shared.Error error;
     public GetInstanceHistoryResponse withError(com.formance.formance_sdk.models.shared.Error error) {
         this.error = error;
@@ -25,17 +27,20 @@ public class GetInstanceHistoryResponse {
     /**
      * The workflow instance history
      */
+    
     public com.formance.formance_sdk.models.shared.GetWorkflowInstanceHistoryResponse getWorkflowInstanceHistoryResponse;
     public GetInstanceHistoryResponse withGetWorkflowInstanceHistoryResponse(com.formance.formance_sdk.models.shared.GetWorkflowInstanceHistoryResponse getWorkflowInstanceHistoryResponse) {
         this.getWorkflowInstanceHistoryResponse = getWorkflowInstanceHistoryResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public GetInstanceHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public GetInstanceHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

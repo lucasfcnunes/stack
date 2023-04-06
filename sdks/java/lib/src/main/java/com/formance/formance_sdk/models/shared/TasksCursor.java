@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * TasksCursor - OK
  */
 public class TasksCursor {
-    @JsonProperty("cursor")public TasksCursorCursor cursor;
+    @JsonProperty("cursor")
+    public TasksCursorCursor cursor;
     public TasksCursor withCursor(TasksCursorCursor cursor) {
         this.cursor = cursor;
         return this;

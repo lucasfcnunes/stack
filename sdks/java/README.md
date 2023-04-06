@@ -41,8 +41,8 @@ public class Application {
                 .build();
 
             AddScopeToClientRequest req = new AddScopeToClientRequest() {{
-                clientId = "unde";
-                scopeId = "deserunt";
+                clientId = "corrupti";
+                scopeId = "provident";
             }}            
 
             AddScopeToClientResponse res = sdk.auth.addScopeToClient(req);
@@ -57,7 +57,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### auth

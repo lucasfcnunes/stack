@@ -10,7 +10,8 @@ public class CancelEventRequest {
     /**
      * The instance id
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instanceID")public String instanceID;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instanceID")
+    public String instanceID;
     public CancelEventRequest withInstanceID(String instanceID) {
         this.instanceID = instanceID;
         return this;

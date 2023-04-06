@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class ListScopesResponse {
+    
     public String contentType;
     public ListScopesResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,17 +17,20 @@ public class ListScopesResponse {
     /**
      * List of scopes
      */
+    
     public com.formance.formance_sdk.models.shared.ListScopesResponse listScopesResponse;
     public ListScopesResponse withListScopesResponse(com.formance.formance_sdk.models.shared.ListScopesResponse listScopesResponse) {
         this.listScopesResponse = listScopesResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public ListScopesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public ListScopesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

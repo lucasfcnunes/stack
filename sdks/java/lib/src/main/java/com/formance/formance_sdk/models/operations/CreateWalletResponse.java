@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class CreateWalletResponse {
+    
     public String contentType;
     public CreateWalletResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,17 +17,20 @@ public class CreateWalletResponse {
     /**
      * Wallet created
      */
+    
     public com.formance.formance_sdk.models.shared.CreateWalletResponse createWalletResponse;
     public CreateWalletResponse withCreateWalletResponse(com.formance.formance_sdk.models.shared.CreateWalletResponse createWalletResponse) {
         this.createWalletResponse = createWalletResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public CreateWalletResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public CreateWalletResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
@@ -37,6 +41,7 @@ public class CreateWalletResponse {
     /**
      * Error
      */
+    
     public com.formance.formance_sdk.models.shared.WalletsErrorResponse walletsErrorResponse;
     public CreateWalletResponse withWalletsErrorResponse(com.formance.formance_sdk.models.shared.WalletsErrorResponse walletsErrorResponse) {
         this.walletsErrorResponse = walletsErrorResponse;

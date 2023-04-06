@@ -7,17 +7,20 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class GetConnectorTaskResponse {
+    
     public String contentType;
     public GetConnectorTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
     
+    
     public Integer statusCode;
     public GetConnectorTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public GetConnectorTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
@@ -28,6 +31,7 @@ public class GetConnectorTaskResponse {
     /**
      * OK
      */
+    
     public com.formance.formance_sdk.models.shared.TaskResponse taskResponse;
     public GetConnectorTaskResponse withTaskResponse(com.formance.formance_sdk.models.shared.TaskResponse taskResponse) {
         this.taskResponse = taskResponse;

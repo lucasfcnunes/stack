@@ -7,7 +7,8 @@ package com.formance.formance_sdk.models.operations;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class UpdateClientRequest {
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.formance.formance_sdk.models.shared.UpdateClientRequest updateClientRequest;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.formance.formance_sdk.models.shared.UpdateClientRequest updateClientRequest;
     public UpdateClientRequest withUpdateClientRequest(com.formance.formance_sdk.models.shared.UpdateClientRequest updateClientRequest) {
         this.updateClientRequest = updateClientRequest;
         return this;
@@ -16,7 +17,8 @@ public class UpdateClientRequest {
     /**
      * Client ID
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")public String clientId;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
+    public String clientId;
     public UpdateClientRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;

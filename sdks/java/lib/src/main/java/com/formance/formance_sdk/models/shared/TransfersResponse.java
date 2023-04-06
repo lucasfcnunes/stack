@@ -13,7 +13,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class TransfersResponse {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("data")public TransfersResponseData[] data;
+    @JsonProperty("data")
+    public TransfersResponseData[] data;
     public TransfersResponse withData(TransfersResponseData[] data) {
         this.data = data;
         return this;

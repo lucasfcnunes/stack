@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TaskCurrencyCloudDescriptor {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public TaskCurrencyCloudDescriptor withName(String name) {
         this.name = name;
         return this;

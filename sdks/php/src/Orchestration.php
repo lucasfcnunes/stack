@@ -317,7 +317,7 @@ class Orchestration
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->listRunsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+                $response->listRunsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'formance\stack\Models\Shared\ListRunsResponse', 'json');
             }
         }
         else {

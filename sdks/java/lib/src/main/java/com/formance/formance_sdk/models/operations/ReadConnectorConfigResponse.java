@@ -10,11 +10,13 @@ public class ReadConnectorConfigResponse {
     /**
      * OK
      */
+    
     public com.formance.formance_sdk.models.shared.ConnectorConfigResponse connectorConfigResponse;
     public ReadConnectorConfigResponse withConnectorConfigResponse(com.formance.formance_sdk.models.shared.ConnectorConfigResponse connectorConfigResponse) {
         this.connectorConfigResponse = connectorConfigResponse;
         return this;
     }
+    
     
     public String contentType;
     public ReadConnectorConfigResponse withContentType(String contentType) {
@@ -22,11 +24,13 @@ public class ReadConnectorConfigResponse {
         return this;
     }
     
+    
     public Integer statusCode;
     public ReadConnectorConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public ReadConnectorConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

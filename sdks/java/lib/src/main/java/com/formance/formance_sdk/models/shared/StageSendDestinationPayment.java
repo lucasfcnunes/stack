@@ -7,7 +7,8 @@ package com.formance.formance_sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StageSendDestinationPayment {
-    @JsonProperty("psp")public String psp;
+    @JsonProperty("psp")
+    public String psp;
     public StageSendDestinationPayment withPsp(String psp) {
         this.psp = psp;
         return this;

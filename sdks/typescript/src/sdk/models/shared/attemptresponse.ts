@@ -3,7 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { Expose } from "class-transformer";
+import { Attempt } from "./attempt";
+import { Expose, Type } from "class-transformer";
 
 /**
  * OK
@@ -11,5 +12,6 @@ import { Expose } from "class-transformer";
 export class AttemptResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
   @Expose({ name: "data" })
-  data: any;
+  @Type(() => Attempt)
+  data: Attempt;
 }

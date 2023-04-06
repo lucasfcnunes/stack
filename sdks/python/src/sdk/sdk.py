@@ -31,7 +31,6 @@ class SDK:
     OAuth2 - an open protocol to allow secure authorization in a simple
     and standard method from web, mobile and desktop applications.
     <SecurityDefinitions />
-    
     """
     auth: Auth
     ledger: Ledger
@@ -46,7 +45,7 @@ class SDK:
     _server_url: str = SERVERS[0]
     _language: str = "python"
     _sdk_version: str = "0.0.1"
-    _gen_version: str = "2.16.1"
+    _gen_version: str = "2.17.8"
 
     def __init__(self,
                  security: shared.Security = None,

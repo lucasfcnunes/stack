@@ -10,7 +10,8 @@ public class GetMappingRequest {
     /**
      * Name of the ledger.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")public String ledger;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")
+    public String ledger;
     public GetMappingRequest withLedger(String ledger) {
         this.ledger = ledger;
         return this;

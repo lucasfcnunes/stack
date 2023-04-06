@@ -15,7 +15,8 @@ import java.time.OffsetDateTime;
 
 public class StageDelay {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("duration")public String duration;
+    @JsonProperty("duration")
+    public String duration;
     public StageDelay withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -24,7 +25,8 @@ public class StageDelay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("until")public OffsetDateTime until;
+    @JsonProperty("until")
+    public OffsetDateTime until;
     public StageDelay withUntil(OffsetDateTime until) {
         this.until = until;
         return this;

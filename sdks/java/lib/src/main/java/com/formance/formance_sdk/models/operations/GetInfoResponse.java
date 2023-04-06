@@ -10,11 +10,13 @@ public class GetInfoResponse {
     /**
      * OK
      */
+    
     public com.formance.formance_sdk.models.shared.ConfigInfoResponse configInfoResponse;
     public GetInfoResponse withConfigInfoResponse(com.formance.formance_sdk.models.shared.ConfigInfoResponse configInfoResponse) {
         this.configInfoResponse = configInfoResponse;
         return this;
     }
+    
     
     public String contentType;
     public GetInfoResponse withContentType(String contentType) {
@@ -25,17 +27,20 @@ public class GetInfoResponse {
     /**
      * Error
      */
+    
     public com.formance.formance_sdk.models.shared.ErrorResponse errorResponse;
     public GetInfoResponse withErrorResponse(com.formance.formance_sdk.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public GetInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public GetInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

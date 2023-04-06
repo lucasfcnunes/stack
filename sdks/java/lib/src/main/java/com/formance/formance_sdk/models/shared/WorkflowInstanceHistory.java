@@ -15,19 +15,22 @@ import java.time.OffsetDateTime;
 
 public class WorkflowInstanceHistory {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("error")public String error;
+    @JsonProperty("error")
+    public String error;
     public WorkflowInstanceHistory withError(String error) {
         this.error = error;
         return this;
     }
     
-    @JsonProperty("input")public Object input;
+    @JsonProperty("input")
+    public Object input;
     public WorkflowInstanceHistory withInput(Object input) {
         this.input = input;
         return this;
     }
     
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public WorkflowInstanceHistory withName(String name) {
         this.name = name;
         return this;
@@ -35,13 +38,15 @@ public class WorkflowInstanceHistory {
     
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("startedAt")public OffsetDateTime startedAt;
+    @JsonProperty("startedAt")
+    public OffsetDateTime startedAt;
     public WorkflowInstanceHistory withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
     }
     
-    @JsonProperty("terminated")public Boolean terminated;
+    @JsonProperty("terminated")
+    public Boolean terminated;
     public WorkflowInstanceHistory withTerminated(Boolean terminated) {
         this.terminated = terminated;
         return this;
@@ -50,7 +55,8 @@ public class WorkflowInstanceHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("terminatedAt")public OffsetDateTime terminatedAt;
+    @JsonProperty("terminatedAt")
+    public OffsetDateTime terminatedAt;
     public WorkflowInstanceHistory withTerminatedAt(OffsetDateTime terminatedAt) {
         this.terminatedAt = terminatedAt;
         return this;

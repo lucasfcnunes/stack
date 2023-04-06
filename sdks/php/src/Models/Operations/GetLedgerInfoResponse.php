@@ -25,10 +25,10 @@ class GetLedgerInfoResponse
     /**
      * OK
      * 
-     * @var mixed $ledgerInfoResponse
+     * @var ?\formance\stack\Models\Shared\LedgerInfoResponse $ledgerInfoResponse
      */
 	
-    public mixed $ledgerInfoResponse = null;
+    public ?\formance\stack\Models\Shared\LedgerInfoResponse $ledgerInfoResponse = null;
     
 	
     public int $statusCode;

@@ -10,42 +10,48 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ResponseCursor {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("data")public java.util.Map<String, Object>[] data;
+    @JsonProperty("data")
+    public java.util.Map<String, Object>[] data;
     public ResponseCursor withData(java.util.Map<String, Object>[] data) {
         this.data = data;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("hasMore")public Boolean hasMore;
+    @JsonProperty("hasMore")
+    public Boolean hasMore;
     public ResponseCursor withHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("next")public String next;
+    @JsonProperty("next")
+    public String next;
     public ResponseCursor withNext(String next) {
         this.next = next;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("pageSize")public Long pageSize;
+    @JsonProperty("pageSize")
+    public Long pageSize;
     public ResponseCursor withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("previous")public String previous;
+    @JsonProperty("previous")
+    public String previous;
     public ResponseCursor withPrevious(String previous) {
         this.previous = previous;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("total")public ResponseCursorTotal total;
+    @JsonProperty("total")
+    public ResponseCursorTotal total;
     public ResponseCursor withTotal(ResponseCursorTotal total) {
         this.total = total;
         return this;

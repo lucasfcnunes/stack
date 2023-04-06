@@ -3,7 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { Expose } from "class-transformer";
+import { WebhooksConfig } from "./webhooksconfig";
+import { Expose, Type } from "class-transformer";
 
 /**
  * Config created successfully.
@@ -11,5 +12,6 @@ import { Expose } from "class-transformer";
 export class ConfigResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
   @Expose({ name: "data" })
-  data: any;
+  @Type(() => WebhooksConfig)
+  data: WebhooksConfig;
 }

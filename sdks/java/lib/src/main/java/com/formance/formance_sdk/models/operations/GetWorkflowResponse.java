@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class GetWorkflowResponse {
+    
     public String contentType;
     public GetWorkflowResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,6 +17,7 @@ public class GetWorkflowResponse {
     /**
      * General error
      */
+    
     public com.formance.formance_sdk.models.shared.Error error;
     public GetWorkflowResponse withError(com.formance.formance_sdk.models.shared.Error error) {
         this.error = error;
@@ -25,17 +27,20 @@ public class GetWorkflowResponse {
     /**
      * The workflow
      */
+    
     public com.formance.formance_sdk.models.shared.GetWorkflowResponse getWorkflowResponse;
     public GetWorkflowResponse withGetWorkflowResponse(com.formance.formance_sdk.models.shared.GetWorkflowResponse getWorkflowResponse) {
         this.getWorkflowResponse = getWorkflowResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public GetWorkflowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public GetWorkflowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

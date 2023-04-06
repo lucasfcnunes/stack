@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class CreateTransactionResponse {
+    
     public String contentType;
     public CreateTransactionResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,17 +17,20 @@ public class CreateTransactionResponse {
     /**
      * Error
      */
+    
     public com.formance.formance_sdk.models.shared.ErrorResponse errorResponse;
     public CreateTransactionResponse withErrorResponse(com.formance.formance_sdk.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public CreateTransactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public CreateTransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
@@ -37,6 +41,7 @@ public class CreateTransactionResponse {
     /**
      * OK
      */
+    
     public com.formance.formance_sdk.models.shared.TransactionsResponse transactionsResponse;
     public CreateTransactionResponse withTransactionsResponse(com.formance.formance_sdk.models.shared.TransactionsResponse transactionsResponse) {
         this.transactionsResponse = transactionsResponse;

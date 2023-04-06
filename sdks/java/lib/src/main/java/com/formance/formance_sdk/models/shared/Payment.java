@@ -12,19 +12,22 @@ import com.formance.formance_sdk.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
 public class Payment {
-    @JsonProperty("accountID")public String accountID;
+    @JsonProperty("accountID")
+    public String accountID;
     public Payment withAccountID(String accountID) {
         this.accountID = accountID;
         return this;
     }
     
-    @JsonProperty("adjustments")public PaymentAdjustment[] adjustments;
+    @JsonProperty("adjustments")
+    public PaymentAdjustment[] adjustments;
     public Payment withAdjustments(PaymentAdjustment[] adjustments) {
         this.adjustments = adjustments;
         return this;
     }
     
-    @JsonProperty("asset")public String asset;
+    @JsonProperty("asset")
+    public String asset;
     public Payment withAsset(String asset) {
         this.asset = asset;
         return this;
@@ -32,61 +35,71 @@ public class Payment {
     
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("createdAt")public OffsetDateTime createdAt;
+    @JsonProperty("createdAt")
+    public OffsetDateTime createdAt;
     public Payment withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
     
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public Payment withId(String id) {
         this.id = id;
         return this;
     }
     
-    @JsonProperty("initialAmount")public Long initialAmount;
+    @JsonProperty("initialAmount")
+    public Long initialAmount;
     public Payment withInitialAmount(Long initialAmount) {
         this.initialAmount = initialAmount;
         return this;
     }
     
-    @JsonProperty("metadata")public PaymentMetadata metadata;
+    @JsonProperty("metadata")
+    public PaymentMetadata metadata;
     public Payment withMetadata(PaymentMetadata metadata) {
         this.metadata = metadata;
         return this;
     }
     
-    @JsonProperty("provider")public ConnectorEnum provider;
+    @JsonProperty("provider")
+    public ConnectorEnum provider;
     public Payment withProvider(ConnectorEnum provider) {
         this.provider = provider;
         return this;
     }
     
-    @JsonProperty("raw")public java.util.Map<String, Object> raw;
+    @JsonProperty("raw")
+    public java.util.Map<String, Object> raw;
     public Payment withRaw(java.util.Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
     
-    @JsonProperty("reference")public String reference;
+    @JsonProperty("reference")
+    public String reference;
     public Payment withReference(String reference) {
         this.reference = reference;
         return this;
     }
     
-    @JsonProperty("scheme")public PaymentSchemeEnum scheme;
+    @JsonProperty("scheme")
+    public PaymentSchemeEnum scheme;
     public Payment withScheme(PaymentSchemeEnum scheme) {
         this.scheme = scheme;
         return this;
     }
     
-    @JsonProperty("status")public PaymentStatusEnum status;
+    @JsonProperty("status")
+    public PaymentStatusEnum status;
     public Payment withStatus(PaymentStatusEnum status) {
         this.status = status;
         return this;
     }
     
-    @JsonProperty("type")public PaymentTypeEnum type;
+    @JsonProperty("type")
+    public PaymentTypeEnum type;
     public Payment withType(PaymentTypeEnum type) {
         this.type = type;
         return this;

@@ -10,11 +10,13 @@ public class GetManyConfigsResponse {
     /**
      * OK
      */
+    
     public com.formance.formance_sdk.models.shared.ConfigsResponse configsResponse;
     public GetManyConfigsResponse withConfigsResponse(com.formance.formance_sdk.models.shared.ConfigsResponse configsResponse) {
         this.configsResponse = configsResponse;
         return this;
     }
+    
     
     public String contentType;
     public GetManyConfigsResponse withContentType(String contentType) {
@@ -22,11 +24,13 @@ public class GetManyConfigsResponse {
         return this;
     }
     
+    
     public Integer statusCode;
     public GetManyConfigsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public GetManyConfigsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

@@ -472,7 +472,7 @@ class Ledger
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->ledgerInfoResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+                $response->ledgerInfoResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'formance\stack\Models\Shared\LedgerInfoResponse', 'json');
             }
         }
         else {

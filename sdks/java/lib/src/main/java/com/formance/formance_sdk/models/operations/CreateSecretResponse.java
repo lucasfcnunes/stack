@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class CreateSecretResponse {
+    
     public String contentType;
     public CreateSecretResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,17 +17,20 @@ public class CreateSecretResponse {
     /**
      * Created secret
      */
+    
     public com.formance.formance_sdk.models.shared.CreateSecretResponse createSecretResponse;
     public CreateSecretResponse withCreateSecretResponse(com.formance.formance_sdk.models.shared.CreateSecretResponse createSecretResponse) {
         this.createSecretResponse = createSecretResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public CreateSecretResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public CreateSecretResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

@@ -10,7 +10,8 @@ public class ListConnectorTasksRequest {
     /**
      * The name of the connector.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connector")public com.formance.formance_sdk.models.shared.ConnectorEnum connector;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connector")
+    public com.formance.formance_sdk.models.shared.ConnectorEnum connector;
     public ListConnectorTasksRequest withConnector(com.formance.formance_sdk.models.shared.ConnectorEnum connector) {
         this.connector = connector;
         return this;
@@ -23,7 +24,8 @@ public class ListConnectorTasksRequest {
      * No other parameters can be set when this parameter is set.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")public String cursor;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
     public ListConnectorTasksRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -33,7 +35,8 @@ public class ListConnectorTasksRequest {
      * The maximum number of results to return per page.
      * 
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")public Long pageSize;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
     public ListConnectorTasksRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;

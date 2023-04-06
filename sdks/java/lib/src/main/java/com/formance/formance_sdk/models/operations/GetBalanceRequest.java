@@ -7,13 +7,15 @@ package com.formance.formance_sdk.models.operations;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class GetBalanceRequest {
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=balanceName")public String balanceName;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=balanceName")
+    public String balanceName;
     public GetBalanceRequest withBalanceName(String balanceName) {
         this.balanceName = balanceName;
         return this;
     }
     
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")public String id;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
     public GetBalanceRequest withId(String id) {
         this.id = id;
         return this;

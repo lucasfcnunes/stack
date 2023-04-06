@@ -17,8 +17,8 @@ public class Application {
                 .build();
 
             AddScopeToClientRequest req = new AddScopeToClientRequest() {{
-                clientId = "unde";
-                scopeId = "deserunt";
+                clientId = "corrupti";
+                scopeId = "provident";
             }}            
 
             AddScopeToClientResponse res = sdk.auth.addScopeToClient(req);

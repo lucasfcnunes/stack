@@ -10,7 +10,8 @@ public class AddTransientScopeRequest {
     /**
      * Scope ID
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scopeId")public String scopeId;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scopeId")
+    public String scopeId;
     public AddTransientScopeRequest withScopeId(String scopeId) {
         this.scopeId = scopeId;
         return this;
@@ -19,7 +20,8 @@ public class AddTransientScopeRequest {
     /**
      * Transient scope ID
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transientScopeId")public String transientScopeId;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transientScopeId")
+    public String transientScopeId;
     public AddTransientScopeRequest withTransientScopeId(String transientScopeId) {
         this.transientScopeId = transientScopeId;
         return this;

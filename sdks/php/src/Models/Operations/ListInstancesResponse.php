@@ -25,10 +25,10 @@ class ListInstancesResponse
     /**
      * List of workflow instances
      * 
-     * @var mixed $listRunsResponse
+     * @var ?\formance\stack\Models\Shared\ListRunsResponse $listRunsResponse
      */
 	
-    public mixed $listRunsResponse = null;
+    public ?\formance\stack\Models\Shared\ListRunsResponse $listRunsResponse = null;
     
 	
     public int $statusCode;

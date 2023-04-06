@@ -10,7 +10,8 @@ public class GetTransactionRequest {
     /**
      * Name of the ledger.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")public String ledger;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")
+    public String ledger;
     public GetTransactionRequest withLedger(String ledger) {
         this.ledger = ledger;
         return this;
@@ -19,7 +20,8 @@ public class GetTransactionRequest {
     /**
      * Transaction ID.
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=txid")public Long txid;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=txid")
+    public Long txid;
     public GetTransactionRequest withTxid(Long txid) {
         this.txid = txid;
         return this;

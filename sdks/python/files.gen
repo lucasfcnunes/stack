@@ -143,6 +143,9 @@ src/sdk/models/shared/configinforesponse.py
 src/sdk/models/shared/configinfo.py
 src/sdk/models/shared/config.py
 src/sdk/models/shared/ledgerstorage.py
+src/sdk/models/shared/ledgerinforesponse.py
+src/sdk/models/shared/ledgerinfo.py
+src/sdk/models/shared/migrationinfo.py
 src/sdk/models/shared/mappingresponse.py
 src/sdk/models/shared/mapping.py
 src/sdk/models/shared/contract.py
@@ -211,6 +214,7 @@ src/sdk/models/shared/creditwalletrequest.py
 src/sdk/models/shared/activitycreatetransaction.py
 src/sdk/models/shared/activityconfirmhold.py
 src/sdk/models/shared/getworkflowresponse.py
+src/sdk/models/shared/listrunsresponse.py
 src/sdk/models/shared/listworkflowsresponse.py
 src/sdk/models/shared/runworkflowresponse.py
 src/sdk/models/shared/stripetransferrequest.py
@@ -261,10 +265,12 @@ src/sdk/models/shared/getwalletresponse.py
 src/sdk/models/shared/listbalancesresponse.py
 src/sdk/models/shared/listwalletsresponse.py
 src/sdk/models/shared/configresponse.py
+src/sdk/models/shared/webhooksconfig.py
 src/sdk/models/shared/configchangesecret.py
 src/sdk/models/shared/configsresponse.py
 src/sdk/models/shared/configuser.py
 src/sdk/models/shared/attemptresponse.py
+src/sdk/models/shared/attempt.py
 src/sdk/models/shared/security.py
 src/sdk/models/shared/__init__.py
 USAGE.md

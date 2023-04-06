@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class CreateClientResponse {
+    
     public String contentType;
     public CreateClientResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,17 +17,20 @@ public class CreateClientResponse {
     /**
      * Client created
      */
+    
     public com.formance.formance_sdk.models.shared.CreateClientResponse createClientResponse;
     public CreateClientResponse withCreateClientResponse(com.formance.formance_sdk.models.shared.CreateClientResponse createClientResponse) {
         this.createClientResponse = createClientResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public CreateClientResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public CreateClientResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

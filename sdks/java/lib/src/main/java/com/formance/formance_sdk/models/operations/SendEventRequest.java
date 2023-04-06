@@ -7,7 +7,8 @@ package com.formance.formance_sdk.models.operations;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class SendEventRequest {
-    @SpeakeasyMetadata("request:mediaType=application/json")public SendEventRequestBody requestBody;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public SendEventRequestBody requestBody;
     public SendEventRequest withRequestBody(SendEventRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,7 +17,8 @@ public class SendEventRequest {
     /**
      * The instance id
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instanceID")public String instanceID;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instanceID")
+    public String instanceID;
     public SendEventRequest withInstanceID(String instanceID) {
         this.instanceID = instanceID;
         return this;

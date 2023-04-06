@@ -10,8 +10,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * AttemptResponse - OK
  */
 public class AttemptResponse {
-    @JsonProperty("data")public Object data;
-    public AttemptResponse withData(Object data) {
+    @JsonProperty("data")
+    public Attempt data;
+    public AttemptResponse withData(Attempt data) {
         this.data = data;
         return this;
     }

@@ -4,5 +4,5 @@ package shared
 
 // ConfigResponse - Config created successfully.
 type ConfigResponse struct {
-	Data interface{} `json:"data"`
+	Data WebhooksConfig `json:"data"`
 }

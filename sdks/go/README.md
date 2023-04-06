@@ -40,8 +40,8 @@ func main() {
     )
 
     req := operations.AddScopeToClientRequest{
-        ClientID: "unde",
-        ScopeID: "deserunt",
+        ClientID: "corrupti",
+        ScopeID: "provident",
     }
 
     ctx := context.Background()
@@ -58,7 +58,7 @@ func main() {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### Auth

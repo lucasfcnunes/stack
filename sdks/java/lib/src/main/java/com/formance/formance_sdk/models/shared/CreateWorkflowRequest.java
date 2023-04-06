@@ -10,13 +10,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateWorkflowRequest {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public CreateWorkflowRequest withName(String name) {
         this.name = name;
         return this;
     }
     
-    @JsonProperty("stages")public java.util.Map<String, Object>[] stages;
+    @JsonProperty("stages")
+    public java.util.Map<String, Object>[] stages;
     public CreateWorkflowRequest withStages(java.util.Map<String, Object>[] stages) {
         this.stages = stages;
         return this;

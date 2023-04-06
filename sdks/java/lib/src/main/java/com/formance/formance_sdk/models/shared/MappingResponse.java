@@ -13,7 +13,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class MappingResponse {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("data")public Mapping data;
+    @JsonProperty("data")
+    public Mapping data;
     public MappingResponse withData(Mapping data) {
         this.data = data;
         return this;

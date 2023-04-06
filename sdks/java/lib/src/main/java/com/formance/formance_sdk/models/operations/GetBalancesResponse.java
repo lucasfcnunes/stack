@@ -10,11 +10,13 @@ public class GetBalancesResponse {
     /**
      * OK
      */
+    
     public com.formance.formance_sdk.models.shared.BalancesCursorResponse balancesCursorResponse;
     public GetBalancesResponse withBalancesCursorResponse(com.formance.formance_sdk.models.shared.BalancesCursorResponse balancesCursorResponse) {
         this.balancesCursorResponse = balancesCursorResponse;
         return this;
     }
+    
     
     public String contentType;
     public GetBalancesResponse withContentType(String contentType) {
@@ -25,17 +27,20 @@ public class GetBalancesResponse {
     /**
      * Error
      */
+    
     public com.formance.formance_sdk.models.shared.ErrorResponse errorResponse;
     public GetBalancesResponse withErrorResponse(com.formance.formance_sdk.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public GetBalancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public GetBalancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

@@ -10,14 +10,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ActivityCreateTransaction {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("data")public PostTransaction data;
+    @JsonProperty("data")
+    public PostTransaction data;
     public ActivityCreateTransaction withData(PostTransaction data) {
         this.data = data;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("ledger")public String ledger;
+    @JsonProperty("ledger")
+    public String ledger;
     public ActivityCreateTransaction withLedger(String ledger) {
         this.ledger = ledger;
         return this;

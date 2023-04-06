@@ -7,6 +7,7 @@ package com.formance.formance_sdk.models.operations;
 import java.net.http.HttpResponse;
 
 public class ListInstancesResponse {
+    
     public String contentType;
     public ListInstancesResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,6 +17,7 @@ public class ListInstancesResponse {
     /**
      * General error
      */
+    
     public com.formance.formance_sdk.models.shared.Error error;
     public ListInstancesResponse withError(com.formance.formance_sdk.models.shared.Error error) {
         this.error = error;
@@ -25,17 +27,20 @@ public class ListInstancesResponse {
     /**
      * List of workflow instances
      */
-    public Object listRunsResponse;
-    public ListInstancesResponse withListRunsResponse(Object listRunsResponse) {
+    
+    public com.formance.formance_sdk.models.shared.ListRunsResponse listRunsResponse;
+    public ListInstancesResponse withListRunsResponse(com.formance.formance_sdk.models.shared.ListRunsResponse listRunsResponse) {
         this.listRunsResponse = listRunsResponse;
         return this;
     }
+    
     
     public Integer statusCode;
     public ListInstancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public ListInstancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

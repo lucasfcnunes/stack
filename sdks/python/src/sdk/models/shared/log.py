@@ -11,8 +11,8 @@ from sdk import utils
 from typing import Any
 
 class LogTypeEnum(str, Enum):
-    NEW_TRANSACTION = "NEW_TRANSACTION"
-    SET_METADATA = "SET_METADATA"
+    NEW_TRANSACTION = 'NEW_TRANSACTION'
+    SET_METADATA = 'SET_METADATA'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

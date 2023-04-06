@@ -7,7 +7,8 @@ package com.formance.formance_sdk.models.operations;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class CreateSecretRequest {
-    @SpeakeasyMetadata("request:mediaType=application/json")public com.formance.formance_sdk.models.shared.CreateSecretRequest createSecretRequest;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public com.formance.formance_sdk.models.shared.CreateSecretRequest createSecretRequest;
     public CreateSecretRequest withCreateSecretRequest(com.formance.formance_sdk.models.shared.CreateSecretRequest createSecretRequest) {
         this.createSecretRequest = createSecretRequest;
         return this;
@@ -16,7 +17,8 @@ public class CreateSecretRequest {
     /**
      * Client ID
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")public String clientId;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
+    public String clientId;
     public CreateSecretRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;

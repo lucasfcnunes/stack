@@ -19,7 +19,7 @@ type ListInstancesResponse struct {
 	// General error
 	Error *shared.Error
 	// List of workflow instances
-	ListRunsResponse interface{}
+	ListRunsResponse *shared.ListRunsResponse
 	StatusCode       int
 	RawResponse      *http.Response
 }

@@ -10,7 +10,8 @@ public class ReadStatsRequest {
     /**
      * name of the ledger
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")public String ledger;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ledger")
+    public String ledger;
     public ReadStatsRequest withLedger(String ledger) {
         this.ledger = ledger;
         return this;

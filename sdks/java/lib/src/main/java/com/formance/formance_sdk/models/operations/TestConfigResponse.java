@@ -10,11 +10,13 @@ public class TestConfigResponse {
     /**
      * OK
      */
+    
     public com.formance.formance_sdk.models.shared.AttemptResponse attemptResponse;
     public TestConfigResponse withAttemptResponse(com.formance.formance_sdk.models.shared.AttemptResponse attemptResponse) {
         this.attemptResponse = attemptResponse;
         return this;
     }
+    
     
     public String contentType;
     public TestConfigResponse withContentType(String contentType) {
@@ -22,11 +24,13 @@ public class TestConfigResponse {
         return this;
     }
     
+    
     public Integer statusCode;
     public TestConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public TestConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {

@@ -10,7 +10,8 @@ public class GetWorkflowRequest {
     /**
      * The flow id
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=flowId")public String flowId;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=flowId")
+    public String flowId;
     public GetWorkflowRequest withFlowId(String flowId) {
         this.flowId = flowId;
         return this;

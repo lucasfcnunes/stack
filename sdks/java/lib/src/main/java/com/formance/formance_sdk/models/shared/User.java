@@ -10,21 +10,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class User {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("email")public String email;
+    @JsonProperty("email")
+    public String email;
     public User withEmail(String email) {
         this.email = email;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public User withId(String id) {
         this.id = id;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("subject")public String subject;
+    @JsonProperty("subject")
+    public String subject;
     public User withSubject(String subject) {
         this.subject = subject;
         return this;
