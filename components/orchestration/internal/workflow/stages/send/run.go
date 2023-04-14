@@ -45,7 +45,7 @@ func RunSend(ctx workflow.Context, send Send) (err error) {
 			err = errors.WithStack(fmt.Errorf("%s", e))
 		}
 	}()
-	amount := *sdk.NewMonetary(send.Amount.Asset, send.Amount.Amount)
+	amount := send.Amount
 	switch {
 	case send.Source.Account != nil && send.Destination.Account != nil:
 		return runAccountToAccount(ctx, send.Source.Account, send.Destination.Account, amount)
@@ -69,9 +69,13 @@ func RunSend(ctx workflow.Context, send Send) (err error) {
 	panic("should not happen")
 }
 
-func runPaymentToWallet(ctx workflow.Context, source *PaymentSource, destination *WalletSource, amount sdk.Monetary) error {
-	if err := savePayment(ctx, source.ID); err != nil {
+func runPaymentToWallet(ctx workflow.Context, source *PaymentSource, destination *WalletSource, amount *sdk.Monetary) error {
+	payment, err := savePayment(ctx, source.ID)
+	if err != nil {
 		return err
+	}
+	if amount == nil {
+		amount = sdk.NewMonetary(payment.Asset, payment.InitialAmount)
 	}
 	return runAccountToWallet(ctx, &LedgerAccountSource{
 		ID:     paymentAccountName(source.ID),
@@ -84,10 +88,10 @@ func paymentAccountName(paymentID string) string {
 	return fmt.Sprintf("payment:%s", paymentID)
 }
 
-func savePayment(ctx workflow.Context, paymentID string) error {
+func savePayment(ctx workflow.Context, paymentID string) (*sdk.Payment, error) {
 	payment, err := activities.GetPayment(internal.InfiniteRetryContext(ctx), paymentID)
 	if err != nil {
-		return errors.Wrapf(err, "retrieving payment: %s", paymentID)
+		return nil, errors.Wrapf(err, "retrieving payment: %s", paymentID)
 	}
 	_, err = activities.CreateTransaction(internal.InfiniteRetryContext(ctx), internalLedger, sdk.PostTransaction{
 		Postings: []sdk.Posting{{
@@ -102,18 +106,22 @@ func savePayment(ctx workflow.Context, paymentID string) error {
 		applicationError := &temporal.ApplicationError{}
 		if errors.As(err, &applicationError) {
 			if applicationError.Type() != "CONFLICT" {
-				return err
+				return nil, err
 			}
 		} else {
-			return err
+			return nil, err
 		}
 	}
-	return nil
+	return payment, nil
 }
 
-func runPaymentToAccount(ctx workflow.Context, source *PaymentSource, destination *LedgerAccountDestination, amount sdk.Monetary) error {
-	if err := savePayment(ctx, source.ID); err != nil {
+func runPaymentToAccount(ctx workflow.Context, source *PaymentSource, destination *LedgerAccountDestination, amount *sdk.Monetary) error {
+	payment, err := savePayment(ctx, source.ID)
+	if err != nil {
 		return err
+	}
+	if amount == nil {
+		amount = sdk.NewMonetary(payment.Asset, payment.InitialAmount)
 	}
 	return runAccountToAccount(ctx, &LedgerAccountSource{
 		ID:     paymentAccountName(source.ID),
@@ -121,7 +129,10 @@ func runPaymentToAccount(ctx workflow.Context, source *PaymentSource, destinatio
 	}, destination, amount)
 }
 
-func runWalletToWallet(ctx workflow.Context, source *WalletSource, destination *WalletDestination, amount sdk.Monetary) error {
+func runWalletToWallet(ctx workflow.Context, source *WalletSource, destination *WalletDestination, amount *sdk.Monetary) error {
+	if amount == nil {
+		return errors.New("amount must be specified")
+	}
 	walletSource, err := activities.GetWallet(internal.InfiniteRetryContext(ctx), source.ID)
 	if err != nil {
 		return err
@@ -134,7 +145,7 @@ func runWalletToWallet(ctx workflow.Context, source *WalletSource, destination *
 		sourceSubject := sdk.NewWalletSubject("WALLET", source.ID)
 		sourceSubject.SetBalance("main")
 		return activities.CreditWallet(internal.InfiniteRetryContext(ctx), destination.ID, sdk.CreditWalletRequest{
-			Amount: *sdk.NewMonetary(amount.Asset, amount.Amount),
+			Amount: *amount,
 			Sources: []sdk.Subject{{
 				WalletSubject: sourceSubject,
 			}},
@@ -153,7 +164,7 @@ func runWalletToWallet(ctx workflow.Context, source *WalletSource, destination *
 	}
 
 	return activities.CreditWallet(internal.InfiniteRetryContext(ctx), destination.ID, sdk.CreditWalletRequest{
-		Amount:  *sdk.NewMonetary(amount.Asset, amount.Amount),
+		Amount:  *amount,
 		Balance: sdk.PtrString(destination.Balance),
 		Metadata: map[string]interface{}{
 			moveFromLedgerMetadata: walletSource.Ledger,
@@ -161,7 +172,10 @@ func runWalletToWallet(ctx workflow.Context, source *WalletSource, destination *
 	})
 }
 
-func runWalletToPayment(ctx workflow.Context, source *WalletSource, destination *PaymentDestination, amount sdk.Monetary) error {
+func runWalletToPayment(ctx workflow.Context, source *WalletSource, destination *PaymentDestination, amount *sdk.Monetary) error {
+	if amount == nil {
+		return errors.New("amount must be specified")
+	}
 	if destination.PSP != "stripe" {
 		return errors.New("only stripe actually supported")
 	}
@@ -187,14 +201,17 @@ func runWalletToPayment(ctx workflow.Context, source *WalletSource, destination 
 	}))
 }
 
-func runWalletToAccount(ctx workflow.Context, source *WalletSource, destination *LedgerAccountDestination, amount sdk.Monetary) error {
+func runWalletToAccount(ctx workflow.Context, source *WalletSource, destination *LedgerAccountDestination, amount *sdk.Monetary) error {
+	if amount == nil {
+		return errors.New("amount must be specified")
+	}
 	wallet, err := activities.GetWallet(internal.InfiniteRetryContext(ctx), source.ID)
 	if err != nil {
 		return err
 	}
 	if wallet.Ledger == destination.Ledger {
 		return justError(activities.DebitWallet(internal.InfiniteRetryContext(ctx), source.ID, sdk.DebitWalletRequest{
-			Amount: *sdk.NewMonetary(amount.Asset, amount.Amount),
+			Amount: *amount,
 			Destination: &sdk.Subject{
 				LedgerAccountSubject: sdk.NewLedgerAccountSubject("ACCOUNT", destination.ID),
 			},
@@ -203,7 +220,7 @@ func runWalletToAccount(ctx workflow.Context, source *WalletSource, destination 
 	}
 
 	if err := justError(activities.DebitWallet(internal.InfiniteRetryContext(ctx), source.ID, sdk.DebitWalletRequest{
-		Amount:   *sdk.NewMonetary(amount.Asset, amount.Amount),
+		Amount:   *amount,
 		Balances: []string{source.Balance},
 		Metadata: map[string]interface{}{
 			moveToLedgerMetadata: destination.Ledger,
@@ -225,14 +242,17 @@ func runWalletToAccount(ctx workflow.Context, source *WalletSource, destination 
 	}))
 }
 
-func runAccountToWallet(ctx workflow.Context, source *LedgerAccountSource, destination *WalletDestination, amount sdk.Monetary) error {
+func runAccountToWallet(ctx workflow.Context, source *LedgerAccountSource, destination *WalletDestination, amount *sdk.Monetary) error {
+	if amount == nil {
+		return errors.New("amount must be specified")
+	}
 	wallet, err := activities.GetWallet(internal.InfiniteRetryContext(ctx), destination.ID)
 	if err != nil {
 		return err
 	}
 	if wallet.Ledger == source.Ledger {
 		return activities.CreditWallet(internal.InfiniteRetryContext(ctx), destination.ID, sdk.CreditWalletRequest{
-			Amount: *sdk.NewMonetary(amount.Asset, amount.Amount),
+			Amount: *amount,
 			Sources: []sdk.Subject{{
 				LedgerAccountSubject: sdk.NewLedgerAccountSubject("ACCOUNT", source.ID),
 			}},
@@ -255,7 +275,7 @@ func runAccountToWallet(ctx workflow.Context, source *LedgerAccountSource, desti
 	}
 
 	return activities.CreditWallet(internal.InfiniteRetryContext(ctx), destination.ID, sdk.CreditWalletRequest{
-		Amount: *sdk.NewMonetary(amount.Asset, amount.Amount),
+		Amount: *amount,
 		Sources: []sdk.Subject{{
 			LedgerAccountSubject: sdk.NewLedgerAccountSubject("ACCOUNT", "world"),
 		}},
@@ -266,7 +286,10 @@ func runAccountToWallet(ctx workflow.Context, source *LedgerAccountSource, desti
 	})
 }
 
-func runAccountToAccount(ctx workflow.Context, source *LedgerAccountSource, destination *LedgerAccountDestination, amount sdk.Monetary) error {
+func runAccountToAccount(ctx workflow.Context, source *LedgerAccountSource, destination *LedgerAccountDestination, amount *sdk.Monetary) error {
+	if amount == nil {
+		return errors.New("amount must be specified")
+	}
 	if source.Ledger == destination.Ledger {
 		return justError(activities.CreateTransaction(internal.InfiniteRetryContext(ctx), destination.Ledger, sdk.PostTransaction{
 			Postings: []sdk.Posting{{
@@ -303,7 +326,10 @@ func runAccountToAccount(ctx workflow.Context, source *LedgerAccountSource, dest
 	}))
 }
 
-func runAccountToPayment(ctx workflow.Context, source *LedgerAccountSource, destination *PaymentDestination, amount sdk.Monetary) error {
+func runAccountToPayment(ctx workflow.Context, source *LedgerAccountSource, destination *PaymentDestination, amount *sdk.Monetary) error {
+	if amount == nil {
+		return errors.New("amount must be specified")
+	}
 	if destination.PSP != "stripe" {
 		return errors.New("only stripe actually supported")
 	}
