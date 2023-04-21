@@ -134,7 +134,7 @@ func (r *Resolver) GetLedger(ctx context.Context, name string) (*Ledger, error) 
 		cache := cache.New(store, cacheOptions...)
 		runOrPanic(cache.Run)
 
-		queryWorker := query.NewWorker(query.DefaultWorkerConfig, query.NewDefaultStore(store), name, r.monitor, metricsRegistry)
+		queryWorker := query.NewWorker(query.DefaultWorkerConfig, store, name, r.monitor, metricsRegistry)
 		runOrPanic(queryWorker.Run)
 
 		ledger = New(store, cache, locker, queryWorker,

@@ -27,8 +27,6 @@ type LedgerStore interface {
 	IsInitialized() bool
 	Name() string
 
-	RunInTransaction(ctx context.Context, f func(ctx context.Context, store LedgerStore) error) error
-
 	AppendLog(context.Context, *core.Log) (*core.PersistedLog, error)
 	GetNextLogID(ctx context.Context) (uint64, error)
 	ReadLogsRange(ctx context.Context, idMin, idMax uint64) ([]core.PersistedLog, error)
@@ -57,7 +55,7 @@ type LedgerStore interface {
 	GetAccountWithVolumes(ctx context.Context, addr string) (*core.AccountWithVolumes, error)
 	GetAccount(ctx context.Context, accountAddress string) (*core.Account, error)
 
-	UpdateVolumes(ctx context.Context, volumes ...core.AccountsAssetsVolumes) error
+	UpdateVolumes(ctx context.Context, moreRecentLogID uint64, volumes ...core.AccountsAssetsVolumes) error
 	GetAssetsVolumes(ctx context.Context, accountAddress string) (core.AssetsVolumes, error)
 
 	GetBalances(context.Context, BalancesQuery) (*api.Cursor[core.AccountsBalances], error)
