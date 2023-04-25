@@ -6,7 +6,7 @@ import (
 )
 
 func NewModule(clientID string, clientSecret string, tokenURL string, debug bool) fx.Option {
-	return fx.Provide(func() (*sdk.APIClient, error) {
+	return fx.Provide(func() (*sdk.Formance, error) {
 		return NewStackClient(clientID, clientSecret, tokenURL, debug)
 	})
 }

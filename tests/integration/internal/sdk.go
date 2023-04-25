@@ -8,7 +8,7 @@ import (
 	"github.com/formancehq/stack/libs/go-libs/httpclient"
 )
 
-var sdkClient *formance.APIClient
+var sdkClient *formance.Formance
 
 func configureSDK() {
 	gatewayUrl, err := url.Parse(gatewayServer.URL)
@@ -16,14 +16,14 @@ func configureSDK() {
 		panic(err)
 	}
 
-	configuration := formance.NewConfiguration()
-	configuration.Host = gatewayUrl.Host
-	configuration.HTTPClient = &http.Client{
-		Transport: httpclient.NewDebugHTTPTransport(http.DefaultTransport),
-	}
-	sdkClient = formance.NewAPIClient(configuration)
+	sdkClient = formance.New(
+		formance.WithClient(&http.Client{
+			Transport: httpclient.NewDebugHTTPTransport(http.DefaultTransport),
+		}),
+		formance.WithServerURL(gatewayUrl.Host),
+	)
 }
 
-func Client() *formance.APIClient {
+func Client() *formance.Formance {
 	return sdkClient
 }

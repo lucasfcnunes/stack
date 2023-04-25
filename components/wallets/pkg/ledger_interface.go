@@ -4,6 +4,8 @@ import (
 	"context"
 
 	sdk "github.com/formancehq/formance-sdk-go"
+	"github.com/formancehq/formance-sdk-go/pkg/models/operations"
+	"github.com/formancehq/formance-sdk-go/pkg/models/shared"
 	"github.com/formancehq/stack/libs/go-libs/metadata"
 )
 
@@ -24,14 +26,14 @@ type ListTransactionsQuery struct {
 
 type Ledger interface {
 	AddMetadataToAccount(ctx context.Context, ledger, account string, metadata metadata.Metadata) error
-	GetAccount(ctx context.Context, ledger, account string) (*sdk.AccountWithVolumesAndBalances, error)
+	GetAccount(ctx context.Context, ledger, account string) (*sdk.Ledger.AccountWithVolumesAndBalances, error)
 	ListAccounts(ctx context.Context, ledger string, query ListAccountsQuery) (*sdk.AccountsCursorResponseCursor, error)
 	ListTransactions(ctx context.Context, ledger string, query ListTransactionsQuery) (*sdk.TransactionsCursorResponseCursor, error)
-	RunScript(ctx context.Context, ledger string, script sdk.Script) (*sdk.ScriptResponse, error)
+	RunScript(ctx context.Context, ledger string, script sdk.Script) (*operations.RunScriptResponse, error)
 }
 
 type DefaultLedger struct {
-	client *sdk.APIClient
+	client *sdk.Formance
 }
 
 func (d DefaultLedger) ListTransactions(ctx context.Context, ledger string, query ListTransactionsQuery) (*sdk.TransactionsCursorResponseCursor, error) {
@@ -97,24 +99,32 @@ func (d DefaultLedger) ListAccounts(ctx context.Context, ledger string, query Li
 	return &ret.Cursor, nil
 }
 
-func (d DefaultLedger) CreateTransaction(ctx context.Context, ledger string, transaction sdk.PostTransaction) error {
+func (d DefaultLedger) CreateTransaction(ctx context.Context, ledger string, transaction shared.PostTransaction) error {
 	//nolint:bodyclose
-	_, _, err := d.client.TransactionsApi.
-		CreateTransaction(ctx, ledger).
-		PostTransaction(transaction).
-		Execute()
+	tx := operations.CreateTransactionRequest{
+		Ledger: ledger,
+		PostTransaction: transaction,
+	}
+	_, err := d.client.Ledger.CreateTransaction(ctx, tx)
 	return err
 }
 
-func (d DefaultLedger) RunScript(ctx context.Context, ledger string, script sdk.Script) (*sdk.ScriptResponse, error) {
+func (d DefaultLedger) RunScript(ctx context.Context, ledger string, script shared.Script) (*operations.RunScriptResponse, error) {
 	//nolint:bodyclose
-	ret, _, err := d.client.ScriptApi.RunScript(ctx, ledger).Script(script).Execute()
-	return ret, err
+	request := operations.RunScriptRequest{
+		Ledger: ledger,
+		Script: script,
+	}
+	runScript, err := d.client.Ledger.RunScript(ctx, request)
+	if err != nil {
+		return nil, err
+	}
+	return runScript, err
 }
 
 var _ Ledger = &DefaultLedger{}
 
-func NewDefaultLedger(client *sdk.APIClient) *DefaultLedger {
+func NewDefaultLedger(client *sdk.Formance) *DefaultLedger {
 	return &DefaultLedger{
 		client: client,
 	}

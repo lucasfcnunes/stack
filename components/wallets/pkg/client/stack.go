@@ -28,17 +28,16 @@ func GetAuthenticatedClient(ctx context.Context, clientID, clientSecret, stackUR
 	return clientCredentialsConfig.Client(context.WithValue(ctx, oauth2.HTTPClient, underlyingHTTPClient)), nil
 }
 
-func NewStackClient(clientID, clientSecret, stackURL string, debug bool) (*sdk.APIClient, error) {
-	config := sdk.NewConfiguration()
-	config.Servers = sdk.ServerConfigurations{{
-		URL: stackURL,
-	}}
+func NewStackClient(clientID, clientSecret, stackURL string, debug bool) (*sdk.Formance, error) {
 
 	httpClient, err := GetAuthenticatedClient(context.Background(), clientID, clientSecret, stackURL, debug)
 	if err != nil {
 		return nil, err
 	}
-	config.HTTPClient = httpClient
+	config := sdk.New(
+		sdk.WithServerURL(stackURL),
+		sdk.WithClient(httpClient),
+	)
 
-	return sdk.NewAPIClient(config), nil
+	return config, nil
 }
