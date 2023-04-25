@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class DeleteConfigRequest {
@@ -17,4 +18,8 @@ public class DeleteConfigRequest {
         return this;
     }
     
+
+    public DeleteConfigRequest(@JsonProperty("id") String id) {
+    this.id = id;
+  }
 }

@@ -21,4 +21,9 @@ public class ActivityRevertTransaction {
         return this;
     }
     
+
+    public ActivityRevertTransaction(@JsonProperty("id") String id, @JsonProperty("ledger") String ledger) {
+    this.id = id;
+this.ledger = ledger;
+  }
 }

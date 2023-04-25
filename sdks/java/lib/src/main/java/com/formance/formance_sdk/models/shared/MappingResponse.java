@@ -20,4 +20,6 @@ public class MappingResponse {
         return this;
     }
     
+
+    public MappingResponse(){}
 }

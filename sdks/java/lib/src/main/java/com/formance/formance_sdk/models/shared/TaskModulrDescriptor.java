@@ -33,4 +33,6 @@ public class TaskModulrDescriptor {
         return this;
     }
     
+
+    public TaskModulrDescriptor(){}
 }

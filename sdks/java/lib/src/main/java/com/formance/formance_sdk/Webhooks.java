@@ -53,11 +53,9 @@ public class Webhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.ActivateConfigResponse res = new com.formance.formance_sdk.models.operations.ActivateConfigResponse() {{
+        com.formance.formance_sdk.models.operations.ActivateConfigResponse res = new com.formance.formance_sdk.models.operations.ActivateConfigResponse(contentType, httpRes.statusCode()) {{
             configResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Webhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.ChangeConfigSecretResponse res = new com.formance.formance_sdk.models.operations.ChangeConfigSecretResponse() {{
+        com.formance.formance_sdk.models.operations.ChangeConfigSecretResponse res = new com.formance.formance_sdk.models.operations.ChangeConfigSecretResponse(contentType, httpRes.statusCode()) {{
             configResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,11 +137,9 @@ public class Webhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.DeactivateConfigResponse res = new com.formance.formance_sdk.models.operations.DeactivateConfigResponse() {{
+        com.formance.formance_sdk.models.operations.DeactivateConfigResponse res = new com.formance.formance_sdk.models.operations.DeactivateConfigResponse(contentType, httpRes.statusCode()) {{
             configResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,10 +177,8 @@ public class Webhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.DeleteConfigResponse res = new com.formance.formance_sdk.models.operations.DeleteConfigResponse() {{
+        com.formance.formance_sdk.models.operations.DeleteConfigResponse res = new com.formance.formance_sdk.models.operations.DeleteConfigResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -223,11 +215,9 @@ public class Webhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.GetManyConfigsResponse res = new com.formance.formance_sdk.models.operations.GetManyConfigsResponse() {{
+        com.formance.formance_sdk.models.operations.GetManyConfigsResponse res = new com.formance.formance_sdk.models.operations.GetManyConfigsResponse(contentType, httpRes.statusCode()) {{
             configsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -277,12 +267,10 @@ public class Webhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.InsertConfigResponse res = new com.formance.formance_sdk.models.operations.InsertConfigResponse() {{
+        com.formance.formance_sdk.models.operations.InsertConfigResponse res = new com.formance.formance_sdk.models.operations.InsertConfigResponse(contentType, httpRes.statusCode()) {{
             configResponse = null;
             insertConfig400TextPlainString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -324,11 +312,9 @@ public class Webhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.TestConfigResponse res = new com.formance.formance_sdk.models.operations.TestConfigResponse() {{
+        com.formance.formance_sdk.models.operations.TestConfigResponse res = new com.formance.formance_sdk.models.operations.TestConfigResponse(contentType, httpRes.statusCode()) {{
             attemptResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -17,4 +17,8 @@ public class RunWorkflowResponse {
         return this;
     }
     
+
+    public RunWorkflowResponse(@JsonProperty("data") WorkflowInstance data) {
+    this.data = data;
+  }
 }

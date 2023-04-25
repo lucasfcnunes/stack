@@ -17,4 +17,8 @@ public class GetWorkflowInstanceHistoryResponse {
         return this;
     }
     
+
+    public GetWorkflowInstanceHistoryResponse(@JsonProperty("data") WorkflowInstanceHistory[] data) {
+    this.data = data;
+  }
 }

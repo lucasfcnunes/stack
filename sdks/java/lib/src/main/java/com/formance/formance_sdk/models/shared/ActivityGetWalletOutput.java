@@ -14,4 +14,8 @@ public class ActivityGetWalletOutput {
         return this;
     }
     
+
+    public ActivityGetWalletOutput(@JsonProperty("data") WalletWithBalances data) {
+    this.data = data;
+  }
 }

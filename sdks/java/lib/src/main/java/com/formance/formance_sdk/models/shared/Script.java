@@ -43,4 +43,8 @@ public class Script {
         return this;
     }
     
+
+    public Script(@JsonProperty("plain") String plain) {
+    this.plain = plain;
+  }
 }

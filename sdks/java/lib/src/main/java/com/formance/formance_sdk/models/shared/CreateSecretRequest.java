@@ -24,4 +24,8 @@ public class CreateSecretRequest {
         return this;
     }
     
+
+    public CreateSecretRequest(@JsonProperty("name") String name) {
+    this.name = name;
+  }
 }

@@ -47,4 +47,9 @@ public class ListBalancesResponseCursor {
         return this;
     }
     
+
+    public ListBalancesResponseCursor(@JsonProperty("data") Balance[] data, @JsonProperty("pageSize") Long pageSize) {
+    this.data = data;
+this.pageSize = pageSize;
+  }
 }

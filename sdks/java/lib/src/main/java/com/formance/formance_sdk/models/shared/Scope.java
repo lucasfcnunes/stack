@@ -39,4 +39,9 @@ public class Scope {
         return this;
     }
     
+
+    public Scope(@JsonProperty("id") String id, @JsonProperty("label") String label) {
+    this.id = id;
+this.label = label;
+  }
 }

@@ -25,4 +25,6 @@ public class ResponseCursorTotal {
         return this;
     }
     
+
+    public ResponseCursorTotal(){}
 }

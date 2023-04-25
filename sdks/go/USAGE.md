@@ -17,12 +17,12 @@ func main() {
         }),
     )
 
+    ctx := context.Background()    
     req := operations.AddScopeToClientRequest{
         ClientID: "corrupti",
         ScopeID: "provident",
     }
 
-    ctx := context.Background()
     res, err := s.Auth.AddScopeToClient(ctx, req)
     if err != nil {
         log.Fatal(err)

@@ -51,4 +51,6 @@ public class GetHoldsRequest {
         return this;
     }
     
+
+    public GetHoldsRequest(){}
 }

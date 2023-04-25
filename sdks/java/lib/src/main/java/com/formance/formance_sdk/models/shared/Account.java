@@ -32,4 +32,8 @@ public class Account {
         return this;
     }
     
+
+    public Account(@JsonProperty("address") String address) {
+    this.address = address;
+  }
 }

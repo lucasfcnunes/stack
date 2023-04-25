@@ -55,4 +55,10 @@ public class StageStatus {
         return this;
     }
     
+
+    public StageStatus(@JsonProperty("instanceID") String instanceID, @JsonProperty("stage") Double stage, @JsonProperty("startedAt") OffsetDateTime startedAt) {
+    this.instanceID = instanceID;
+this.stage = stage;
+this.startedAt = startedAt;
+  }
 }

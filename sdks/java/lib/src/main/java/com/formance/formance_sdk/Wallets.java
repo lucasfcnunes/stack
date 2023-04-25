@@ -54,11 +54,9 @@ public class Wallets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.ConfirmHoldResponse res = new com.formance.formance_sdk.models.operations.ConfirmHoldResponse() {{
+        com.formance.formance_sdk.models.operations.ConfirmHoldResponse res = new com.formance.formance_sdk.models.operations.ConfirmHoldResponse(contentType, httpRes.statusCode()) {{
             walletsErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -97,12 +95,10 @@ public class Wallets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.CreateBalanceResponse res = new com.formance.formance_sdk.models.operations.CreateBalanceResponse() {{
+        com.formance.formance_sdk.models.operations.CreateBalanceResponse res = new com.formance.formance_sdk.models.operations.CreateBalanceResponse(contentType, httpRes.statusCode()) {{
             createBalanceResponse = null;
             walletsErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -146,12 +142,10 @@ public class Wallets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.CreateWalletResponse res = new com.formance.formance_sdk.models.operations.CreateWalletResponse() {{
+        com.formance.formance_sdk.models.operations.CreateWalletResponse res = new com.formance.formance_sdk.models.operations.CreateWalletResponse(contentType, httpRes.statusCode()) {{
             createWalletResponse = null;
             walletsErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -195,11 +189,9 @@ public class Wallets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.CreditWalletResponse res = new com.formance.formance_sdk.models.operations.CreditWalletResponse() {{
+        com.formance.formance_sdk.models.operations.CreditWalletResponse res = new com.formance.formance_sdk.models.operations.CreditWalletResponse(contentType, httpRes.statusCode()) {{
             walletsErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -238,12 +230,10 @@ public class Wallets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.DebitWalletResponse res = new com.formance.formance_sdk.models.operations.DebitWalletResponse() {{
+        com.formance.formance_sdk.models.operations.DebitWalletResponse res = new com.formance.formance_sdk.models.operations.DebitWalletResponse(contentType, httpRes.statusCode()) {{
             debitWalletResponse = null;
             walletsErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -287,12 +277,10 @@ public class Wallets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.GetBalanceResponse res = new com.formance.formance_sdk.models.operations.GetBalanceResponse() {{
+        com.formance.formance_sdk.models.operations.GetBalanceResponse res = new com.formance.formance_sdk.models.operations.GetBalanceResponse(contentType, httpRes.statusCode()) {{
             getBalanceResponse = null;
             walletsErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -334,12 +322,10 @@ public class Wallets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.GetHoldResponse res = new com.formance.formance_sdk.models.operations.GetHoldResponse() {{
+        com.formance.formance_sdk.models.operations.GetHoldResponse res = new com.formance.formance_sdk.models.operations.GetHoldResponse(contentType, httpRes.statusCode()) {{
             getHoldResponse = null;
             walletsErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,12 +373,10 @@ public class Wallets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.GetHoldsResponse res = new com.formance.formance_sdk.models.operations.GetHoldsResponse() {{
+        com.formance.formance_sdk.models.operations.GetHoldsResponse res = new com.formance.formance_sdk.models.operations.GetHoldsResponse(contentType, httpRes.statusCode()) {{
             getHoldsResponse = null;
             walletsErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -434,12 +418,10 @@ public class Wallets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.GetTransactionsResponse res = new com.formance.formance_sdk.models.operations.GetTransactionsResponse() {{
+        com.formance.formance_sdk.models.operations.GetTransactionsResponse res = new com.formance.formance_sdk.models.operations.GetTransactionsResponse(contentType, httpRes.statusCode()) {{
             getTransactionsResponse = null;
             walletsErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -481,12 +463,10 @@ public class Wallets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.GetWalletResponse res = new com.formance.formance_sdk.models.operations.GetWalletResponse() {{
+        com.formance.formance_sdk.models.operations.GetWalletResponse res = new com.formance.formance_sdk.models.operations.GetWalletResponse(contentType, httpRes.statusCode()) {{
             getWalletResponse = null;
             walletsErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -530,11 +510,9 @@ public class Wallets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.ListBalancesResponse res = new com.formance.formance_sdk.models.operations.ListBalancesResponse() {{
+        com.formance.formance_sdk.models.operations.ListBalancesResponse res = new com.formance.formance_sdk.models.operations.ListBalancesResponse(contentType, httpRes.statusCode()) {{
             listBalancesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -575,11 +553,9 @@ public class Wallets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.ListWalletsResponse res = new com.formance.formance_sdk.models.operations.ListWalletsResponse() {{
+        com.formance.formance_sdk.models.operations.ListWalletsResponse res = new com.formance.formance_sdk.models.operations.ListWalletsResponse(contentType, httpRes.statusCode()) {{
             listWalletsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -616,11 +592,9 @@ public class Wallets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.UpdateWalletResponse res = new com.formance.formance_sdk.models.operations.UpdateWalletResponse() {{
+        com.formance.formance_sdk.models.operations.UpdateWalletResponse res = new com.formance.formance_sdk.models.operations.UpdateWalletResponse(contentType, httpRes.statusCode()) {{
             walletsErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -657,11 +631,9 @@ public class Wallets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.VoidHoldResponse res = new com.formance.formance_sdk.models.operations.VoidHoldResponse() {{
+        com.formance.formance_sdk.models.operations.VoidHoldResponse res = new com.formance.formance_sdk.models.operations.VoidHoldResponse(contentType, httpRes.statusCode()) {{
             walletsErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -697,12 +669,10 @@ public class Wallets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.WalletsgetServerInfoResponse res = new com.formance.formance_sdk.models.operations.WalletsgetServerInfoResponse() {{
+        com.formance.formance_sdk.models.operations.WalletsgetServerInfoResponse res = new com.formance.formance_sdk.models.operations.WalletsgetServerInfoResponse(contentType, httpRes.statusCode()) {{
             serverInfo = null;
             walletsErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

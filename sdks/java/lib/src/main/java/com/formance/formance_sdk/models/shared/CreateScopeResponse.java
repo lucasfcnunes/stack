@@ -20,4 +20,6 @@ public class CreateScopeResponse {
         return this;
     }
     
+
+    public CreateScopeResponse(){}
 }

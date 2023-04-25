@@ -76,10 +76,7 @@ export class Orchestration {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.error = utils.deserializeJSONResponse(
-              httpRes?.data,
-              shared.ErrorT
-            );
+            res.error = utils.objectToClass(httpRes?.data, shared.ErrorT);
           }
           break;
       }
@@ -146,7 +143,7 @@ export class Orchestration {
       switch (true) {
         case httpRes?.status == 201:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.createWorkflowResponse = utils.deserializeJSONResponse(
+            res.createWorkflowResponse = utils.objectToClass(
               httpRes?.data,
               shared.CreateWorkflowResponse
             );
@@ -154,10 +151,7 @@ export class Orchestration {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.error = utils.deserializeJSONResponse(
-              httpRes?.data,
-              shared.ErrorT
-            );
+            res.error = utils.objectToClass(httpRes?.data, shared.ErrorT);
           }
           break;
       }
@@ -209,7 +203,7 @@ export class Orchestration {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.getWorkflowInstanceResponse = utils.deserializeJSONResponse(
+            res.getWorkflowInstanceResponse = utils.objectToClass(
               httpRes?.data,
               shared.GetWorkflowInstanceResponse
             );
@@ -217,10 +211,7 @@ export class Orchestration {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.error = utils.deserializeJSONResponse(
-              httpRes?.data,
-              shared.ErrorT
-            );
+            res.error = utils.objectToClass(httpRes?.data, shared.ErrorT);
           }
           break;
       }
@@ -272,19 +263,15 @@ export class Orchestration {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.getWorkflowInstanceHistoryResponse =
-              utils.deserializeJSONResponse(
-                httpRes?.data,
-                shared.GetWorkflowInstanceHistoryResponse
-              );
+            res.getWorkflowInstanceHistoryResponse = utils.objectToClass(
+              httpRes?.data,
+              shared.GetWorkflowInstanceHistoryResponse
+            );
           }
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.error = utils.deserializeJSONResponse(
-              httpRes?.data,
-              shared.ErrorT
-            );
+            res.error = utils.objectToClass(httpRes?.data, shared.ErrorT);
           }
           break;
       }
@@ -336,19 +323,15 @@ export class Orchestration {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.getWorkflowInstanceHistoryStageResponse =
-              utils.deserializeJSONResponse(
-                httpRes?.data,
-                shared.GetWorkflowInstanceHistoryStageResponse
-              );
+            res.getWorkflowInstanceHistoryStageResponse = utils.objectToClass(
+              httpRes?.data,
+              shared.GetWorkflowInstanceHistoryStageResponse
+            );
           }
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.error = utils.deserializeJSONResponse(
-              httpRes?.data,
-              shared.ErrorT
-            );
+            res.error = utils.objectToClass(httpRes?.data, shared.ErrorT);
           }
           break;
       }
@@ -400,7 +383,7 @@ export class Orchestration {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.getWorkflowResponse = utils.deserializeJSONResponse(
+            res.getWorkflowResponse = utils.objectToClass(
               httpRes?.data,
               shared.GetWorkflowResponse
             );
@@ -408,10 +391,7 @@ export class Orchestration {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.error = utils.deserializeJSONResponse(
-              httpRes?.data,
-              shared.ErrorT
-            );
+            res.error = utils.objectToClass(httpRes?.data, shared.ErrorT);
           }
           break;
       }
@@ -462,7 +442,7 @@ export class Orchestration {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.listRunsResponse = utils.deserializeJSONResponse(
+            res.listRunsResponse = utils.objectToClass(
               httpRes?.data,
               shared.ListRunsResponse
             );
@@ -470,10 +450,7 @@ export class Orchestration {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.error = utils.deserializeJSONResponse(
-              httpRes?.data,
-              shared.ErrorT
-            );
+            res.error = utils.objectToClass(httpRes?.data, shared.ErrorT);
           }
           break;
       }
@@ -517,7 +494,7 @@ export class Orchestration {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.listWorkflowsResponse = utils.deserializeJSONResponse(
+            res.listWorkflowsResponse = utils.objectToClass(
               httpRes?.data,
               shared.ListWorkflowsResponse
             );
@@ -525,10 +502,7 @@ export class Orchestration {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.error = utils.deserializeJSONResponse(
-              httpRes?.data,
-              shared.ErrorT
-            );
+            res.error = utils.objectToClass(httpRes?.data, shared.ErrorT);
           }
           break;
       }
@@ -568,7 +542,7 @@ export class Orchestration {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.serverInfo = utils.deserializeJSONResponse(
+            res.serverInfo = utils.objectToClass(
               httpRes?.data,
               shared.ServerInfo
             );
@@ -576,10 +550,7 @@ export class Orchestration {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.error = utils.deserializeJSONResponse(
-              httpRes?.data,
-              shared.ErrorT
-            );
+            res.error = utils.objectToClass(httpRes?.data, shared.ErrorT);
           }
           break;
       }
@@ -650,7 +621,7 @@ export class Orchestration {
       switch (true) {
         case httpRes?.status == 201:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.runWorkflowResponse = utils.deserializeJSONResponse(
+            res.runWorkflowResponse = utils.objectToClass(
               httpRes?.data,
               shared.RunWorkflowResponse
             );
@@ -658,10 +629,7 @@ export class Orchestration {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.error = utils.deserializeJSONResponse(
-              httpRes?.data,
-              shared.ErrorT
-            );
+            res.error = utils.objectToClass(httpRes?.data, shared.ErrorT);
           }
           break;
       }
@@ -733,10 +701,7 @@ export class Orchestration {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.error = utils.deserializeJSONResponse(
-              httpRes?.data,
-              shared.ErrorT
-            );
+            res.error = utils.objectToClass(httpRes?.data, shared.ErrorT);
           }
           break;
       }

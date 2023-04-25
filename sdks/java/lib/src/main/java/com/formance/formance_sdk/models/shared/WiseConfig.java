@@ -14,4 +14,8 @@ public class WiseConfig {
         return this;
     }
     
+
+    public WiseConfig(@JsonProperty("apiKey") String apiKey) {
+    this.apiKey = apiKey;
+  }
 }

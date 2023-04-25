@@ -41,4 +41,6 @@ public class GetTransactionsRequest {
         return this;
     }
     
+
+    public GetTransactionsRequest(){}
 }

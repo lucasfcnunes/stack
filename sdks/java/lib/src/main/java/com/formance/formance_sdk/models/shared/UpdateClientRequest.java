@@ -64,4 +64,8 @@ public class UpdateClientRequest {
         return this;
     }
     
+
+    public UpdateClientRequest(@JsonProperty("name") String name) {
+    this.name = name;
+  }
 }

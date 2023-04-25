@@ -14,4 +14,8 @@ public class WalletWithBalancesBalances {
         return this;
     }
     
+
+    public WalletWithBalancesBalances(@JsonProperty("main") AssetHolder main) {
+    this.main = main;
+  }
 }

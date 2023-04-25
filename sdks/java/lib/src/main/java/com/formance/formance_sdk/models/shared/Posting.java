@@ -35,4 +35,11 @@ public class Posting {
         return this;
     }
     
+
+    public Posting(@JsonProperty("amount") Long amount, @JsonProperty("asset") String asset, @JsonProperty("destination") String destination, @JsonProperty("source") String source) {
+    this.amount = amount;
+this.asset = asset;
+this.destination = destination;
+this.source = source;
+  }
 }

@@ -38,4 +38,10 @@ public class TransferRequest {
         return this;
     }
     
+
+    public TransferRequest(@JsonProperty("amount") Long amount, @JsonProperty("asset") String asset, @JsonProperty("destination") String destination) {
+    this.amount = amount;
+this.asset = asset;
+this.destination = destination;
+  }
 }

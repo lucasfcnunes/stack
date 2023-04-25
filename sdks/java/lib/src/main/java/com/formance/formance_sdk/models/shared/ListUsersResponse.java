@@ -20,4 +20,6 @@ public class ListUsersResponse {
         return this;
     }
     
+
+    public ListUsersResponse(){}
 }

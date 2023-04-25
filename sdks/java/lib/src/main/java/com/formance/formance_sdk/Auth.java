@@ -51,10 +51,8 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.AddScopeToClientResponse res = new com.formance.formance_sdk.models.operations.AddScopeToClientResponse() {{
+        com.formance.formance_sdk.models.operations.AddScopeToClientResponse res = new com.formance.formance_sdk.models.operations.AddScopeToClientResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -85,10 +83,8 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.AddTransientScopeResponse res = new com.formance.formance_sdk.models.operations.AddTransientScopeResponse() {{
+        com.formance.formance_sdk.models.operations.AddTransientScopeResponse res = new com.formance.formance_sdk.models.operations.AddTransientScopeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -120,11 +116,9 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.CreateClientResponse res = new com.formance.formance_sdk.models.operations.CreateClientResponse() {{
+        com.formance.formance_sdk.models.operations.CreateClientResponse res = new com.formance.formance_sdk.models.operations.CreateClientResponse(contentType, httpRes.statusCode()) {{
             createClientResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -162,11 +156,9 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.CreateScopeResponse res = new com.formance.formance_sdk.models.operations.CreateScopeResponse() {{
+        com.formance.formance_sdk.models.operations.CreateScopeResponse res = new com.formance.formance_sdk.models.operations.CreateScopeResponse(contentType, httpRes.statusCode()) {{
             createScopeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -203,11 +195,9 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.CreateSecretResponse res = new com.formance.formance_sdk.models.operations.CreateSecretResponse() {{
+        com.formance.formance_sdk.models.operations.CreateSecretResponse res = new com.formance.formance_sdk.models.operations.CreateSecretResponse(contentType, httpRes.statusCode()) {{
             createSecretResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,10 +232,8 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.DeleteClientResponse res = new com.formance.formance_sdk.models.operations.DeleteClientResponse() {{
+        com.formance.formance_sdk.models.operations.DeleteClientResponse res = new com.formance.formance_sdk.models.operations.DeleteClientResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -276,10 +264,8 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.DeleteScopeResponse res = new com.formance.formance_sdk.models.operations.DeleteScopeResponse() {{
+        com.formance.formance_sdk.models.operations.DeleteScopeResponse res = new com.formance.formance_sdk.models.operations.DeleteScopeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -309,10 +295,8 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.DeleteScopeFromClientResponse res = new com.formance.formance_sdk.models.operations.DeleteScopeFromClientResponse() {{
+        com.formance.formance_sdk.models.operations.DeleteScopeFromClientResponse res = new com.formance.formance_sdk.models.operations.DeleteScopeFromClientResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -342,10 +326,8 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.DeleteSecretResponse res = new com.formance.formance_sdk.models.operations.DeleteSecretResponse() {{
+        com.formance.formance_sdk.models.operations.DeleteSecretResponse res = new com.formance.formance_sdk.models.operations.DeleteSecretResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -376,10 +358,8 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.DeleteTransientScopeResponse res = new com.formance.formance_sdk.models.operations.DeleteTransientScopeResponse() {{
+        com.formance.formance_sdk.models.operations.DeleteTransientScopeResponse res = new com.formance.formance_sdk.models.operations.DeleteTransientScopeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -408,11 +388,9 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.GetServerInfoResponse res = new com.formance.formance_sdk.models.operations.GetServerInfoResponse() {{
+        com.formance.formance_sdk.models.operations.GetServerInfoResponse res = new com.formance.formance_sdk.models.operations.GetServerInfoResponse(contentType, httpRes.statusCode()) {{
             serverInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -446,11 +424,9 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.ListClientsResponse res = new com.formance.formance_sdk.models.operations.ListClientsResponse() {{
+        com.formance.formance_sdk.models.operations.ListClientsResponse res = new com.formance.formance_sdk.models.operations.ListClientsResponse(contentType, httpRes.statusCode()) {{
             listClientsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -485,11 +461,9 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.ListScopesResponse res = new com.formance.formance_sdk.models.operations.ListScopesResponse() {{
+        com.formance.formance_sdk.models.operations.ListScopesResponse res = new com.formance.formance_sdk.models.operations.ListScopesResponse(contentType, httpRes.statusCode()) {{
             listScopesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -524,11 +498,9 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.ListUsersResponse res = new com.formance.formance_sdk.models.operations.ListUsersResponse() {{
+        com.formance.formance_sdk.models.operations.ListUsersResponse res = new com.formance.formance_sdk.models.operations.ListUsersResponse(contentType, httpRes.statusCode()) {{
             listUsersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -563,11 +535,9 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.ReadClientResponse res = new com.formance.formance_sdk.models.operations.ReadClientResponse() {{
+        com.formance.formance_sdk.models.operations.ReadClientResponse res = new com.formance.formance_sdk.models.operations.ReadClientResponse(contentType, httpRes.statusCode()) {{
             readClientResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -603,11 +573,9 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.ReadScopeResponse res = new com.formance.formance_sdk.models.operations.ReadScopeResponse() {{
+        com.formance.formance_sdk.models.operations.ReadScopeResponse res = new com.formance.formance_sdk.models.operations.ReadScopeResponse(contentType, httpRes.statusCode()) {{
             readScopeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -643,11 +611,9 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.ReadUserResponse res = new com.formance.formance_sdk.models.operations.ReadUserResponse() {{
+        com.formance.formance_sdk.models.operations.ReadUserResponse res = new com.formance.formance_sdk.models.operations.ReadUserResponse(contentType, httpRes.statusCode()) {{
             readUserResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -684,11 +650,9 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.UpdateClientResponse res = new com.formance.formance_sdk.models.operations.UpdateClientResponse() {{
+        com.formance.formance_sdk.models.operations.UpdateClientResponse res = new com.formance.formance_sdk.models.operations.UpdateClientResponse(contentType, httpRes.statusCode()) {{
             updateClientResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -726,11 +690,9 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.UpdateScopeResponse res = new com.formance.formance_sdk.models.operations.UpdateScopeResponse() {{
+        com.formance.formance_sdk.models.operations.UpdateScopeResponse res = new com.formance.formance_sdk.models.operations.UpdateScopeResponse(contentType, httpRes.statusCode()) {{
             updateScopeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

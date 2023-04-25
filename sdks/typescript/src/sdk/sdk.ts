@@ -11,7 +11,8 @@ import { Payments } from "./payments";
 import { Search } from "./search";
 import { Wallets } from "./wallets";
 import { Webhooks } from "./webhooks";
-import axios, { AxiosInstance } from "axios";
+import axios from "axios";
+import { AxiosInstance } from "axios";
 
 /**
  * Contains the list of servers available to the SDK
@@ -75,7 +76,7 @@ export class SDK {
   public _serverURL: string;
   private _language = "typescript";
   private _sdkVersion = "0.7.2";
-  private _genVersion = "2.17.8";
+  private _genVersion = "2.20.1";
   private _globals: any;
 
   constructor(props?: SDKProps) {

@@ -79,4 +79,12 @@ public class WorkflowInstance {
         return this;
     }
     
+
+    public WorkflowInstance(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("terminated") Boolean terminated, @JsonProperty("updatedAt") OffsetDateTime updatedAt, @JsonProperty("workflowID") String workflowID) {
+    this.createdAt = createdAt;
+this.id = id;
+this.terminated = terminated;
+this.updatedAt = updatedAt;
+this.workflowID = workflowID;
+  }
 }

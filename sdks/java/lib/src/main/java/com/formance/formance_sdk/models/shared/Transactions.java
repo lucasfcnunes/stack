@@ -14,4 +14,8 @@ public class Transactions {
         return this;
     }
     
+
+    public Transactions(@JsonProperty("transactions") TransactionData[] transactions) {
+    this.transactions = transactions;
+  }
 }

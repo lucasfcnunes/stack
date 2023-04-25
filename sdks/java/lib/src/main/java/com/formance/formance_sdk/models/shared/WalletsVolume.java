@@ -28,4 +28,10 @@ public class WalletsVolume {
         return this;
     }
     
+
+    public WalletsVolume(@JsonProperty("balance") Long balance, @JsonProperty("input") Long input, @JsonProperty("output") Long output) {
+    this.balance = balance;
+this.input = input;
+this.output = output;
+  }
 }

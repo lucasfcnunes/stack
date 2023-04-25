@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class AddMetadataToAccountRequest {
@@ -41,4 +42,10 @@ public class AddMetadataToAccountRequest {
         return this;
     }
     
+
+    public AddMetadataToAccountRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("address") String address, @JsonProperty("ledger") String ledger) {
+    this.requestBody = requestBody;
+this.address = address;
+this.ledger = ledger;
+  }
 }

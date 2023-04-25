@@ -35,4 +35,11 @@ public class BankingCircleConfig {
         return this;
     }
     
+
+    public BankingCircleConfig(@JsonProperty("username") String username, @JsonProperty("password") String password, @JsonProperty("authorizationEndpoint") String authorizationEndpoint, @JsonProperty("endpoint") String endpoint) {
+    this.username = username;
+this.password = password;
+this.authorizationEndpoint = authorizationEndpoint;
+this.endpoint = endpoint;
+  }
 }

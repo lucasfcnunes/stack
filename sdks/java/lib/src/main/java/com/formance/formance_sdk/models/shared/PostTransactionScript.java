@@ -24,4 +24,8 @@ public class PostTransactionScript {
         return this;
     }
     
+
+    public PostTransactionScript(@JsonProperty("plain") String plain) {
+    this.plain = plain;
+  }
 }

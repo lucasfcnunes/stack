@@ -17,4 +17,8 @@ public class ListWorkflowsResponse {
         return this;
     }
     
+
+    public ListWorkflowsResponse(@JsonProperty("data") Workflow[] data) {
+    this.data = data;
+  }
 }

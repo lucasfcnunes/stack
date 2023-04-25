@@ -17,4 +17,8 @@ public class ConfigResponse {
         return this;
     }
     
+
+    public ConfigResponse(@JsonProperty("data") WebhooksConfig data) {
+    this.data = data;
+  }
 }

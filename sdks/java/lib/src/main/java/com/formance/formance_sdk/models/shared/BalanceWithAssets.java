@@ -21,4 +21,9 @@ public class BalanceWithAssets {
         return this;
     }
     
+
+    public BalanceWithAssets(@JsonProperty("assets") java.util.Map<String, Double> assets, @JsonProperty("name") String name) {
+    this.assets = assets;
+this.name = name;
+  }
 }

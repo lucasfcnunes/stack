@@ -17,4 +17,8 @@ public class GetTransactionsResponse {
         return this;
     }
     
+
+    public GetTransactionsResponse(@JsonProperty("cursor") GetTransactionsResponseCursor cursor) {
+    this.cursor = cursor;
+  }
 }

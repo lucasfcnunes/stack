@@ -31,4 +31,9 @@ public class TaskStripeDescriptor {
         return this;
     }
     
+
+    public TaskStripeDescriptor(@JsonProperty("account") String account, @JsonProperty("name") String name) {
+    this.account = account;
+this.name = name;
+  }
 }

@@ -32,4 +32,6 @@ public class StageDelay {
         return this;
     }
     
+
+    public StageDelay(){}
 }

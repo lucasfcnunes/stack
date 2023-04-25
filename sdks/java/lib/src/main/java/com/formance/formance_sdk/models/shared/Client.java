@@ -87,4 +87,9 @@ public class Client {
         return this;
     }
     
+
+    public Client(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+    this.id = id;
+this.name = name;
+  }
 }

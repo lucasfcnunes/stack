@@ -17,4 +17,8 @@ public class AttemptResponse {
         return this;
     }
     
+
+    public AttemptResponse(@JsonProperty("data") Attempt data) {
+    this.data = data;
+  }
 }

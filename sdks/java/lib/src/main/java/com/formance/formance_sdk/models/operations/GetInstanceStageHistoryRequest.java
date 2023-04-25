@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class GetInstanceStageHistoryRequest {
@@ -27,4 +28,9 @@ public class GetInstanceStageHistoryRequest {
         return this;
     }
     
+
+    public GetInstanceStageHistoryRequest(@JsonProperty("instanceID") String instanceID, @JsonProperty("number") Long number) {
+    this.instanceID = instanceID;
+this.number = number;
+  }
 }

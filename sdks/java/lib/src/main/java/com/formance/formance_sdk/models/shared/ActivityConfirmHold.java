@@ -14,4 +14,8 @@ public class ActivityConfirmHold {
         return this;
     }
     
+
+    public ActivityConfirmHold(@JsonProperty("id") String id) {
+    this.id = id;
+  }
 }

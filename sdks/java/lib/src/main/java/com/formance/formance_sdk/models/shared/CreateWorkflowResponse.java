@@ -17,4 +17,8 @@ public class CreateWorkflowResponse {
         return this;
     }
     
+
+    public CreateWorkflowResponse(@JsonProperty("data") Workflow data) {
+    this.data = data;
+  }
 }

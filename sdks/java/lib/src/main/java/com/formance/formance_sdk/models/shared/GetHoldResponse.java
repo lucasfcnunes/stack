@@ -17,4 +17,8 @@ public class GetHoldResponse {
         return this;
     }
     
+
+    public GetHoldResponse(@JsonProperty("data") ExpandedDebitHold data) {
+    this.data = data;
+  }
 }

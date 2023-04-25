@@ -17,4 +17,8 @@ public class ConfigsResponse {
         return this;
     }
     
+
+    public ConfigsResponse(@JsonProperty("cursor") ConfigsResponseCursor cursor) {
+    this.cursor = cursor;
+  }
 }

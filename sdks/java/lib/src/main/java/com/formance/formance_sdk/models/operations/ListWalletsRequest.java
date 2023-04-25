@@ -51,4 +51,6 @@ public class ListWalletsRequest {
         return this;
     }
     
+
+    public ListWalletsRequest(){}
 }

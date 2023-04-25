@@ -25,4 +25,6 @@ public class TaskBankingCircleDescriptor {
         return this;
     }
     
+
+    public TaskBankingCircleDescriptor(){}
 }

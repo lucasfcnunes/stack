@@ -53,4 +53,9 @@ public class CreditWalletRequest {
         return this;
     }
     
+
+    public CreditWalletRequest(@JsonProperty("amount") Monetary amount, @JsonProperty("sources") Object[] sources) {
+    this.amount = amount;
+this.sources = sources;
+  }
 }

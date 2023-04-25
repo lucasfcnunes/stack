@@ -21,4 +21,9 @@ public class ConnectorsConfigsResponseDataConnectorKey {
         return this;
     }
     
+
+    public ConnectorsConfigsResponseDataConnectorKey(@JsonProperty("dataType") String dataType, @JsonProperty("required") Boolean required) {
+    this.dataType = dataType;
+this.required = required;
+  }
 }

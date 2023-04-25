@@ -17,4 +17,8 @@ public class TasksCursor {
         return this;
     }
     
+
+    public TasksCursor(@JsonProperty("cursor") TasksCursorCursor cursor) {
+    this.cursor = cursor;
+  }
 }

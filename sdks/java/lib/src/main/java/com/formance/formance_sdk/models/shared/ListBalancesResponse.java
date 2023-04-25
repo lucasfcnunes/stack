@@ -17,4 +17,8 @@ public class ListBalancesResponse {
         return this;
     }
     
+
+    public ListBalancesResponse(@JsonProperty("cursor") ListBalancesResponseCursor cursor) {
+    this.cursor = cursor;
+  }
 }

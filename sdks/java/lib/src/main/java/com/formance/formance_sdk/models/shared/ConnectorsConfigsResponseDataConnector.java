@@ -14,4 +14,8 @@ public class ConnectorsConfigsResponseDataConnector {
         return this;
     }
     
+
+    public ConnectorsConfigsResponseDataConnector(@JsonProperty("key") ConnectorsConfigsResponseDataConnectorKey key) {
+    this.key = key;
+  }
 }

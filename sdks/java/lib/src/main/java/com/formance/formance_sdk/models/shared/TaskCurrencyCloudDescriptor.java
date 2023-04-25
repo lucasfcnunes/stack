@@ -17,4 +17,6 @@ public class TaskCurrencyCloudDescriptor {
         return this;
     }
     
+
+    public TaskCurrencyCloudDescriptor(){}
 }

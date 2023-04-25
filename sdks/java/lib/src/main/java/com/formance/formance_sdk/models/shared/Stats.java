@@ -21,4 +21,9 @@ public class Stats {
         return this;
     }
     
+
+    public Stats(@JsonProperty("accounts") Long accounts, @JsonProperty("transactions") Long transactions) {
+    this.accounts = accounts;
+this.transactions = transactions;
+  }
 }

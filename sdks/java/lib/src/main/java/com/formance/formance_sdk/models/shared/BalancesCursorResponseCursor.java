@@ -46,4 +46,10 @@ public class BalancesCursorResponseCursor {
         return this;
     }
     
+
+    public BalancesCursorResponseCursor(@JsonProperty("data") java.util.Map<String, java.util.Map<String, Long>>[] data, @JsonProperty("hasMore") Boolean hasMore, @JsonProperty("pageSize") Long pageSize) {
+    this.data = data;
+this.hasMore = hasMore;
+this.pageSize = pageSize;
+  }
 }

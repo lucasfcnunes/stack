@@ -24,4 +24,8 @@ public class Contract {
         return this;
     }
     
+
+    public Contract(@JsonProperty("expr") java.util.Map<String, Object> expr) {
+    this.expr = expr;
+  }
 }

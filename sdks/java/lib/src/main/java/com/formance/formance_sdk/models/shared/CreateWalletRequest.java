@@ -27,4 +27,8 @@ public class CreateWalletRequest {
         return this;
     }
     
+
+    public CreateWalletRequest(@JsonProperty("name") String name) {
+    this.name = name;
+  }
 }

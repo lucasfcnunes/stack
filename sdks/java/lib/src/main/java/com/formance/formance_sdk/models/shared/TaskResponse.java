@@ -17,4 +17,8 @@ public class TaskResponse {
         return this;
     }
     
+
+    public TaskResponse(@JsonProperty("data") Object data) {
+    this.data = data;
+  }
 }

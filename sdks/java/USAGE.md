@@ -11,15 +11,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }})
                 .build();
 
-            AddScopeToClientRequest req = new AddScopeToClientRequest() {{
-                clientId = "corrupti";
-                scopeId = "provident";
-            }}            
+            AddScopeToClientRequest req = new AddScopeToClientRequest("provident", "distinctio");            
 
             AddScopeToClientResponse res = sdk.auth.addScopeToClient(req);
 

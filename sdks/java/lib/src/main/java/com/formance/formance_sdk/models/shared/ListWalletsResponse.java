@@ -17,4 +17,8 @@ public class ListWalletsResponse {
         return this;
     }
     
+
+    public ListWalletsResponse(@JsonProperty("cursor") ListWalletsResponseCursor cursor) {
+    this.cursor = cursor;
+  }
 }

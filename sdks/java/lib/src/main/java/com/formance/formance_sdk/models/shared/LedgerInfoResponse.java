@@ -20,4 +20,6 @@ public class LedgerInfoResponse {
         return this;
     }
     
+
+    public LedgerInfoResponse(){}
 }

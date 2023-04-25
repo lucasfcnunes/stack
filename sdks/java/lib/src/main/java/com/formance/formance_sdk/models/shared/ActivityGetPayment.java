@@ -14,4 +14,8 @@ public class ActivityGetPayment {
         return this;
     }
     
+
+    public ActivityGetPayment(@JsonProperty("id") String id) {
+    this.id = id;
+  }
 }

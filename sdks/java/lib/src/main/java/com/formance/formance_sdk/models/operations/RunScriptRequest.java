@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class RunScriptRequest {
@@ -34,4 +35,9 @@ public class RunScriptRequest {
         return this;
     }
     
+
+    public RunScriptRequest(@JsonProperty("Script") com.formance.formance_sdk.models.shared.Script script, @JsonProperty("ledger") String ledger) {
+    this.script = script;
+this.ledger = ledger;
+  }
 }

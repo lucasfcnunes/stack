@@ -35,7 +35,10 @@ func newAuth(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // AddScopeToClient - Add scope to client
 func (s *auth) AddScopeToClient(ctx context.Context, request operations.AddScopeToClientRequest) (*operations.AddScopeToClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/auth/clients/{clientId}/scopes/{scopeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/auth/clients/{clientId}/scopes/{scopeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -71,7 +74,10 @@ func (s *auth) AddScopeToClient(ctx context.Context, request operations.AddScope
 // Add a transient scope to a scope
 func (s *auth) AddTransientScope(ctx context.Context, request operations.AddTransientScopeRequest) (*operations.AddTransientScopeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/auth/scopes/{scopeId}/transient/{transientScopeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/auth/scopes/{scopeId}/transient/{transientScopeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -209,7 +215,10 @@ func (s *auth) CreateScope(ctx context.Context, request shared.CreateScopeReques
 // CreateSecret - Add a secret to a client
 func (s *auth) CreateSecret(ctx context.Context, request operations.CreateSecretRequest) (*operations.CreateSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/auth/clients/{clientId}/secrets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/auth/clients/{clientId}/secrets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateSecretRequest", "json")
 	if err != nil {
@@ -260,7 +269,10 @@ func (s *auth) CreateSecret(ctx context.Context, request operations.CreateSecret
 // DeleteClient - Delete client
 func (s *auth) DeleteClient(ctx context.Context, request operations.DeleteClientRequest) (*operations.DeleteClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/auth/clients/{clientId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/auth/clients/{clientId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -296,7 +308,10 @@ func (s *auth) DeleteClient(ctx context.Context, request operations.DeleteClient
 // Delete scope
 func (s *auth) DeleteScope(ctx context.Context, request operations.DeleteScopeRequest) (*operations.DeleteScopeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/auth/scopes/{scopeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/auth/scopes/{scopeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -331,7 +346,10 @@ func (s *auth) DeleteScope(ctx context.Context, request operations.DeleteScopeRe
 // DeleteScopeFromClient - Delete scope from client
 func (s *auth) DeleteScopeFromClient(ctx context.Context, request operations.DeleteScopeFromClientRequest) (*operations.DeleteScopeFromClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/auth/clients/{clientId}/scopes/{scopeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/auth/clients/{clientId}/scopes/{scopeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -366,7 +384,10 @@ func (s *auth) DeleteScopeFromClient(ctx context.Context, request operations.Del
 // DeleteSecret - Delete a secret from a client
 func (s *auth) DeleteSecret(ctx context.Context, request operations.DeleteSecretRequest) (*operations.DeleteSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/auth/clients/{clientId}/secrets/{secretId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/auth/clients/{clientId}/secrets/{secretId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -402,7 +423,10 @@ func (s *auth) DeleteSecret(ctx context.Context, request operations.DeleteSecret
 // Delete a transient scope from a scope
 func (s *auth) DeleteTransientScope(ctx context.Context, request operations.DeleteTransientScopeRequest) (*operations.DeleteTransientScopeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/auth/scopes/{scopeId}/transient/{transientScopeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/auth/scopes/{scopeId}/transient/{transientScopeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -615,7 +639,10 @@ func (s *auth) ListUsers(ctx context.Context) (*operations.ListUsersResponse, er
 // ReadClient - Read client
 func (s *auth) ReadClient(ctx context.Context, request operations.ReadClientRequest) (*operations.ReadClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/auth/clients/{clientId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/auth/clients/{clientId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -660,7 +687,10 @@ func (s *auth) ReadClient(ctx context.Context, request operations.ReadClientRequ
 // Read scope
 func (s *auth) ReadScope(ctx context.Context, request operations.ReadScopeRequest) (*operations.ReadScopeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/auth/scopes/{scopeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/auth/scopes/{scopeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -705,7 +735,10 @@ func (s *auth) ReadScope(ctx context.Context, request operations.ReadScopeReques
 // Read user
 func (s *auth) ReadUser(ctx context.Context, request operations.ReadUserRequest) (*operations.ReadUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/auth/users/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/auth/users/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -749,7 +782,10 @@ func (s *auth) ReadUser(ctx context.Context, request operations.ReadUserRequest)
 // UpdateClient - Update client
 func (s *auth) UpdateClient(ctx context.Context, request operations.UpdateClientRequest) (*operations.UpdateClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/auth/clients/{clientId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/auth/clients/{clientId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateClientRequest", "json")
 	if err != nil {
@@ -801,7 +837,10 @@ func (s *auth) UpdateClient(ctx context.Context, request operations.UpdateClient
 // Update scope
 func (s *auth) UpdateScope(ctx context.Context, request operations.UpdateScopeRequest) (*operations.UpdateScopeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/auth/scopes/{scopeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/auth/scopes/{scopeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateScopeRequest", "json")
 	if err != nil {

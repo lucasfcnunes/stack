@@ -14,4 +14,8 @@ public class ActivityVoidHold {
         return this;
     }
     
+
+    public ActivityVoidHold(@JsonProperty("id") String id) {
+    this.id = id;
+  }
 }

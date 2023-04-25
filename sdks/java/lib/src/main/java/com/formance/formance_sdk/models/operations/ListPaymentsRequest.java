@@ -42,4 +42,6 @@ public class ListPaymentsRequest {
         return this;
     }
     
+
+    public ListPaymentsRequest(){}
 }

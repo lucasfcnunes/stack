@@ -14,4 +14,8 @@ public class StageSendDestinationPayment {
         return this;
     }
     
+
+    public StageSendDestinationPayment(@JsonProperty("psp") String psp) {
+    this.psp = psp;
+  }
 }

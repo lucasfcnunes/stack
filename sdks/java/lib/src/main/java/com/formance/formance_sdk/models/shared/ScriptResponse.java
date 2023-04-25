@@ -50,4 +50,6 @@ public class ScriptResponse {
         return this;
     }
     
+
+    public ScriptResponse(){}
 }

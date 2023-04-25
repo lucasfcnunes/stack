@@ -46,4 +46,10 @@ public class LogsCursorResponseCursor {
         return this;
     }
     
+
+    public LogsCursorResponseCursor(@JsonProperty("data") Log[] data, @JsonProperty("hasMore") Boolean hasMore, @JsonProperty("pageSize") Long pageSize) {
+    this.data = data;
+this.hasMore = hasMore;
+this.pageSize = pageSize;
+  }
 }

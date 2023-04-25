@@ -53,11 +53,9 @@ public class Orchestration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.CancelEventResponse res = new com.formance.formance_sdk.models.operations.CancelEventResponse() {{
+        com.formance.formance_sdk.models.operations.CancelEventResponse res = new com.formance.formance_sdk.models.operations.CancelEventResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -97,12 +95,10 @@ public class Orchestration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.CreateWorkflowResponse res = new com.formance.formance_sdk.models.operations.CreateWorkflowResponse() {{
+        com.formance.formance_sdk.models.operations.CreateWorkflowResponse res = new com.formance.formance_sdk.models.operations.CreateWorkflowResponse(contentType, httpRes.statusCode()) {{
             createWorkflowResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -145,12 +141,10 @@ public class Orchestration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.GetInstanceResponse res = new com.formance.formance_sdk.models.operations.GetInstanceResponse() {{
+        com.formance.formance_sdk.models.operations.GetInstanceResponse res = new com.formance.formance_sdk.models.operations.GetInstanceResponse(contentType, httpRes.statusCode()) {{
             getWorkflowInstanceResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,12 +187,10 @@ public class Orchestration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.GetInstanceHistoryResponse res = new com.formance.formance_sdk.models.operations.GetInstanceHistoryResponse() {{
+        com.formance.formance_sdk.models.operations.GetInstanceHistoryResponse res = new com.formance.formance_sdk.models.operations.GetInstanceHistoryResponse(contentType, httpRes.statusCode()) {{
             getWorkflowInstanceHistoryResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,12 +233,10 @@ public class Orchestration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.GetInstanceStageHistoryResponse res = new com.formance.formance_sdk.models.operations.GetInstanceStageHistoryResponse() {{
+        com.formance.formance_sdk.models.operations.GetInstanceStageHistoryResponse res = new com.formance.formance_sdk.models.operations.GetInstanceStageHistoryResponse(contentType, httpRes.statusCode()) {{
             getWorkflowInstanceHistoryStageResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,12 +279,10 @@ public class Orchestration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.GetWorkflowResponse res = new com.formance.formance_sdk.models.operations.GetWorkflowResponse() {{
+        com.formance.formance_sdk.models.operations.GetWorkflowResponse res = new com.formance.formance_sdk.models.operations.GetWorkflowResponse(contentType, httpRes.statusCode()) {{
             getWorkflowResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,12 +331,10 @@ public class Orchestration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.ListInstancesResponse res = new com.formance.formance_sdk.models.operations.ListInstancesResponse() {{
+        com.formance.formance_sdk.models.operations.ListInstancesResponse res = new com.formance.formance_sdk.models.operations.ListInstancesResponse(contentType, httpRes.statusCode()) {{
             listRunsResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,12 +376,10 @@ public class Orchestration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.ListWorkflowsResponse res = new com.formance.formance_sdk.models.operations.ListWorkflowsResponse() {{
+        com.formance.formance_sdk.models.operations.ListWorkflowsResponse res = new com.formance.formance_sdk.models.operations.ListWorkflowsResponse(contentType, httpRes.statusCode()) {{
             listWorkflowsResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -436,12 +420,10 @@ public class Orchestration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.OrchestrationgetServerInfoResponse res = new com.formance.formance_sdk.models.operations.OrchestrationgetServerInfoResponse() {{
+        com.formance.formance_sdk.models.operations.OrchestrationgetServerInfoResponse res = new com.formance.formance_sdk.models.operations.OrchestrationgetServerInfoResponse(contentType, httpRes.statusCode()) {{
             serverInfo = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -492,12 +474,10 @@ public class Orchestration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.RunWorkflowResponse res = new com.formance.formance_sdk.models.operations.RunWorkflowResponse() {{
+        com.formance.formance_sdk.models.operations.RunWorkflowResponse res = new com.formance.formance_sdk.models.operations.RunWorkflowResponse(contentType, httpRes.statusCode()) {{
             runWorkflowResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -542,11 +522,9 @@ public class Orchestration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.formance.formance_sdk.models.operations.SendEventResponse res = new com.formance.formance_sdk.models.operations.SendEventResponse() {{
+        com.formance.formance_sdk.models.operations.SendEventResponse res = new com.formance.formance_sdk.models.operations.SendEventResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

@@ -47,4 +47,9 @@ public class GetTransactionsResponseCursor {
         return this;
     }
     
+
+    public GetTransactionsResponseCursor(@JsonProperty("data") WalletsTransaction[] data, @JsonProperty("pageSize") Long pageSize) {
+    this.data = data;
+this.pageSize = pageSize;
+  }
 }

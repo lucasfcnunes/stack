@@ -20,4 +20,6 @@ public class CreateClientResponse {
         return this;
     }
     
+
+    public CreateClientResponse(){}
 }

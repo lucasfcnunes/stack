@@ -17,4 +17,6 @@ public class LedgerInfoStorage {
         return this;
     }
     
+
+    public LedgerInfoStorage(){}
 }

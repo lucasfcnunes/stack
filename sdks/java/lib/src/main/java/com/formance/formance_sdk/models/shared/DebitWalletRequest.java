@@ -62,4 +62,8 @@ public class DebitWalletRequest {
         return this;
     }
     
+
+    public DebitWalletRequest(@JsonProperty("amount") Monetary amount) {
+    this.amount = amount;
+  }
 }

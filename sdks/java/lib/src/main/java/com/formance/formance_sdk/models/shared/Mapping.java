@@ -14,4 +14,8 @@ public class Mapping {
         return this;
     }
     
+
+    public Mapping(@JsonProperty("contracts") Contract[] contracts) {
+    this.contracts = contracts;
+  }
 }

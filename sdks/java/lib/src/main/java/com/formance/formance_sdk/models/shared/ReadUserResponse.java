@@ -20,4 +20,6 @@ public class ReadUserResponse {
         return this;
     }
     
+
+    public ReadUserResponse(){}
 }

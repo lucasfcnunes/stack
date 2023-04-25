@@ -21,4 +21,9 @@ public class LedgerStorage {
         return this;
     }
     
+
+    public LedgerStorage(@JsonProperty("driver") String driver, @JsonProperty("ledgers") String[] ledgers) {
+    this.driver = driver;
+this.ledgers = ledgers;
+  }
 }

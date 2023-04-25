@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class GetHoldRequest {
@@ -17,4 +18,8 @@ public class GetHoldRequest {
         return this;
     }
     
+
+    public GetHoldRequest(@JsonProperty("holdID") String holdID) {
+    this.holdID = holdID;
+  }
 }

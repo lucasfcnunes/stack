@@ -62,4 +62,6 @@ public class PostTransaction {
         return this;
     }
     
+
+    public PostTransaction(){}
 }

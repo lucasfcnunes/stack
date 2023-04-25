@@ -17,4 +17,6 @@ public class PaymentMetadata {
         return this;
     }
     
+
+    public PaymentMetadata(){}
 }

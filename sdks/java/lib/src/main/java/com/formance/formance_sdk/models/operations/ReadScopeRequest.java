@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class ReadScopeRequest {
@@ -17,4 +18,8 @@ public class ReadScopeRequest {
         return this;
     }
     
+
+    public ReadScopeRequest(@JsonProperty("scopeId") String scopeId) {
+    this.scopeId = scopeId;
+  }
 }

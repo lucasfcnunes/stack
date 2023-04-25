@@ -20,4 +20,6 @@ public class UpdateWalletRequestBody {
         return this;
     }
     
+
+    public UpdateWalletRequestBody(){}
 }

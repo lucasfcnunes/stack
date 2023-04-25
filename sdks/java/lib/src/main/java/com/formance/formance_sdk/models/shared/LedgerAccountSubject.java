@@ -21,4 +21,9 @@ public class LedgerAccountSubject {
         return this;
     }
     
+
+    public LedgerAccountSubject(@JsonProperty("identifier") String identifier, @JsonProperty("type") String type) {
+    this.identifier = identifier;
+this.type = type;
+  }
 }

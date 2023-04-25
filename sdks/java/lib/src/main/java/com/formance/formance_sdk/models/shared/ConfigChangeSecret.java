@@ -17,4 +17,6 @@ public class ConfigChangeSecret {
         return this;
     }
     
+
+    public ConfigChangeSecret(){}
 }

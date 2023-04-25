@@ -14,4 +14,8 @@ public class Config {
         return this;
     }
     
+
+    public Config(@JsonProperty("storage") LedgerStorage storage) {
+    this.storage = storage;
+  }
 }

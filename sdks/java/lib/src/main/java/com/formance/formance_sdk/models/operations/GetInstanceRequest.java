@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class GetInstanceRequest {
@@ -17,4 +18,8 @@ public class GetInstanceRequest {
         return this;
     }
     
+
+    public GetInstanceRequest(@JsonProperty("instanceID") String instanceID) {
+    this.instanceID = instanceID;
+  }
 }

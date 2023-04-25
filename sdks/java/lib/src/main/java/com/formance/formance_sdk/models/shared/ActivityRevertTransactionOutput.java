@@ -14,4 +14,8 @@ public class ActivityRevertTransactionOutput {
         return this;
     }
     
+
+    public ActivityRevertTransactionOutput(@JsonProperty("data") Transaction data) {
+    this.data = data;
+  }
 }

@@ -21,4 +21,9 @@ public class ActivityGetAccount {
         return this;
     }
     
+
+    public ActivityGetAccount(@JsonProperty("id") String id, @JsonProperty("ledger") String ledger) {
+    this.id = id;
+this.ledger = ledger;
+  }
 }

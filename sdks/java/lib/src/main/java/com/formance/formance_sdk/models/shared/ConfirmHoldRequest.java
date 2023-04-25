@@ -31,4 +31,6 @@ public class ConfirmHoldRequest {
         return this;
     }
     
+
+    public ConfirmHoldRequest(){}
 }

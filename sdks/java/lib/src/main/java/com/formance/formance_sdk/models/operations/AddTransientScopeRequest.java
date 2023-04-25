@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class AddTransientScopeRequest {
@@ -27,4 +28,9 @@ public class AddTransientScopeRequest {
         return this;
     }
     
+
+    public AddTransientScopeRequest(@JsonProperty("scopeId") String scopeId, @JsonProperty("transientScopeId") String transientScopeId) {
+    this.scopeId = scopeId;
+this.transientScopeId = transientScopeId;
+  }
 }

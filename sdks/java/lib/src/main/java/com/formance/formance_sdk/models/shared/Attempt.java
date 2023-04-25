@@ -100,4 +100,6 @@ public class Attempt {
         return this;
     }
     
+
+    public Attempt(){}
 }

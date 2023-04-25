@@ -17,4 +17,8 @@ public class GetHoldsResponse {
         return this;
     }
     
+
+    public GetHoldsResponse(@JsonProperty("cursor") GetHoldsResponseCursor cursor) {
+    this.cursor = cursor;
+  }
 }

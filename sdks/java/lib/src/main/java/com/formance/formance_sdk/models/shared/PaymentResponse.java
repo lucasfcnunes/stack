@@ -17,4 +17,8 @@ public class PaymentResponse {
         return this;
     }
     
+
+    public PaymentResponse(@JsonProperty("data") Payment data) {
+    this.data = data;
+  }
 }

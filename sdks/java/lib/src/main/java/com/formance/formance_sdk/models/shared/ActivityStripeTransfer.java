@@ -46,4 +46,6 @@ public class ActivityStripeTransfer {
         return this;
     }
     
+
+    public ActivityStripeTransfer(){}
 }

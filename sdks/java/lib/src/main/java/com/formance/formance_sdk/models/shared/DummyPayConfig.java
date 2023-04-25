@@ -38,4 +38,8 @@ public class DummyPayConfig {
         return this;
     }
     
+
+    public DummyPayConfig(@JsonProperty("directory") String directory) {
+    this.directory = directory;
+  }
 }

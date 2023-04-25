@@ -45,4 +45,11 @@ public class Secret {
         return this;
     }
     
+
+    public Secret(@JsonProperty("clear") String clear, @JsonProperty("id") String id, @JsonProperty("lastDigits") String lastDigits, @JsonProperty("name") String name) {
+    this.clear = clear;
+this.id = id;
+this.lastDigits = lastDigits;
+this.name = name;
+  }
 }

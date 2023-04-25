@@ -89,4 +89,6 @@ public class WorkflowInstanceHistoryStageInput {
         return this;
     }
     
+
+    public WorkflowInstanceHistoryStageInput(){}
 }

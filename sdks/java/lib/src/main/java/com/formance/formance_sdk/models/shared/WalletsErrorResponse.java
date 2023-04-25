@@ -24,4 +24,9 @@ public class WalletsErrorResponse {
         return this;
     }
     
+
+    public WalletsErrorResponse(@JsonProperty("errorCode") WalletsErrorResponseErrorCodeEnum errorCode, @JsonProperty("errorMessage") String errorMessage) {
+    this.errorCode = errorCode;
+this.errorMessage = errorMessage;
+  }
 }

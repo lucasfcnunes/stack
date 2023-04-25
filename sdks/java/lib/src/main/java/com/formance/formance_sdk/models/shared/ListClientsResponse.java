@@ -20,4 +20,6 @@ public class ListClientsResponse {
         return this;
     }
     
+
+    public ListClientsResponse(){}
 }

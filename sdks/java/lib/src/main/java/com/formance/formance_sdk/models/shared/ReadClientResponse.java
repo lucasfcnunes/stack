@@ -20,4 +20,6 @@ public class ReadClientResponse {
         return this;
     }
     
+
+    public ReadClientResponse(){}
 }

@@ -95,4 +95,12 @@ public class WorkflowInstanceHistoryStage {
         return this;
     }
     
+
+    public WorkflowInstanceHistoryStage(@JsonProperty("attempt") Long attempt, @JsonProperty("input") WorkflowInstanceHistoryStageInput input, @JsonProperty("name") String name, @JsonProperty("startedAt") OffsetDateTime startedAt, @JsonProperty("terminated") Boolean terminated) {
+    this.attempt = attempt;
+this.input = input;
+this.name = name;
+this.startedAt = startedAt;
+this.terminated = terminated;
+  }
 }

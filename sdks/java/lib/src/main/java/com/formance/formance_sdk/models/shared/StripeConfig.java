@@ -40,4 +40,8 @@ public class StripeConfig {
         return this;
     }
     
+
+    public StripeConfig(@JsonProperty("apiKey") String apiKey) {
+    this.apiKey = apiKey;
+  }
 }

@@ -31,4 +31,9 @@ public class ModulrConfig {
         return this;
     }
     
+
+    public ModulrConfig(@JsonProperty("apiKey") String apiKey, @JsonProperty("apiSecret") String apiSecret) {
+    this.apiKey = apiKey;
+this.apiSecret = apiSecret;
+  }
 }

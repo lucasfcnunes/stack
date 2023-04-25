@@ -25,4 +25,6 @@ public class ConnectorsResponseData {
         return this;
     }
     
+
+    public ConnectorsResponseData(){}
 }

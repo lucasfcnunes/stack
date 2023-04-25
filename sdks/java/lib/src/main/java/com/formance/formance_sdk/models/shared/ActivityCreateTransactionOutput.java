@@ -14,4 +14,8 @@ public class ActivityCreateTransactionOutput {
         return this;
     }
     
+
+    public ActivityCreateTransactionOutput(@JsonProperty("data") Transaction[] data) {
+    this.data = data;
+  }
 }

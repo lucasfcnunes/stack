@@ -24,4 +24,8 @@ public class CreateWorkflowRequest {
         return this;
     }
     
+
+    public CreateWorkflowRequest(@JsonProperty("stages") java.util.Map<String, Object>[] stages) {
+    this.stages = stages;
+  }
 }

@@ -25,4 +25,6 @@ public class ActivityCreditWallet {
         return this;
     }
     
+
+    public ActivityCreditWallet(){}
 }

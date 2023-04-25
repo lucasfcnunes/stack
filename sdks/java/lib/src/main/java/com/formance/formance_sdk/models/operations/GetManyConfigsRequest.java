@@ -27,4 +27,6 @@ public class GetManyConfigsRequest {
         return this;
     }
     
+
+    public GetManyConfigsRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class CreateTransactionsRequest {
@@ -24,4 +25,9 @@ public class CreateTransactionsRequest {
         return this;
     }
     
+
+    public CreateTransactionsRequest(@JsonProperty("Transactions") com.formance.formance_sdk.models.shared.Transactions transactions, @JsonProperty("ledger") String ledger) {
+    this.transactions = transactions;
+this.ledger = ledger;
+  }
 }

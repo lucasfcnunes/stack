@@ -20,4 +20,6 @@ public class TransfersResponse {
         return this;
     }
     
+
+    public TransfersResponse(){}
 }

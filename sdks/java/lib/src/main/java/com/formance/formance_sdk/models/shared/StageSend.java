@@ -33,4 +33,6 @@ public class StageSend {
         return this;
     }
     
+
+    public StageSend(){}
 }

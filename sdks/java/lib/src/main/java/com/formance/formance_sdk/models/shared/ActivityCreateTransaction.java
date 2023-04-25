@@ -25,4 +25,6 @@ public class ActivityCreateTransaction {
         return this;
     }
     
+
+    public ActivityCreateTransaction(){}
 }

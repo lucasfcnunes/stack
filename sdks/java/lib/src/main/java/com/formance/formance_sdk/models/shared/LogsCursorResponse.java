@@ -17,4 +17,8 @@ public class LogsCursorResponse {
         return this;
     }
     
+
+    public LogsCursorResponse(@JsonProperty("cursor") LogsCursorResponseCursor cursor) {
+    this.cursor = cursor;
+  }
 }

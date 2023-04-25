@@ -46,4 +46,10 @@ public class TransactionsCursorResponseCursor {
         return this;
     }
     
+
+    public TransactionsCursorResponseCursor(@JsonProperty("data") Transaction[] data, @JsonProperty("hasMore") Boolean hasMore, @JsonProperty("pageSize") Long pageSize) {
+    this.data = data;
+this.hasMore = hasMore;
+this.pageSize = pageSize;
+  }
 }

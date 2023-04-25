@@ -91,7 +91,7 @@ export class Ledger {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.transactionsResponse = utils.deserializeJSONResponse(
+            res.transactionsResponse = utils.objectToClass(
               httpRes?.data,
               shared.TransactionsResponse
             );
@@ -99,7 +99,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );
@@ -171,7 +171,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );
@@ -245,7 +245,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );
@@ -302,7 +302,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );
@@ -359,7 +359,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );
@@ -432,7 +432,7 @@ export class Ledger {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.transactionsResponse = utils.deserializeJSONResponse(
+            res.transactionsResponse = utils.objectToClass(
               httpRes?.data,
               shared.TransactionsResponse
             );
@@ -440,7 +440,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );
@@ -492,7 +492,7 @@ export class Ledger {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.accountResponse = utils.deserializeJSONResponse(
+            res.accountResponse = utils.objectToClass(
               httpRes?.data,
               shared.AccountResponse
             );
@@ -500,7 +500,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );
@@ -554,7 +554,7 @@ export class Ledger {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.balancesCursorResponse = utils.deserializeJSONResponse(
+            res.balancesCursorResponse = utils.objectToClass(
               httpRes?.data,
               shared.BalancesCursorResponse
             );
@@ -562,7 +562,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );
@@ -616,7 +616,7 @@ export class Ledger {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.aggregateBalancesResponse = utils.deserializeJSONResponse(
+            res.aggregateBalancesResponse = utils.objectToClass(
               httpRes?.data,
               shared.AggregateBalancesResponse
             );
@@ -624,7 +624,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );
@@ -664,7 +664,7 @@ export class Ledger {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.configInfoResponse = utils.deserializeJSONResponse(
+            res.configInfoResponse = utils.objectToClass(
               httpRes?.data,
               shared.ConfigInfoResponse
             );
@@ -672,7 +672,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );
@@ -724,7 +724,7 @@ export class Ledger {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.ledgerInfoResponse = utils.deserializeJSONResponse(
+            res.ledgerInfoResponse = utils.objectToClass(
               httpRes?.data,
               shared.LedgerInfoResponse
             );
@@ -732,7 +732,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );
@@ -784,7 +784,7 @@ export class Ledger {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.mappingResponse = utils.deserializeJSONResponse(
+            res.mappingResponse = utils.objectToClass(
               httpRes?.data,
               shared.MappingResponse
             );
@@ -792,7 +792,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );
@@ -844,7 +844,7 @@ export class Ledger {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.transactionResponse = utils.deserializeJSONResponse(
+            res.transactionResponse = utils.objectToClass(
               httpRes?.data,
               shared.TransactionResponse
             );
@@ -852,7 +852,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );
@@ -909,7 +909,7 @@ export class Ledger {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.accountsCursorResponse = utils.deserializeJSONResponse(
+            res.accountsCursorResponse = utils.objectToClass(
               httpRes?.data,
               shared.AccountsCursorResponse
             );
@@ -917,7 +917,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );
@@ -973,7 +973,7 @@ export class Ledger {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.logsCursorResponse = utils.deserializeJSONResponse(
+            res.logsCursorResponse = utils.objectToClass(
               httpRes?.data,
               shared.LogsCursorResponse
             );
@@ -981,7 +981,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );
@@ -1038,7 +1038,7 @@ export class Ledger {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.transactionsCursorResponse = utils.deserializeJSONResponse(
+            res.transactionsCursorResponse = utils.objectToClass(
               httpRes?.data,
               shared.TransactionsCursorResponse
             );
@@ -1046,7 +1046,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );
@@ -1102,7 +1102,7 @@ export class Ledger {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.statsResponse = utils.deserializeJSONResponse(
+            res.statsResponse = utils.objectToClass(
               httpRes?.data,
               shared.StatsResponse
             );
@@ -1110,7 +1110,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );
@@ -1162,7 +1162,7 @@ export class Ledger {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.transactionResponse = utils.deserializeJSONResponse(
+            res.transactionResponse = utils.objectToClass(
               httpRes?.data,
               shared.TransactionResponse
             );
@@ -1170,7 +1170,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );
@@ -1247,7 +1247,7 @@ export class Ledger {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.scriptResponse = utils.deserializeJSONResponse(
+            res.scriptResponse = utils.objectToClass(
               httpRes?.data,
               shared.ScriptResponse
             );
@@ -1319,7 +1319,7 @@ export class Ledger {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.mappingResponse = utils.deserializeJSONResponse(
+            res.mappingResponse = utils.objectToClass(
               httpRes?.data,
               shared.MappingResponse
             );
@@ -1327,7 +1327,7 @@ export class Ledger {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.errorResponse = utils.deserializeJSONResponse(
+            res.errorResponse = utils.objectToClass(
               httpRes?.data,
               shared.ErrorResponse
             );

@@ -17,4 +17,8 @@ public class ConfigInfoResponse {
         return this;
     }
     
+
+    public ConfigInfoResponse(@JsonProperty("data") ConfigInfo data) {
+    this.data = data;
+  }
 }

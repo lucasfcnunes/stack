@@ -91,9 +91,7 @@ export class Payments {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.stripeTransferResponse = utils.deserializeJSONResponse(
-              httpRes?.data
-            );
+            res.stripeTransferResponse = utils.objectToClass(httpRes?.data);
           }
           break;
       }
@@ -165,7 +163,7 @@ export class Payments {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.transferResponse = utils.deserializeJSONResponse(
+            res.transferResponse = utils.objectToClass(
               httpRes?.data,
               shared.TransferResponse
             );
@@ -220,7 +218,7 @@ export class Payments {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.taskResponse = utils.deserializeJSONResponse(
+            res.taskResponse = utils.objectToClass(
               httpRes?.data,
               shared.TaskResponse
             );
@@ -272,7 +270,7 @@ export class Payments {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.paymentResponse = utils.deserializeJSONResponse(
+            res.paymentResponse = utils.objectToClass(
               httpRes?.data,
               shared.PaymentResponse
             );
@@ -387,7 +385,7 @@ export class Payments {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.connectorsResponse = utils.deserializeJSONResponse(
+            res.connectorsResponse = utils.objectToClass(
               httpRes?.data,
               shared.ConnectorsResponse
             );
@@ -434,7 +432,7 @@ export class Payments {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.connectorsConfigsResponse = utils.deserializeJSONResponse(
+            res.connectorsConfigsResponse = utils.objectToClass(
               httpRes?.data,
               shared.ConnectorsConfigsResponse
             );
@@ -491,7 +489,7 @@ export class Payments {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.tasksCursor = utils.deserializeJSONResponse(
+            res.tasksCursor = utils.objectToClass(
               httpRes?.data,
               shared.TasksCursor
             );
@@ -546,7 +544,7 @@ export class Payments {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.transfersResponse = utils.deserializeJSONResponse(
+            res.transfersResponse = utils.objectToClass(
               httpRes?.data,
               shared.TransfersResponse
             );
@@ -596,7 +594,7 @@ export class Payments {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.paymentsCursor = utils.deserializeJSONResponse(
+            res.paymentsCursor = utils.objectToClass(
               httpRes?.data,
               shared.PaymentsCursor
             );
@@ -639,7 +637,7 @@ export class Payments {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.serverInfo = utils.deserializeJSONResponse(
+            res.serverInfo = utils.objectToClass(
               httpRes?.data,
               shared.ServerInfo
             );
@@ -689,7 +687,7 @@ export class Payments {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.accountsCursor = utils.deserializeJSONResponse(
+            res.accountsCursor = utils.objectToClass(
               httpRes?.data,
               shared.AccountsCursor
             );
@@ -744,7 +742,7 @@ export class Payments {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.connectorConfigResponse = utils.deserializeJSONResponse(
+            res.connectorConfigResponse = utils.objectToClass(
               httpRes?.data,
               shared.ConnectorConfigResponse
             );

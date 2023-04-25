@@ -17,4 +17,8 @@ public class ConnectorsResponse {
         return this;
     }
     
+
+    public ConnectorsResponse(@JsonProperty("data") ConnectorsResponseData[] data) {
+    this.data = data;
+  }
 }

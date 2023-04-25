@@ -57,4 +57,6 @@ public class ResponseCursor {
         return this;
     }
     
+
+    public ResponseCursor(){}
 }

@@ -17,4 +17,8 @@ public class AccountResponse {
         return this;
     }
     
+
+    public AccountResponse(@JsonProperty("data") AccountWithVolumesAndBalances data) {
+    this.data = data;
+  }
 }

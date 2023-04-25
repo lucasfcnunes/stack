@@ -17,4 +17,8 @@ public class ServerInfo {
         return this;
     }
     
+
+    public ServerInfo(@JsonProperty("version") String version) {
+    this.version = version;
+  }
 }

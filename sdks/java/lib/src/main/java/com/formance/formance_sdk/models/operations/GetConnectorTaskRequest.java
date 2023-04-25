@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class GetConnectorTaskRequest {
@@ -27,4 +28,9 @@ public class GetConnectorTaskRequest {
         return this;
     }
     
+
+    public GetConnectorTaskRequest(@JsonProperty("connector") com.formance.formance_sdk.models.shared.ConnectorEnum connector, @JsonProperty("taskId") String taskId) {
+    this.connector = connector;
+this.taskId = taskId;
+  }
 }

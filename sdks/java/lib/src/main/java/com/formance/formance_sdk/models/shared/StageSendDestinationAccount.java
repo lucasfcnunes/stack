@@ -24,4 +24,8 @@ public class StageSendDestinationAccount {
         return this;
     }
     
+
+    public StageSendDestinationAccount(@JsonProperty("id") String id) {
+    this.id = id;
+  }
 }

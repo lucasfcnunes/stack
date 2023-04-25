@@ -28,4 +28,10 @@ public class ConfigInfo {
         return this;
     }
     
+
+    public ConfigInfo(@JsonProperty("config") Config config, @JsonProperty("server") String server, @JsonProperty("version") String version) {
+    this.config = config;
+this.server = server;
+this.version = version;
+  }
 }

@@ -180,7 +180,7 @@ export class Auth {
       switch (true) {
         case httpRes?.status == 201:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.createClientResponse = utils.deserializeJSONResponse(
+            res.createClientResponse = utils.objectToClass(
               httpRes?.data,
               shared.CreateClientResponse
             );
@@ -249,7 +249,7 @@ export class Auth {
       switch (true) {
         case httpRes?.status == 201:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.createScopeResponse = utils.deserializeJSONResponse(
+            res.createScopeResponse = utils.objectToClass(
               httpRes?.data,
               shared.CreateScopeResponse
             );
@@ -319,7 +319,7 @@ export class Auth {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.createSecretResponse = utils.deserializeJSONResponse(
+            res.createSecretResponse = utils.objectToClass(
               httpRes?.data,
               shared.CreateSecretResponse
             );
@@ -598,7 +598,7 @@ export class Auth {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.serverInfo = utils.deserializeJSONResponse(
+            res.serverInfo = utils.objectToClass(
               httpRes?.data,
               shared.ServerInfo
             );
@@ -641,7 +641,7 @@ export class Auth {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.listClientsResponse = utils.deserializeJSONResponse(
+            res.listClientsResponse = utils.objectToClass(
               httpRes?.data,
               shared.ListClientsResponse
             );
@@ -687,7 +687,7 @@ export class Auth {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.listScopesResponse = utils.deserializeJSONResponse(
+            res.listScopesResponse = utils.objectToClass(
               httpRes?.data,
               shared.ListScopesResponse
             );
@@ -733,7 +733,7 @@ export class Auth {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.listUsersResponse = utils.deserializeJSONResponse(
+            res.listUsersResponse = utils.objectToClass(
               httpRes?.data,
               shared.ListUsersResponse
             );
@@ -785,7 +785,7 @@ export class Auth {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.readClientResponse = utils.deserializeJSONResponse(
+            res.readClientResponse = utils.objectToClass(
               httpRes?.data,
               shared.ReadClientResponse
             );
@@ -840,7 +840,7 @@ export class Auth {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.readScopeResponse = utils.deserializeJSONResponse(
+            res.readScopeResponse = utils.objectToClass(
               httpRes?.data,
               shared.ReadScopeResponse
             );
@@ -894,7 +894,7 @@ export class Auth {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.readUserResponse = utils.deserializeJSONResponse(
+            res.readUserResponse = utils.objectToClass(
               httpRes?.data,
               shared.ReadUserResponse
             );
@@ -964,7 +964,7 @@ export class Auth {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.updateClientResponse = utils.deserializeJSONResponse(
+            res.updateClientResponse = utils.objectToClass(
               httpRes?.data,
               shared.UpdateClientResponse
             );
@@ -1037,7 +1037,7 @@ export class Auth {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.updateScopeResponse = utils.deserializeJSONResponse(
+            res.updateScopeResponse = utils.objectToClass(
               httpRes?.data,
               shared.UpdateScopeResponse
             );

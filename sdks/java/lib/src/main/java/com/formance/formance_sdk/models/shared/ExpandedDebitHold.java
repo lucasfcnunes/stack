@@ -74,4 +74,13 @@ public class ExpandedDebitHold {
         return this;
     }
     
+
+    public ExpandedDebitHold(@JsonProperty("description") String description, @JsonProperty("id") String id, @JsonProperty("metadata") java.util.Map<String, Object> metadata, @JsonProperty("originalAmount") Long originalAmount, @JsonProperty("remaining") Long remaining, @JsonProperty("walletID") String walletID) {
+    this.description = description;
+this.id = id;
+this.metadata = metadata;
+this.originalAmount = originalAmount;
+this.remaining = remaining;
+this.walletID = walletID;
+  }
 }

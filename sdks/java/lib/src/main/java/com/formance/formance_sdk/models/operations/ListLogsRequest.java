@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 import java.time.OffsetDateTime;
 
@@ -130,4 +131,8 @@ public class ListLogsRequest {
         return this;
     }
     
+
+    public ListLogsRequest(@JsonProperty("ledger") String ledger) {
+    this.ledger = ledger;
+  }
 }

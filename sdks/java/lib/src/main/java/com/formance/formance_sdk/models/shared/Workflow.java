@@ -44,4 +44,11 @@ public class Workflow {
         return this;
     }
     
+
+    public Workflow(@JsonProperty("config") WorkflowConfig config, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+    this.config = config;
+this.createdAt = createdAt;
+this.id = id;
+this.updatedAt = updatedAt;
+  }
 }

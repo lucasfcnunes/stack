@@ -31,4 +31,6 @@ public class Response {
         return this;
     }
     
+
+    public Response(){}
 }

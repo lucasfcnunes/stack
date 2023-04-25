@@ -21,4 +21,9 @@ public class ConfigsResponseCursor {
         return this;
     }
     
+
+    public ConfigsResponseCursor(@JsonProperty("data") WebhooksConfig[] data, @JsonProperty("hasMore") Boolean hasMore) {
+    this.data = data;
+this.hasMore = hasMore;
+  }
 }

@@ -17,4 +17,8 @@ public class CreateBalanceResponse {
         return this;
     }
     
+
+    public CreateBalanceResponse(@JsonProperty("data") Balance data) {
+    this.data = data;
+  }
 }

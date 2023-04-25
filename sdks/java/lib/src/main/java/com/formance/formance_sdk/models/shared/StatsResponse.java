@@ -17,4 +17,8 @@ public class StatsResponse {
         return this;
     }
     
+
+    public StatsResponse(@JsonProperty("data") Stats data) {
+    this.data = data;
+  }
 }

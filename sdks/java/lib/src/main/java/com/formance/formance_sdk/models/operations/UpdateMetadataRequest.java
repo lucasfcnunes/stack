@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class UpdateMetadataRequest {
@@ -24,4 +25,9 @@ public class UpdateMetadataRequest {
         return this;
     }
     
+
+    public UpdateMetadataRequest(@JsonProperty("PaymentMetadata") com.formance.formance_sdk.models.shared.PaymentMetadata paymentMetadata, @JsonProperty("paymentId") String paymentId) {
+    this.paymentMetadata = paymentMetadata;
+this.paymentId = paymentId;
+  }
 }

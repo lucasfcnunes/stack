@@ -17,4 +17,8 @@ public class CreateWalletResponse {
         return this;
     }
     
+
+    public CreateWalletResponse(@JsonProperty("data") Wallet data) {
+    this.data = data;
+  }
 }

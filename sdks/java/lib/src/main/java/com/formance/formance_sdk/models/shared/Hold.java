@@ -54,4 +54,11 @@ public class Hold {
         return this;
     }
     
+
+    public Hold(@JsonProperty("description") String description, @JsonProperty("id") String id, @JsonProperty("metadata") java.util.Map<String, Object> metadata, @JsonProperty("walletID") String walletID) {
+    this.description = description;
+this.id = id;
+this.metadata = metadata;
+this.walletID = walletID;
+  }
 }

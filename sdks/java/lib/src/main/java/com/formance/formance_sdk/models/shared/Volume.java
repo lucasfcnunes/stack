@@ -31,4 +31,9 @@ public class Volume {
         return this;
     }
     
+
+    public Volume(@JsonProperty("input") Long input, @JsonProperty("output") Long output) {
+    this.input = input;
+this.output = output;
+  }
 }

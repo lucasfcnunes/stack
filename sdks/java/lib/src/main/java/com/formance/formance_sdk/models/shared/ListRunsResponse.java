@@ -17,4 +17,8 @@ public class ListRunsResponse {
         return this;
     }
     
+
+    public ListRunsResponse(@JsonProperty("data") WorkflowInstance[] data) {
+    this.data = data;
+  }
 }

@@ -49,4 +49,12 @@ public class PaymentAdjustment {
         return this;
     }
     
+
+    public PaymentAdjustment(@JsonProperty("absolute") Boolean absolute, @JsonProperty("amount") Long amount, @JsonProperty("date") OffsetDateTime date, @JsonProperty("raw") java.util.Map<String, Object> raw, @JsonProperty("status") PaymentStatusEnum status) {
+    this.absolute = absolute;
+this.amount = amount;
+this.date = date;
+this.raw = raw;
+this.status = status;
+  }
 }

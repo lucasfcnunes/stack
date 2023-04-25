@@ -24,4 +24,9 @@ public class Error {
         return this;
     }
     
+
+    public Error(@JsonProperty("errorCode") ErrorErrorCodeEnum errorCode, @JsonProperty("errorMessage") String errorMessage) {
+    this.errorCode = errorCode;
+this.errorMessage = errorMessage;
+  }
 }

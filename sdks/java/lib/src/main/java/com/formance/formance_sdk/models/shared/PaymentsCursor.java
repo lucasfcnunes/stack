@@ -17,4 +17,8 @@ public class PaymentsCursor {
         return this;
     }
     
+
+    public PaymentsCursor(@JsonProperty("cursor") PaymentsCursorCursor cursor) {
+    this.cursor = cursor;
+  }
 }

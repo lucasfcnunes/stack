@@ -17,4 +17,8 @@ public class AggregateBalancesResponse {
         return this;
     }
     
+
+    public AggregateBalancesResponse(@JsonProperty("data") java.util.Map<String, Long> data) {
+    this.data = data;
+  }
 }

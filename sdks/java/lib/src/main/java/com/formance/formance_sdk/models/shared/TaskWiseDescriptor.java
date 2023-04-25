@@ -33,4 +33,6 @@ public class TaskWiseDescriptor {
         return this;
     }
     
+
+    public TaskWiseDescriptor(){}
 }

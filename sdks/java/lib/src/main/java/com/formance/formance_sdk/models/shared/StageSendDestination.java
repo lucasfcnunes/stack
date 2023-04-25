@@ -33,4 +33,6 @@ public class StageSendDestination {
         return this;
     }
     
+
+    public StageSendDestination(){}
 }

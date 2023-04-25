@@ -14,4 +14,8 @@ public class CreateBalanceRequest {
         return this;
     }
     
+
+    public CreateBalanceRequest(@JsonProperty("name") String name) {
+    this.name = name;
+  }
 }

@@ -64,4 +64,8 @@ public class CreateClientRequest {
         return this;
     }
     
+
+    public CreateClientRequest(@JsonProperty("name") String name) {
+    this.name = name;
+  }
 }

@@ -47,4 +47,8 @@ public class TransactionData {
         return this;
     }
     
+
+    public TransactionData(@JsonProperty("postings") Posting[] postings) {
+    this.postings = postings;
+  }
 }

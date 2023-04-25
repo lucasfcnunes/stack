@@ -46,4 +46,10 @@ public class AccountsCursorCursor {
         return this;
     }
     
+
+    public AccountsCursorCursor(@JsonProperty("data") PaymentsAccount[] data, @JsonProperty("hasMore") Boolean hasMore, @JsonProperty("pageSize") Long pageSize) {
+    this.data = data;
+this.hasMore = hasMore;
+this.pageSize = pageSize;
+  }
 }

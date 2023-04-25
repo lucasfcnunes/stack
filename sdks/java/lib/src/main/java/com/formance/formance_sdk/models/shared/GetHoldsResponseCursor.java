@@ -47,4 +47,9 @@ public class GetHoldsResponseCursor {
         return this;
     }
     
+
+    public GetHoldsResponseCursor(@JsonProperty("data") Hold[] data, @JsonProperty("pageSize") Long pageSize) {
+    this.data = data;
+this.pageSize = pageSize;
+  }
 }

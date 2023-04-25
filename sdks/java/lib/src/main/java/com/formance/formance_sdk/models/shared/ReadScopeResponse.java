@@ -20,4 +20,6 @@ public class ReadScopeResponse {
         return this;
     }
     
+
+    public ReadScopeResponse(){}
 }

@@ -75,4 +75,14 @@ public class TaskWise {
         return this;
     }
     
+
+    public TaskWise(@JsonProperty("connectorId") String connectorId, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("descriptor") TaskWiseDescriptor descriptor, @JsonProperty("id") String id, @JsonProperty("state") java.util.Map<String, Object> state, @JsonProperty("status") PaymentStatusEnum status, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+    this.connectorId = connectorId;
+this.createdAt = createdAt;
+this.descriptor = descriptor;
+this.id = id;
+this.state = state;
+this.status = status;
+this.updatedAt = updatedAt;
+  }
 }

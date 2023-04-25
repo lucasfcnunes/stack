@@ -14,4 +14,8 @@ public class StageWaitEvent {
         return this;
     }
     
+
+    public StageWaitEvent(@JsonProperty("event") String event) {
+    this.event = event;
+  }
 }

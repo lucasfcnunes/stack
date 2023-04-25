@@ -27,4 +27,6 @@ public class ListInstancesRequest {
         return this;
     }
     
+
+    public ListInstancesRequest(){}
 }

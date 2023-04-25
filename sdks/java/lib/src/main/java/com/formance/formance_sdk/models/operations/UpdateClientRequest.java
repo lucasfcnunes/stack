@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class UpdateClientRequest {
@@ -24,4 +25,8 @@ public class UpdateClientRequest {
         return this;
     }
     
+
+    public UpdateClientRequest(@JsonProperty("clientId") String clientId) {
+    this.clientId = clientId;
+  }
 }

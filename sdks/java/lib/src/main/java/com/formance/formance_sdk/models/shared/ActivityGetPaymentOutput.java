@@ -14,4 +14,8 @@ public class ActivityGetPaymentOutput {
         return this;
     }
     
+
+    public ActivityGetPaymentOutput(@JsonProperty("data") Payment data) {
+    this.data = data;
+  }
 }

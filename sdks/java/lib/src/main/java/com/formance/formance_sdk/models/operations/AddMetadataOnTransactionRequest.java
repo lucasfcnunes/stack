@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class AddMetadataOnTransactionRequest {
@@ -37,4 +38,9 @@ public class AddMetadataOnTransactionRequest {
         return this;
     }
     
+
+    public AddMetadataOnTransactionRequest(@JsonProperty("ledger") String ledger, @JsonProperty("txid") Long txid) {
+    this.ledger = ledger;
+this.txid = txid;
+  }
 }

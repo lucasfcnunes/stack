@@ -27,4 +27,9 @@ public class Monetary {
         return this;
     }
     
+
+    public Monetary(@JsonProperty("amount") Long amount, @JsonProperty("asset") String asset) {
+    this.amount = amount;
+this.asset = asset;
+  }
 }

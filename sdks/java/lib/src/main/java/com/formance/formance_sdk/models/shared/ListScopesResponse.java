@@ -20,4 +20,6 @@ public class ListScopesResponse {
         return this;
     }
     
+
+    public ListScopesResponse(){}
 }

@@ -38,4 +38,10 @@ public class ClientSecret {
         return this;
     }
     
+
+    public ClientSecret(@JsonProperty("id") String id, @JsonProperty("lastDigits") String lastDigits, @JsonProperty("name") String name) {
+    this.id = id;
+this.lastDigits = lastDigits;
+this.name = name;
+  }
 }

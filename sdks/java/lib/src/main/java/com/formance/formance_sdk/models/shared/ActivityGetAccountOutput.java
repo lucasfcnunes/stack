@@ -14,4 +14,8 @@ public class ActivityGetAccountOutput {
         return this;
     }
     
+
+    public ActivityGetAccountOutput(@JsonProperty("data") AccountWithVolumesAndBalances data) {
+    this.data = data;
+  }
 }

@@ -55,4 +55,12 @@ public class Wallet {
         return this;
     }
     
+
+    public Wallet(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("ledger") String ledger, @JsonProperty("metadata") java.util.Map<String, Object> metadata, @JsonProperty("name") String name) {
+    this.createdAt = createdAt;
+this.id = id;
+this.ledger = ledger;
+this.metadata = metadata;
+this.name = name;
+  }
 }

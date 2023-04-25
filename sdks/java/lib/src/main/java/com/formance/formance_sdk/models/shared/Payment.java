@@ -105,4 +105,20 @@ public class Payment {
         return this;
     }
     
+
+    public Payment(@JsonProperty("accountID") String accountID, @JsonProperty("adjustments") PaymentAdjustment[] adjustments, @JsonProperty("asset") String asset, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("initialAmount") Long initialAmount, @JsonProperty("metadata") PaymentMetadata metadata, @JsonProperty("provider") ConnectorEnum provider, @JsonProperty("raw") java.util.Map<String, Object> raw, @JsonProperty("reference") String reference, @JsonProperty("scheme") PaymentSchemeEnum scheme, @JsonProperty("status") PaymentStatusEnum status, @JsonProperty("type") PaymentTypeEnum type) {
+    this.accountID = accountID;
+this.adjustments = adjustments;
+this.asset = asset;
+this.createdAt = createdAt;
+this.id = id;
+this.initialAmount = initialAmount;
+this.metadata = metadata;
+this.provider = provider;
+this.raw = raw;
+this.reference = reference;
+this.scheme = scheme;
+this.status = status;
+this.type = type;
+  }
 }

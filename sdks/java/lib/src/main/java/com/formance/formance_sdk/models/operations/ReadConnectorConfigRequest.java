@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class ReadConnectorConfigRequest {
@@ -17,4 +18,8 @@ public class ReadConnectorConfigRequest {
         return this;
     }
     
+
+    public ReadConnectorConfigRequest(@JsonProperty("connector") com.formance.formance_sdk.models.shared.ConnectorEnum connector) {
+    this.connector = connector;
+  }
 }

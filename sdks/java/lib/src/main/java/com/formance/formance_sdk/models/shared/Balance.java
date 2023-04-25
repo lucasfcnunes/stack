@@ -14,4 +14,8 @@ public class Balance {
         return this;
     }
     
+
+    public Balance(@JsonProperty("name") String name) {
+    this.name = name;
+  }
 }

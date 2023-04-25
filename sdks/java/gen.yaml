@@ -2,7 +2,6 @@ configVersion: 1.0.0
 generation:
   telemetryEnabled: false
   sdkClassName: SDK
-  sdkFlattening: true
   singleTagPerOp: true
 java:
   version: 0.0.1

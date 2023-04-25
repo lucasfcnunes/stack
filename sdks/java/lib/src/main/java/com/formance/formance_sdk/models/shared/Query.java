@@ -81,4 +81,6 @@ public class Query {
         return this;
     }
     
+
+    public Query(){}
 }

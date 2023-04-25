@@ -48,4 +48,6 @@ public class MigrationInfo {
         return this;
     }
     
+
+    public MigrationInfo(){}
 }

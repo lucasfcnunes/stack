@@ -47,4 +47,9 @@ public class ListWalletsResponseCursor {
         return this;
     }
     
+
+    public ListWalletsResponseCursor(@JsonProperty("data") Wallet[] data, @JsonProperty("pageSize") Long pageSize) {
+    this.data = data;
+this.pageSize = pageSize;
+  }
 }

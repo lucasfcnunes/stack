@@ -48,4 +48,9 @@ public class CurrencyCloudConfig {
         return this;
     }
     
+
+    public CurrencyCloudConfig(@JsonProperty("apiKey") String apiKey, @JsonProperty("loginID") String loginID) {
+    this.apiKey = apiKey;
+this.loginID = loginID;
+  }
 }

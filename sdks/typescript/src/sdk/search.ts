@@ -89,10 +89,7 @@ export class Search {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.response = utils.deserializeJSONResponse(
-              httpRes?.data,
-              shared.Response
-            );
+            res.response = utils.objectToClass(httpRes?.data, shared.Response);
           }
           break;
         default:
@@ -134,7 +131,7 @@ export class Search {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.serverInfo = utils.deserializeJSONResponse(
+            res.serverInfo = utils.objectToClass(
               httpRes?.data,
               shared.ServerInfo
             );

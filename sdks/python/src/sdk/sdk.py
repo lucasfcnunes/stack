@@ -45,7 +45,7 @@ class SDK:
     _server_url: str = SERVERS[0]
     _language: str = "python"
     _sdk_version: str = "0.0.1"
-    _gen_version: str = "2.17.8"
+    _gen_version: str = "2.20.1"
 
     def __init__(self,
                  security: shared.Security = None,

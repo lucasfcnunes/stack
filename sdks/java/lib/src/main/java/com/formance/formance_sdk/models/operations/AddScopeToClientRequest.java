@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class AddScopeToClientRequest {
@@ -27,4 +28,9 @@ public class AddScopeToClientRequest {
         return this;
     }
     
+
+    public AddScopeToClientRequest(@JsonProperty("clientId") String clientId, @JsonProperty("scopeId") String scopeId) {
+    this.clientId = clientId;
+this.scopeId = scopeId;
+  }
 }

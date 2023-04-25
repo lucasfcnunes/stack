@@ -14,4 +14,8 @@ public class ActivityDebitWalletOutput {
         return this;
     }
     
+
+    public ActivityDebitWalletOutput(@JsonProperty("data") Hold data) {
+    this.data = data;
+  }
 }

@@ -46,4 +46,6 @@ public class StripeTransferRequest {
         return this;
     }
     
+
+    public StripeTransferRequest(){}
 }

@@ -20,4 +20,6 @@ public class CreateSecretResponse {
         return this;
     }
     
+
+    public CreateSecretResponse(){}
 }

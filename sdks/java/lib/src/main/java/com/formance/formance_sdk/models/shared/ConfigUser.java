@@ -31,4 +31,9 @@ public class ConfigUser {
         return this;
     }
     
+
+    public ConfigUser(@JsonProperty("endpoint") String endpoint, @JsonProperty("eventTypes") String[] eventTypes) {
+    this.endpoint = endpoint;
+this.eventTypes = eventTypes;
+  }
 }

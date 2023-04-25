@@ -14,4 +14,8 @@ public class SendEventRequestBody {
         return this;
     }
     
+
+    public SendEventRequestBody(@JsonProperty("name") String name) {
+    this.name = name;
+  }
 }

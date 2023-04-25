@@ -57,4 +57,6 @@ public class WorkflowInstanceHistoryStageOutput {
         return this;
     }
     
+
+    public WorkflowInstanceHistoryStageOutput(){}
 }

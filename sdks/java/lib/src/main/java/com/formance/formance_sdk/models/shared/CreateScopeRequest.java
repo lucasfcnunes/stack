@@ -24,4 +24,8 @@ public class CreateScopeRequest {
         return this;
     }
     
+
+    public CreateScopeRequest(@JsonProperty("label") String label) {
+    this.label = label;
+  }
 }

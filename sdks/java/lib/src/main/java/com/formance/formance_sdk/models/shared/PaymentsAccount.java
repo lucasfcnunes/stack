@@ -49,4 +49,12 @@ public class PaymentsAccount {
         return this;
     }
     
+
+    public PaymentsAccount(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("provider") ConnectorEnum provider, @JsonProperty("reference") String reference, @JsonProperty("type") PaymentsAccountTypeEnum type) {
+    this.createdAt = createdAt;
+this.id = id;
+this.provider = provider;
+this.reference = reference;
+this.type = type;
+  }
 }

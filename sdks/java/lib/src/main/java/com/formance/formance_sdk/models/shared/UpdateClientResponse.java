@@ -20,4 +20,6 @@ public class UpdateClientResponse {
         return this;
     }
     
+
+    public UpdateClientResponse(){}
 }

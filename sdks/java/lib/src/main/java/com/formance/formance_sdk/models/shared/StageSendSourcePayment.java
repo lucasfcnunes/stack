@@ -14,4 +14,8 @@ public class StageSendSourcePayment {
         return this;
     }
     
+
+    public StageSendSourcePayment(@JsonProperty("id") String id) {
+    this.id = id;
+  }
 }

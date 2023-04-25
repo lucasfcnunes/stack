@@ -14,4 +14,8 @@ public class AssetHolder {
         return this;
     }
     
+
+    public AssetHolder(@JsonProperty("assets") java.util.Map<String, Double> assets) {
+    this.assets = assets;
+  }
 }

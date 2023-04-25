@@ -36,4 +36,6 @@ public class ErrorResponse {
         return this;
     }
     
+
+    public ErrorResponse(){}
 }

@@ -46,4 +46,10 @@ public class TasksCursorCursor {
         return this;
     }
     
+
+    public TasksCursorCursor(@JsonProperty("data") Object[] data, @JsonProperty("hasMore") Boolean hasMore, @JsonProperty("pageSize") Long pageSize) {
+    this.data = data;
+this.hasMore = hasMore;
+this.pageSize = pageSize;
+  }
 }

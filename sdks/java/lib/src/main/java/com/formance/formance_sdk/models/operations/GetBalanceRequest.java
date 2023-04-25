@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class GetBalanceRequest {
@@ -21,4 +22,9 @@ public class GetBalanceRequest {
         return this;
     }
     
+
+    public GetBalanceRequest(@JsonProperty("balanceName") String balanceName, @JsonProperty("id") String id) {
+    this.balanceName = balanceName;
+this.id = id;
+  }
 }

@@ -25,4 +25,6 @@ public class LedgerInfo {
         return this;
     }
     
+
+    public LedgerInfo(){}
 }

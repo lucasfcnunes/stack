@@ -17,4 +17,8 @@ public class DebitWalletResponse {
         return this;
     }
     
+
+    public DebitWalletResponse(@JsonProperty("data") Hold data) {
+    this.data = data;
+  }
 }

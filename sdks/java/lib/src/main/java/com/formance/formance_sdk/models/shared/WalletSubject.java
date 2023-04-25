@@ -31,4 +31,9 @@ public class WalletSubject {
         return this;
     }
     
+
+    public WalletSubject(@JsonProperty("identifier") String identifier, @JsonProperty("type") String type) {
+    this.identifier = identifier;
+this.type = type;
+  }
 }

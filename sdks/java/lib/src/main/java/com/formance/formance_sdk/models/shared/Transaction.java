@@ -69,4 +69,10 @@ public class Transaction {
         return this;
     }
     
+
+    public Transaction(@JsonProperty("postings") Posting[] postings, @JsonProperty("timestamp") OffsetDateTime timestamp, @JsonProperty("txid") Long txid) {
+    this.postings = postings;
+this.timestamp = timestamp;
+this.txid = txid;
+  }
 }

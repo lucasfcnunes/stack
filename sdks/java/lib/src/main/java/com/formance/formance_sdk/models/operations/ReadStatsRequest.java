@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class ReadStatsRequest {
@@ -17,4 +18,8 @@ public class ReadStatsRequest {
         return this;
     }
     
+
+    public ReadStatsRequest(@JsonProperty("ledger") String ledger) {
+    this.ledger = ledger;
+  }
 }

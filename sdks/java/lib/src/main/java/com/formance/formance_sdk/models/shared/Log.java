@@ -49,4 +49,12 @@ public class Log {
         return this;
     }
     
+
+    public Log(@JsonProperty("data") java.util.Map<String, Object> data, @JsonProperty("date") OffsetDateTime date, @JsonProperty("hash") String hash, @JsonProperty("id") Long id, @JsonProperty("type") LogTypeEnum type) {
+    this.data = data;
+this.date = date;
+this.hash = hash;
+this.id = id;
+this.type = type;
+  }
 }

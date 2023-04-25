@@ -91,7 +91,7 @@ export class Wallets {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.walletsErrorResponse = utils.deserializeJSONResponse(
+            res.walletsErrorResponse = utils.objectToClass(
               httpRes?.data,
               shared.WalletsErrorResponse
             );
@@ -161,7 +161,7 @@ export class Wallets {
       switch (true) {
         case httpRes?.status == 201:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.createBalanceResponse = utils.deserializeJSONResponse(
+            res.createBalanceResponse = utils.objectToClass(
               httpRes?.data,
               shared.CreateBalanceResponse
             );
@@ -169,7 +169,7 @@ export class Wallets {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.walletsErrorResponse = utils.deserializeJSONResponse(
+            res.walletsErrorResponse = utils.objectToClass(
               httpRes?.data,
               shared.WalletsErrorResponse
             );
@@ -235,7 +235,7 @@ export class Wallets {
       switch (true) {
         case httpRes?.status == 201:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.createWalletResponse = utils.deserializeJSONResponse(
+            res.createWalletResponse = utils.objectToClass(
               httpRes?.data,
               shared.CreateWalletResponse
             );
@@ -243,7 +243,7 @@ export class Wallets {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.walletsErrorResponse = utils.deserializeJSONResponse(
+            res.walletsErrorResponse = utils.objectToClass(
               httpRes?.data,
               shared.WalletsErrorResponse
             );
@@ -315,7 +315,7 @@ export class Wallets {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.walletsErrorResponse = utils.deserializeJSONResponse(
+            res.walletsErrorResponse = utils.objectToClass(
               httpRes?.data,
               shared.WalletsErrorResponse
             );
@@ -385,7 +385,7 @@ export class Wallets {
       switch (true) {
         case httpRes?.status == 201:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.debitWalletResponse = utils.deserializeJSONResponse(
+            res.debitWalletResponse = utils.objectToClass(
               httpRes?.data,
               shared.DebitWalletResponse
             );
@@ -395,7 +395,7 @@ export class Wallets {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.walletsErrorResponse = utils.deserializeJSONResponse(
+            res.walletsErrorResponse = utils.objectToClass(
               httpRes?.data,
               shared.WalletsErrorResponse
             );
@@ -447,7 +447,7 @@ export class Wallets {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.getBalanceResponse = utils.deserializeJSONResponse(
+            res.getBalanceResponse = utils.objectToClass(
               httpRes?.data,
               shared.GetBalanceResponse
             );
@@ -455,7 +455,7 @@ export class Wallets {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.walletsErrorResponse = utils.deserializeJSONResponse(
+            res.walletsErrorResponse = utils.objectToClass(
               httpRes?.data,
               shared.WalletsErrorResponse
             );
@@ -506,7 +506,7 @@ export class Wallets {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.getHoldResponse = utils.deserializeJSONResponse(
+            res.getHoldResponse = utils.objectToClass(
               httpRes?.data,
               shared.GetHoldResponse
             );
@@ -514,7 +514,7 @@ export class Wallets {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.walletsErrorResponse = utils.deserializeJSONResponse(
+            res.walletsErrorResponse = utils.objectToClass(
               httpRes?.data,
               shared.WalletsErrorResponse
             );
@@ -563,7 +563,7 @@ export class Wallets {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.getHoldsResponse = utils.deserializeJSONResponse(
+            res.getHoldsResponse = utils.objectToClass(
               httpRes?.data,
               shared.GetHoldsResponse
             );
@@ -571,7 +571,7 @@ export class Wallets {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.walletsErrorResponse = utils.deserializeJSONResponse(
+            res.walletsErrorResponse = utils.objectToClass(
               httpRes?.data,
               shared.WalletsErrorResponse
             );
@@ -619,7 +619,7 @@ export class Wallets {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.getTransactionsResponse = utils.deserializeJSONResponse(
+            res.getTransactionsResponse = utils.objectToClass(
               httpRes?.data,
               shared.GetTransactionsResponse
             );
@@ -627,7 +627,7 @@ export class Wallets {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.walletsErrorResponse = utils.deserializeJSONResponse(
+            res.walletsErrorResponse = utils.objectToClass(
               httpRes?.data,
               shared.WalletsErrorResponse
             );
@@ -679,7 +679,7 @@ export class Wallets {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.getWalletResponse = utils.deserializeJSONResponse(
+            res.getWalletResponse = utils.objectToClass(
               httpRes?.data,
               shared.GetWalletResponse
             );
@@ -689,7 +689,7 @@ export class Wallets {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.walletsErrorResponse = utils.deserializeJSONResponse(
+            res.walletsErrorResponse = utils.objectToClass(
               httpRes?.data,
               shared.WalletsErrorResponse
             );
@@ -741,7 +741,7 @@ export class Wallets {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.listBalancesResponse = utils.deserializeJSONResponse(
+            res.listBalancesResponse = utils.objectToClass(
               httpRes?.data,
               shared.ListBalancesResponse
             );
@@ -791,7 +791,7 @@ export class Wallets {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.listWalletsResponse = utils.deserializeJSONResponse(
+            res.listWalletsResponse = utils.objectToClass(
               httpRes?.data,
               shared.ListWalletsResponse
             );
@@ -863,7 +863,7 @@ export class Wallets {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.walletsErrorResponse = utils.deserializeJSONResponse(
+            res.walletsErrorResponse = utils.objectToClass(
               httpRes?.data,
               shared.WalletsErrorResponse
             );
@@ -916,7 +916,7 @@ export class Wallets {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.walletsErrorResponse = utils.deserializeJSONResponse(
+            res.walletsErrorResponse = utils.objectToClass(
               httpRes?.data,
               shared.WalletsErrorResponse
             );
@@ -959,7 +959,7 @@ export class Wallets {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.serverInfo = utils.deserializeJSONResponse(
+            res.serverInfo = utils.objectToClass(
               httpRes?.data,
               shared.ServerInfo
             );
@@ -967,7 +967,7 @@ export class Wallets {
           break;
         default:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.walletsErrorResponse = utils.deserializeJSONResponse(
+            res.walletsErrorResponse = utils.objectToClass(
               httpRes?.data,
               shared.WalletsErrorResponse
             );

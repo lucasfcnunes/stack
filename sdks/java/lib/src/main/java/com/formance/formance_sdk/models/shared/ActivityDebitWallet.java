@@ -25,4 +25,6 @@ public class ActivityDebitWallet {
         return this;
     }
     
+
+    public ActivityDebitWallet(){}
 }

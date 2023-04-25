@@ -74,4 +74,6 @@ public class WebhooksConfig {
         return this;
     }
     
+
+    public WebhooksConfig(){}
 }

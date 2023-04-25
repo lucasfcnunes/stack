@@ -48,4 +48,8 @@ public class AccountWithVolumesAndBalances {
         return this;
     }
     
+
+    public AccountWithVolumesAndBalances(@JsonProperty("address") String address) {
+    this.address = address;
+  }
 }

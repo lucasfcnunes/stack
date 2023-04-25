@@ -17,4 +17,8 @@ public class TransactionsResponse {
         return this;
     }
     
+
+    public TransactionsResponse(@JsonProperty("data") Transaction[] data) {
+    this.data = data;
+  }
 }

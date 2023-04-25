@@ -4,6 +4,7 @@
 
 package com.formance.formance_sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.formance.formance_sdk.utils.SpeakeasyMetadata;
 
 public class TestConfigRequest {
@@ -17,4 +18,8 @@ public class TestConfigRequest {
         return this;
     }
     
+
+    public TestConfigRequest(@JsonProperty("id") String id) {
+    this.id = id;
+  }
 }

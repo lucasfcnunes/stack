@@ -62,4 +62,11 @@ public class WorkflowInstanceHistory {
         return this;
     }
     
+
+    public WorkflowInstanceHistory(@JsonProperty("input") Object input, @JsonProperty("name") String name, @JsonProperty("startedAt") OffsetDateTime startedAt, @JsonProperty("terminated") Boolean terminated) {
+    this.input = input;
+this.name = name;
+this.startedAt = startedAt;
+this.terminated = terminated;
+  }
 }
